@@ -346,3 +346,37 @@ Preference alone is insufficient. A representation can feel easier while causing
 ## 13. Design rule
 
 **Do not optimize for making text look easier. Optimize for making information easier to understand while preserving the information itself.**
+
+
+## 14. Evidence status by representation family
+
+The research evidence should be interpreted at the level of the operation and task, not the label alone.
+
+| Representation family | Current evidence signal | Main limitation | Reframe status |
+|---|---|---|---|
+| Outline / graphic organizer | Supportive in some learning-disability and text-structure research | Benefits vary by organizer, task, outcome, and whether readers actively construct it | Test |
+| Main idea / supporting details | Supported as a comprehension strategy in instructional literature | Strategy instruction is not equivalent to automatic extraction | Test |
+| 5W+H | Direct evidence exists, including disability research | Current direct evidence located is very small/single-subject; why/how can require inference | Test narrowly |
+| Timeline / sequence | Text-structure research supports sequence/chronology as a meaningful structure | Automatic timeline generation can misrepresent temporal relations | Test with fidelity checks |
+| Cause/effect | Text-structure research supports cause-effect as a text structure | Causality may be explicit or inferred; inference must not be presented as source fact | Test with explicit state labels |
+| Compare/contrast | Included in text-structure intervention research | Comparison axes can be invented or omit important qualifiers | Test with provenance |
+| Visual symbols/icons | Mixed/negative evidence in some disability populations | Added visual information can increase load or distract | Experimental only |
+
+### 15. Evidence-transfer rule
+
+Evidence that a strategy works when **taught and practiced by a human** does not automatically establish that an automatically generated representation will work. Reframe should record the intervention type explicitly and avoid converting instructional evidence into product-effectiveness claims.
+
+### 16. Representation-specific measurement
+
+Each representation experiment should predefine the task it is intended to support. At minimum, test separate question types where relevant:
+
+- literal retrieval;
+- paraphrase;
+- main idea;
+- vocabulary;
+- inference;
+- temporal relationship;
+- causal relationship;
+- cross-sentence integration.
+
+This prevents a representation from appearing effective merely because it improves one narrow question type while harming another.
