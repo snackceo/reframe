@@ -430,3 +430,23 @@ W3C guidance supports separating structural information from presentation. Valid
 ## 33. Adaptive selection must permit null and negative outcomes
 
 Experiments must permit no benefit, task-specific benefit, content-specific benefit, switching benefit with interaction cost, preference without objective benefit, objective benefit without preference, and negative effects from adaptation.
+
+## 34. Switch events must be interpreted, not counted as success
+
+Multi-text research indicates that text-to-diagram switches can sometimes accompany confusion rather than productive integration. Reframe experiments should distinguish:
+- productive task support;
+- source verification;
+- uncertainty/recovery;
+- repeated cycling;
+- representation abandonment.
+
+Switch count alone is not a positive outcome.
+
+## 35. Preference and performance must remain separate in multimodal calibration
+
+Recent work with multilingual students with developmental disabilities found a modality with higher observed accuracy was not necessarily the modality students preferred. Reframe calibration should therefore retain separate fields for preference, confidence, and objective outcome, including cases where they disagree.
+
+## 36. Adaptation must be decomposed by operation
+
+Automatic adaptation research has tested lexical, syntactic, and discourse changes separately and found heterogeneous effects. Reframe should record transformation operations individually rather than evaluating a broad “simplification” label.
+
