@@ -1606,3 +1606,58 @@ Before production implementation, establish:
 - no navigation loops or inaccessible dynamic changes;
 - native semantic accessibility for transformed content;
 - preservation of source recovery and reading position under assistive technology.
+
+
+### 160. Structure exposure and structure construction are different interventions
+
+Meta-analyses of text-structure research consistently find benefits from explicit instruction, but the interventions often require active construction, such as creating graphic organizers or practicing rule-based summarization. Immediate comprehension effects are stronger and more consistent than delayed or far-transfer effects.
+
+Sources:
+- https://ila.onlinelibrary.wiley.com/doi/10.1002/rrq.311
+- https://eric.ed.gov/?id=EJ1105625
+- https://doi.org/10.1177/0731948720906490
+
+**Reframe implication:** automatically displaying a structure is not equivalent to teaching the reader to recognize or construct that structure. Reframe should not claim instructional transfer from a passive representation.
+
+### 161. Representation benefit depends on the outcome being measured
+
+The upper-elementary meta-analysis found different effect sizes for comprehension questions, summarization, recall, and knowledge about text structure. Effects also changed by intervention features.
+
+**Reframe implication:** calibration should define the task before selecting the outcome. “Comprehension” should not be treated as a single interchangeable metric.
+
+### 162. Far transfer is a separate research question
+
+Text-structure interventions show small or inconsistent far-transfer effects compared with stronger immediate/proximal effects.
+
+**Reframe implication:** a reader successfully answering questions with Reframe's Structure view does not establish that the reader's general reading comprehension improved. Product claims and experiments must distinguish immediate task assistance from durable skill transfer.
+
+### 163. Reader support can improve task performance without teaching the underlying skill
+
+The literature supports instructional strategies such as graphic/semantic organizers, question answering, question generation, story structure, and summarization, but these often involve active learning or guided practice.
+
+Source: https://www.nichd.nih.gov/publications/pubs/nrp/Pages/findings.aspx
+
+**Reframe implication:** Reframe should initially position semantic representations as accessibility/task-support mechanisms, not as substitutes for reading instruction.
+
+### 164. Self-assessment and metacomprehension are distinct from objective comprehension
+
+Research on situation-model interventions indicates that self-explanation can affect metacomprehension accuracy, but metacomprehension itself remains a distinct outcome from actual comprehension.
+
+Source: https://link.springer.com/article/10.1007/s10648-020-09558-6
+
+**Reframe implication:** preference, confidence, perceived clarity, metacomprehension, and objective task performance should remain separate fields in calibration data.
+
+### 165. The first research instrument should avoid teaching effects during calibration
+
+If the calibration task repeatedly asks readers to construct or practice the same text structures, later performance may reflect learning the task rather than discovering a representation preference or benefit.
+
+**Reframe implication:** calibration should use brief, controlled exposure to representations, matched unseen passages, and minimal repeated instruction. Any instructional training condition should be a separate experiment.
+
+### Research gate addition: support vs instruction
+
+Before production implementation, establish:
+- whether passive representations produce immediate task benefits;
+- whether active construction produces different effects;
+- whether any observed benefit persists on delayed or transfer tasks;
+- whether calibration itself teaches the reader the tested structure;
+- whether Reframe's claims remain limited to accessibility/task support unless instructional effects are independently demonstrated.
