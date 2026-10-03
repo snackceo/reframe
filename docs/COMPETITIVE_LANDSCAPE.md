@@ -102,3 +102,38 @@ The strongest current argument for continuing Reframe is empirical:
 > There may be value in a reader-controlled system for moving between source-preserving representations of information, but the usefulness of that system remains an empirical question.
 
 That question can be tested independently of whether competitors already implement parts of it.
+
+
+## 8. Prior-art update — mainstream reading systems already cover many presentation controls
+
+Microsoft Immersive Reader currently exposes text size, spacing, font, themes, line focus, read-aloud, syllables, parts-of-speech highlighting, picture dictionary, translation, and reading-coach capabilities across supported products and languages.
+
+Sources:
+- https://support.microsoft.com/en-us/accessibility/word/use-immersive-reader-in-word
+- https://support.microsoft.com/en-us/education/learning-accelerators/languages-and-products-supported-by-immersive-reader
+
+Helperbird likewise offers spacing controls, text-to-speech, reading modes, dyslexia-oriented fonts, reading rulers, color overlays, OCR/screenshot reading, dictionaries, and accessibility profiles across web browsers and Apple mobile platforms.
+
+Source:
+- https://www.helperbird.com/features/
+
+**Landscape implication:** presentation customization, TTS, focus tools, OCR, and profile-based personalization are established capabilities. Reframe should not position these capabilities alone as novel.
+
+## 9. Prior-art update — accessibility requirements emphasize continuity
+
+The DAISY Reading Apps User Requirements (2025) establishes navigation, semantic structure, reading-position restoration, TTS control, synchronized text/audio, visual emphasis controls, bookmarks, highlights, and notes as important requirements for accessible reading applications.
+
+Source:
+- https://daisy.github.io/reading-apps-ux-reqs/requirements/published/FINAL-20251031/
+
+**Landscape implication:** any Reframe representation must preserve the user's relationship to the source, reading position, navigation structure, and accessibility semantics. Switching representations cannot become a dead-end view.
+
+## 10. Reframe's research gap should be framed carefully
+
+The current prior-art scan does not establish that Reframe is uniquely the first system to provide semantic restructuring or personalization. It does establish that the market already contains extensive presentation-level assistance.
+
+The research question that remains worth testing is narrower:
+
+**Can a reader-controlled representation layer provide measurable task-specific benefit by switching between source-faithful semantic views, while preserving navigation, accessibility semantics, and source fidelity?**
+
+That is a research hypothesis rather than a uniqueness claim.
