@@ -1478,3 +1478,70 @@ Before production implementation, establish:
 - whether switching cost changes net benefit;
 - whether audio requires a separate calibration protocol;
 - whether calibration remains accessible with large text and screen readers.
+
+
+### 148. Transformed reading must preserve assistive-technology text navigation
+
+Apple's current reading-app guidance treats long-form reading as a distinct accessibility problem. VoiceOver and Speak Screen require granular line/word/character navigation, continuous reading across pages, and usable text selection. Custom-rendered or scanned text needs explicit text-input/accessibility support rather than only visual accessibility.
+
+Source: Apple Developer, WWDC26 “Enhance the accessibility of your reading app.”
+
+**Reframe implication:** every transformed representation must retain an accessible semantic text path. A visually successful representation that breaks VoiceOver navigation is not a successful representation.
+
+### 149. Representation changes must not unexpectedly reset reading position
+
+Apple's VoiceOver evaluation criteria explicitly calls out preserving reading position when content reloads or refreshes. Current reading-app guidance also provides mechanisms for continuous reading across paginated content.
+
+**Reframe implication:** switching Original → Structure → Original must preserve or explicitly restore the reader's semantic position. Representation switching should be reversible without forcing the reader to rediscover location.
+
+### 150. Source recovery should be an accessibility operation, not only a visual control
+
+Accessible reading systems need logical navigation order and meaningful grouping, while screen-reader users may encounter elements non-linearly.
+
+**Reframe implication:** “show source” cannot depend on a visually obvious button or spatial relationship. The source-recovery action, transformed claim, and corresponding source location must all be discoverable through the accessibility tree.
+
+### 151. Semantic transformation should be evaluated with answerability, not readability alone
+
+Human evaluation of automatic simplification found that even the best-performing tested system left at least 14% of evaluated questions unanswerable from its simplified output.
+
+**Reframe implication:** Reframe should distinguish:
+- easier to read;
+- task performance;
+- source-supported;
+- omitted;
+- inferred;
+- unexplained.
+
+A transformation that improves readability while making a source fact unavailable is not automatically beneficial.
+
+### 152. Large-scale simplification evidence strengthens the case for controlled semantic experiments
+
+Google Research reports a randomized study of roughly 50,000 multiple-choice responses in which participants reading a minimally-lossy simplified version showed a roughly 4% absolute comprehension improvement and lower perceived cognitive load. The result persisted whether participants could refer back to the text.
+
+**Reframe implication:** semantic simplification is now supported by stronger experimental evidence than many presentation interventions, but this evidence concerns simplification specifically. It should not be generalized to all semantic representations.
+
+### 153. Reframe needs a transformation ledger
+
+The research now supports recording the relationship between every transformed element and its source status.
+
+Minimum state:
+- source span;
+- operation;
+- representation;
+- status: STATED / INFERRED / UNKNOWN / CONFLICTING;
+- recoverable source location;
+- whether content was omitted;
+- whether wording was changed;
+- confidence/evidence metadata where appropriate.
+
+**Reframe implication:** this ledger becomes a validation artifact before it becomes an implementation detail.
+
+### Research gate addition: accessible transformation
+
+Before production implementation, establish:
+- continuous VoiceOver/Speak Screen navigation through transformed content;
+- preserved semantic reading position across representation switches;
+- accessible source recovery;
+- answerability testing for transformed claims;
+- explicit handling of omitted and inferred information;
+- transformation-level traceability back to source.
