@@ -611,3 +611,58 @@ This prevents feature inventories from being mistaken for scientific validation.
 - Multilingual capabilities vary by language and cannot be assumed to generalize uniformly.
 - Reframe's research question should focus on source-faithful semantic representation and validated task-specific selection.
 - Competitive research must separate feature existence from evidence of effectiveness.
+
+
+## Research cycle 2026-10-02 — Semantic reading prior art and source alignment
+
+### 61. Open-source prior art now directly overlaps several Reframe capabilities
+
+ReadAble combines on-device OCR, summarization, date/amount extraction, a dyslexia-oriented reader, TTS with sentence highlighting, Q&A, document history, and offline-first storage. Dyslexa combines AI text simplification, visual preferences, TTS, word definitions, and user-defined processing rules. Readapt focuses on configurable reading aids for reading challenges. ClearPath combines browser read-aloud, synchronized word highlighting, plain-language rewriting, reading mode, focus tools, and symbol overlays.
+
+Sources:
+- https://github.com/nazarli-shabnam/ReadAble
+- https://github.com/btaniemie/dyslexa
+- https://github.com/ContentSquare/readapt
+- https://github.com/clearpath-ext/clearpath-extension
+
+**Reframe implication:** OCR → transformation → presentation is already an established open-source pattern. Reframe should therefore investigate the *representation model and validation method*, not merely reproduce this pipeline.
+
+### 62. Source-aligned alternate views are already present in patent prior art
+
+US20240086616A1 describes a browser reading assistant that presents original content alongside extracted, simplified/reformatted content and synchronizes scrolling between the two views to preserve context.
+
+Source: https://patents.google.com/patent/US20240086616A1/en
+
+**Reframe implication:** preserving source context while displaying transformed content is not sufficient by itself to establish novelty. Reframe's source-fidelity requirement should therefore be more rigorous: transformations need explicit provenance and semantic-state handling, and experimental evaluation should measure transformation errors rather than relying on synchronized views alone.
+
+### 63. Visual augmentation remains an evidence-sensitive intervention
+
+A 2025 study of symbolated text for people with intellectual and developmental disabilities found that participants performed worse with symbolated text than traditional text and concluded that graphic-symbol augmentation should not automatically be assumed to improve accessibility.
+
+Source: https://doi.org/10.1016/j.ridd.2025.104998
+
+**Reframe implication:** representations such as icons, symbols, diagrams, or other visual additions must remain experimental operations. The system should support abandoning a representation when it increases cognitive or visual load.
+
+### 64. New research distinction: source alignment vs source fidelity
+
+Prior art shows several ways to keep transformed content visually or spatially aligned with the source. Reframe should distinguish this from **semantic source fidelity**.
+
+- **Source alignment:** the reader can locate the transformed passage relative to the original.
+- **Source fidelity:** the transformed representation preserves what the source states, including qualifiers, uncertainty, relationships, exceptions, and contradictions.
+
+This distinction should become explicit in future experiments. A transformed view can be perfectly aligned with the source while still changing its meaning.
+
+### 65. Updated prior-art research question
+
+**When a representation changes information structure, can Reframe preserve semantic source fidelity while improving a defined reading task, and can that benefit be demonstrated on unseen content?**
+
+This is narrower and more testable than a general claim that Reframe makes reading easier.
+
+## Current research conclusions — semantic prior-art update
+
+- Several open-source systems already combine OCR, TTS, simplification, visual controls, and Q&A.
+- Source-aligned transformed views also exist in patent prior art.
+- Visual augmentation can reduce rather than improve comprehension.
+- Source alignment and semantic source fidelity must be measured separately.
+- The research instrument should include semantic-fidelity checks whenever a representation changes information structure.
+- Reframe should continue prior-art research before making any novelty or differentiation claim.
