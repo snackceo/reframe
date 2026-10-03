@@ -731,3 +731,60 @@ For every representation, the research instrument should specify:
 - reader preference separately from objective performance.
 
 **Current hypothesis:** Reframe should not ask whether an outline, timeline, 5W+H, or comparison view is “better.” It should test whether a particular representation improves a particular task for a particular reader/context while preserving source meaning.
+
+
+## Research cycle 2026-10-02 — Transfer and calibration: a critical constraint
+
+### 72. Text-structure benefits show a transfer gradient
+
+A randomized study of 62 students with reading disabilities in grades 4–5 found significant gains in text-structure identification and main-idea generation on near- and mid-transfer measures, but no statistically significant effect on a far-transfer measure of general reading comprehension. The intervention involved 25 lessons and explicit paraphrasing/text-structure instruction.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/33041619/
+
+A broader meta-analysis of 45 studies found text-structure instruction effective across proximal, maintenance, near-transfer, and far-transfer outcomes, but far-transfer effects were small and inconsistent. Stronger effects were associated with teaching more text structures and incorporating writing.
+
+Source: https://eric.ed.gov/?id=EJ1105625
+
+**Reframe implication:** improvement on the exact task a representation targets cannot be treated as evidence that the representation improves general reading comprehension. Reframe experiments need at least one transfer condition.
+
+### 73. Transfer can occur across domains, but transfer support matters
+
+A randomized controlled trial with second-grade children experiencing difficulty in both reading comprehension and word-problem solving found cross-domain transfer from text-structure intervention. However, the interventions included explicit instruction designed to sensitize children to shared structures across domains.
+
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC12499653/
+
+**Reframe implication:** transfer is not automatic. If Reframe expects a representation preference or skill learned on one content type to generalize to another, that assumption must be experimentally tested rather than encoded as a product rule.
+
+### 74. Graphic-organizer evidence also contains a transfer warning
+
+A synthesis of graphic-organizer studies for students with learning disabilities found overall comprehension benefits, but earlier research reported that initial gains were not consistently present on later or new comprehension tasks. A later meta-analysis found benefits across near- and far-transfer measures, demonstrating that results depend on study design and intervention characteristics.
+
+Sources:
+- https://pubmed.ncbi.nlm.nih.gov/15493233/
+- https://doi.org/10.1177/073194871103400104
+
+**Reframe implication:** every representation needs a defined transfer level: same passage, new passage with same structure, new structure, new task, or broader comprehension.
+
+### 75. Calibration should separate preference from judgment accuracy
+
+Digital-learning research has explicitly measured students' judgments of learning against subsequent comprehension performance and found that metacognitive support can affect both performance and judgment accuracy. This reinforces the distinction between “this looks/feels easier” and “this representation actually improved comprehension.”
+
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC11570305/
+
+**Reframe implication:** Reader Calibration should collect at least two separate signals: subjective preference/perceived clarity/effort and objective task performance on the same and unseen material.
+
+### 76. Revised Reader Calibration model
+
+Calibration should be treated as a prediction problem rather than a preference survey:
+
+calibration examples → candidate representation signal → unseen-content test → prediction error → editable reader profile
+
+For each candidate representation, measure: preference; perceived effort/clarity; task accuracy; response time where appropriate; rereading/navigation; semantic-fidelity errors; performance on unseen content; and whether the result transfers to a new task or structure.
+
+The system should retain uncertainty when evidence is insufficient and permit task-specific profiles instead of forcing one global “reading style.”
+
+### 77. New research-gate requirement: transfer
+
+Before Reframe can claim that calibration identifies a useful representation for a reader, evidence should demonstrate prediction beyond the calibration material. At minimum, a prototype experiment should include held-out passages and counterbalanced representation order.
+
+**Updated hypothesis:** A reader-controlled calibration can identify useful representation/task relationships only if subjective preference and performance are evaluated separately and the learned relationship predicts benefit on unseen content without unacceptable semantic-fidelity costs.
