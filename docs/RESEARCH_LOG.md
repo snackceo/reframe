@@ -539,3 +539,75 @@ The calibration concept is now a research hypothesis and should be tested in the
 ## Research cycle 2026-10-02 — Prior-art update
 
 DAISY's 2025 Reading Apps User Requirements establish navigation, semantic structure, read-aloud, synchronized text/audio, visual adjustments, bookmarking, highlighting, and reversibility as core accessibility requirements. Existing assistive products already provide many presentation-level features. Reframe therefore needs to validate its semantic representation, representation-selection, and source-fidelity hypotheses rather than treating a larger accessibility feature set as differentiation.
+
+
+## Research cycle 2026-10-02 — Assistive reading prior art and representation boundaries
+
+### 55. Mainstream reading tools already provide substantial presentation-level assistance
+
+Microsoft Immersive Reader currently supports text size, spacing, font changes, themes, line focus, read-aloud, syllabification, parts-of-speech highlighting, picture dictionary, translation, and reading-coach functionality in supported products and languages.
+
+Sources:
+- https://support.microsoft.com/en-us/accessibility/word/use-immersive-reader-in-word
+- https://support.microsoft.com/en-us/education/learning-accelerators/languages-and-products-supported-by-immersive-reader
+
+Helperbird currently provides spacing controls, text-to-speech, reading modes, dyslexia-oriented fonts, reading rulers, color overlays, OCR/screenshot reading, dictionaries, and accessibility profiles.
+
+Source:
+- https://www.helperbird.com/features/
+
+**Reframe implication:** these are established prior art. Reframe should not treat a larger collection of presentation controls as the central product hypothesis.
+
+### 56. Accessibility profiles are already an established personalization pattern
+
+Existing products can apply preset accessibility configurations for labels such as dyslexia or ADHD.
+
+**Reframe implication:** a diagnosis- or label-based preset is not sufficient differentiation and should not replace the research question around task-conditioned calibration. Reframe should continue testing whether reader preference and measured performance can identify useful representations without assigning a permanent reader type.
+
+### 57. Reading-app standards make continuity part of representation quality
+
+The 2025 DAISY Reading Apps User Requirements treat forward/back navigation, table-of-contents navigation, location restoration, structural navigation, semantic exposure to screen readers, read-aloud starting position, synchronized text/audio, and user-controlled visual emphasis as important requirements.
+
+Source:
+- https://daisy.github.io/reading-apps-ux-reqs/requirements/published/FINAL-20251031/
+
+**Reframe implication:** representation quality must include continuity. A transformed view should preserve or provide a clear path back to the source location and should not destroy structural accessibility information.
+
+### 58. Multilingual support must account for capability differences
+
+Microsoft's current Immersive Reader language documentation shows that available capabilities vary substantially by language: some languages support read-aloud, spacing, syllables, parts of speech, line focus, picture dictionary, and translation in combinations rather than uniformly.
+
+Source:
+- https://support.microsoft.com/en-us/education/learning-accelerators/languages-and-products-supported-by-immersive-reader
+
+**Reframe implication:** multilingual support cannot be specified as a simple feature toggle. Research and later implementation must track which representation operations are actually valid and available for each language/script.
+
+### 59. Prior-art research narrows the research gap
+
+The current scan does not establish that Reframe is the first system to offer alternate reading views, TTS, personalization, OCR, or semantic assistance.
+
+It does establish a more useful research gap:
+
+**Can a reader-controlled representation layer switch among source-faithful semantic views and produce measurable task-specific benefit while preserving navigation, accessibility semantics, and source fidelity?**
+
+This remains a hypothesis requiring controlled evaluation.
+
+### 60. Competitive research must distinguish capability from evidence
+
+A competitor having a feature demonstrates that the capability exists. It does not demonstrate that the capability improves comprehension for a particular population or task.
+
+Therefore future landscape research should record two separate fields:
+
+- **Capability evidence:** what the system actually provides.
+- **Effectiveness evidence:** what controlled or published evidence, if any, supports the feature.
+
+This prevents feature inventories from being mistaken for scientific validation.
+
+## Current research conclusions — prior-art update
+
+- Presentation-level reading assistance is a mature capability area.
+- TTS, spacing, focus, highlighting, OCR, reading modes, and accessibility profiles are established prior art.
+- Navigation, reversibility, semantic accessibility, and source continuity are core requirements, not optional polish.
+- Multilingual capabilities vary by language and cannot be assumed to generalize uniformly.
+- Reframe's research question should focus on source-faithful semantic representation and validated task-specific selection.
+- Competitive research must separate feature existence from evidence of effectiveness.
