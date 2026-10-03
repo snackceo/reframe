@@ -101,19 +101,6 @@ This document records durable product and engineering decisions. Rejected ideas 
 
 **Consequence:** Agents must update canonical documents when durable decisions change.
 
-## Reconsideration rule
-
-A decision should be revisited when:
-
-- new research materially changes its premise;
-- user testing contradicts the hypothesis;
-- implementation evidence reveals an unacceptable tradeoff;
-- privacy or accessibility requirements change;
-- the product boundary changes.
-
-A decision is not permanent merely because it is documented.
-
-
 ## D013 — Technology direction remains research-gated
 
 **Decision:** Reframe will target iOS and Android. Kotlin Multiplatform is the current leading technology candidate for shared core logic, with native platform layers retained where native accessibility and system integration matter.
@@ -126,43 +113,14 @@ A decision is not permanent merely because it is documented.
 
 **Explicit non-decision:** Moshi is not an application architecture choice; it is a Kotlin serialization library and is not being selected as Reframe's stack.
 
-**Consequence:** The technology choice must be validated against research findings and platform feasibility before implementation. Documentation may describe the candidate direction, but no production architecture should be built from this decision alone.
+**Consequence:** The technology choice must be validated against research findings and platform feasibility before implementation.
 
 ## D014 — Research gate precedes implementation
 
 **Decision:** Do not begin Reframe implementation until the research program has sufficiently mapped the relevant reading, learning, language, cognitive, developmental, acquired, and accessibility evidence.
 
-**Minimum gate questions:**
-
-1. What reading/access problems are documented?
-2. Which mechanisms or processing demands are implicated?
-3. Which populations and contexts have been studied?
-4. Which interventions or assistive technologies have evidence?
-5. Where does evidence conflict or remain uncertain?
-6. Which Reframe representations have defensible hypotheses?
-7. How will comprehension, effort, task performance, and semantic fidelity be measured?
-8. What failure modes could make a representation harmful, misleading, or unnecessarily difficult?
-9. What platform capabilities are actually required by the validated research prototype?
-10. What privacy and consent boundaries follow from those requirements?
-
-**Consequence:** The first implementation, when the gate is met, should be a research instrument/prototype rather than a full product or system-wide HUD.
-
-
-## D013 — Technology direction remains provisional
-
-**Decision:** Reframe will document a cross-platform technology direction before implementation, with Kotlin Multiplatform currently the leading candidate for a shared semantic/core layer and native iOS/Android integration.
-
-**Why:** Reframe targets both iOS and Android, while the product concept depends heavily on platform capabilities such as accessibility, content acquisition, text rendering, OCR, audio, and potentially on-device intelligence. A shared core can reduce duplicated semantic logic while native layers preserve platform-specific capabilities.
-
-**Boundary:** This is a provisional technology direction, not authorization to begin implementation. Flutter and React Native remain alternatives until the research and platform-feasibility gate is complete. Moshi is a library-level dependency, not an application architecture.
-
-**Consequence:** Technology documentation can evolve during research without forcing premature implementation.
-
-## D014 — Research gate precedes product implementation
-
-**Decision:** Do not begin full product implementation until the research gate has been sufficiently completed.
-
 **Minimum gate:**
+
 1. target reading/access problems are explicitly defined;
 2. relevant mechanisms and competing explanations are mapped;
 3. populations and evidence limitations are documented;
@@ -174,4 +132,44 @@ A decision is not permanent merely because it is documented.
 9. platform feasibility is researched;
 10. the first prototype is defined as a research instrument rather than a full product.
 
-**Consequence:** The next work is research synthesis, evidence mapping, competitive/prior-art review, and technology feasibility—not feature implementation.
+**Consequence:** The next work is research synthesis, evidence mapping, prior-art review, and technology feasibility—not feature implementation.
+
+## D015 — Typography is a variable, not the product
+
+**Decision:** Reframe will investigate spacing, typography, layout, hierarchy, and emphasis as configurable representation variables, but will not make a dyslexia-specific font the core product mechanism.
+
+**Evidence basis:** A 2026 meta-analysis of 15 studies, 91 effect sizes, and 688 dyslexic students found no consistent or reliable reading-performance advantage for dyslexia-specific fonts over standard fonts. Separate spacing research provides evidence that some spacing changes can help under specific conditions while also reporting mixed findings and possible negative effects from excessive spacing.
+
+Sources:
+- https://pubmed.ncbi.nlm.nih.gov/42536336/
+- https://onlinelibrary.wiley.com/doi/full/10.1002/dys.1787
+
+**Consequence:** Reframe should test typography and spacing empirically, with reader-controlled parameters where appropriate, instead of encoding a universal "dyslexia font" mode.
+
+## D016 — Separate task benefit from source fidelity
+
+**Decision:** Every semantic representation experiment must evaluate both whether the representation helps the intended task and whether it preserves source meaning sufficiently for that task.
+
+**Why:** A transformation can make information easier to process while also omitting qualifiers, changing relationships, or introducing unsupported inference.
+
+**Consequence:** Comprehension/task performance and semantic fidelity are separate evaluation dimensions. Preference alone is not evidence of benefit.
+
+## D017 — Continue research before building production
+
+**Decision:** Continue evidence synthesis and prior-art research. Do not begin production implementation yet.
+
+**Current next priorities:** semantic/structural representations, main-idea and information-extraction support, adult evidence, multilingual/non-English evidence, attention/working-memory interactions, personalization versus automatic selection, mobile reading contexts, and existing/open-source assistive reading systems.
+
+**First build when the gate is met:** a small research instrument capable of controlled representation comparisons. It should not begin as the final system-wide HUD.
+
+## Reconsideration rule
+
+A decision should be revisited when:
+
+- new research materially changes its premise;
+- user testing contradicts the hypothesis;
+- implementation evidence reveals an unacceptable tradeoff;
+- privacy or accessibility requirements change;
+- the product boundary changes.
+
+A decision is not permanent merely because it is documented.
