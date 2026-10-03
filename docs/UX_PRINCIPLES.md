@@ -204,3 +204,38 @@ A representation that looks cleaner but increases misunderstanding is not a succ
 **The reader should feel more in control of the information, not less.**
 
 W3C's current accessibility work also emphasizes adaptable presentation and user personalization; Reframe's UX should align with those principles without treating W3C guidance as validation of any particular Reframe feature.
+
+
+## 16. Setup and first-run flow
+
+The setup should be a short, reader-controlled calibration rather than a diagnostic questionnaire. The same content and task should be reused across representation conditions where practical so that representation is the experimental variable rather than passage difficulty.
+
+The proposed flow is:
+
+**Welcome → basic presentation preferences → representation calibration → second task → editable preferences → reading**
+
+Calibration should measure preference separately from objective task performance. The reader must be able to skip setup, change preferences later, and return to Original at any time.
+
+## 17. Mobile app surface
+
+The product should have a small number of primary surfaces:
+
+- **Home:** open/import/paste content and resume recent reading.
+- **Reader:** the main reading surface.
+- **Reframe sheet:** compact representation choices such as Focus, Structure, Key information, Explain, Listen, and Original.
+- **Source view:** direct recovery and source-span verification.
+- **Settings/Profile:** editable reading and representation preferences plus privacy controls.
+
+The UI should remain reading-first rather than becoming a dashboard or chat interface.
+
+## 18. Active-state transparency
+
+Whenever a representation other than Original is active, the reader should be able to tell what changed. Examples include “Structure · Same source, reorganized” and “Simplified wording · Wording changed · View source.”
+
+This follows the existing source-first and no-surprise principles and should be treated as a usability requirement for semantic transformations.
+
+## 19. First research instrument versus final product
+
+The first build should be a controlled mobile research instrument rather than the complete system-wide product. It should support a small number of passages, tasks, representations, preference/effort measures, source recovery, switching, and research event logging.
+
+The instrument exists to answer whether the representation system provides measurable benefit before the product expands into broader acquisition, automatic adaptation, or system-wide integration.
