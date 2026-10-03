@@ -1727,3 +1727,70 @@ Before production implementation, establish:
 - whether extraction granularity affects representation quality;
 - whether simplification and structural reorganization produce different benefit/fidelity profiles;
 - whether semantic and visual transformations can be independently evaluated.
+
+
+### 173. Multilingual representation effects cannot be reduced to translation
+
+A 2025 Applied Psycholinguistics study of 1,073 adults found that L1 writing-script type (alphabetic, logographic, or alphasyllabic) was associated with differences in English word-reading speed and accuracy beyond L2 usage.
+
+Source: https://www.cambridge.org/core/journals/applied-psycholinguistics/article/how-does-ones-first-language-writing-script-modulate-second-language-reading-evidence-from-the-english-reading-online-project-enro/0232AF1AAB66C4D2C5ECE29862A7A38D
+
+**Reframe implication:** multilingual representation support must model language and script, not merely translated text. Reading profiles should not silently transfer across scripts.
+
+### 174. Reading comprehension can differ across languages even within multilingual learners
+
+A 2025 study of 199 multilingual children found different comprehension performance across Spanish, Basque, and English, with language exposure and individual factors contributing to differences.
+
+Source: https://doi.org/10.1016/j.system.2025.103665
+
+**Reframe implication:** conditional profiles should include language context. “Reader preference” without language context is insufficient evidence for adaptive selection.
+
+### 175. Text-to-picture switching has language-dependent processing costs
+
+Research comparing English and Chinese L1/L2 readers found increased comprehension time for several groups in the text-to-picture switch condition, while Chinese L1 readers did not show the same disruption.
+
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC12696150/
+
+**Reframe implication:** switching cost should be measured separately by language/script rather than assumed to be universal.
+
+### 176. Multimodal literacy interventions can expose vocabulary and sequence bottlenecks
+
+A 2026 study of multilingual sixth-grade learners using multimodal science texts reported limited-to-moderate improvement for two of three participants and identified discipline-specific vocabulary and sequence interpretation as recurring challenges.
+
+Source: https://doi.org/10.1080/19388071.2025.2557801
+
+**Reframe implication:** task decomposition should include vocabulary burden and sequence interpretation as separate demands. A Structure or Timeline view should not be evaluated as a generic comprehension intervention.
+
+### 177. Executive-function demands may differ for bilingual readers
+
+A 2025 study of third-grade bilingual and monolingual children found executive functions contributed more strongly to reading comprehension among bilingual children, while the groups did not differ in executive-function performance overall.
+
+Source: https://doi.org/10.1016/j.jecp.2025.106333
+
+**Reframe implication:** differences in representation benefit should not be interpreted as evidence of a reader deficit. Task demand and language context may change which support is useful.
+
+### 178. Cross-language eye-tracking resources make language-specific experiments more feasible
+
+Wave 2 of the Multilingual Eye-Movement Corpus added N=654 readers across 13 languages, 16 laboratories, and 15 countries, expanding data for studying online reading processes across languages.
+
+Source: https://www.nature.com/articles/s41597-025-05453-3
+
+**Reframe implication:** multilingual evaluation can use language-specific processing measures rather than assuming English-derived reading behavior generalizes.
+
+### 179. AAC users introduce an additional accessibility population with different literacy constraints
+
+A 2025 review of literacy for people who need or use AAC reports significant barriers when literacy instruction depends on spoken responses and notes limited evidence about which instructional approaches work best for whom.
+
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC13122432/
+
+**Reframe implication:** Reframe should not assume spoken interaction, speech output, or conventional input as prerequisites for calibration. Accessibility of the calibration task itself must include non-speech interaction paths.
+
+### Research gate addition: multilingual and alternative-access reading
+
+Before production implementation, establish:
+- language/script-specific representation effects;
+- whether profiles transfer across languages;
+- language-specific switching cost;
+- vocabulary and sequence-demand conditions;
+- non-speech calibration and interaction paths;
+- whether representation benefit differs because of task demand rather than reader diagnosis.
