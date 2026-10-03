@@ -666,3 +666,68 @@ This is narrower and more testable than a general claim that Reframe makes readi
 - Source alignment and semantic source fidelity must be measured separately.
 - The research instrument should include semantic-fidelity checks whenever a representation changes information structure.
 - Reframe should continue prior-art research before making any novelty or differentiation claim.
+
+
+## Research cycle 2026-10-02 — Semantic representations: structure, main idea, graphic organizers, 5W+H
+
+### 66. Text-structure evidence supports structure-aware comprehension, but not a generic visual overlay
+
+A meta-analysis of 44 experimental/quasi-experimental studies in grades 4–6 found immediate positive effects from text-structure instruction, with effects differing substantially by outcome: comprehension questions, recall, summarization, and text-structure knowledge did not behave as interchangeable measures. Effects were no longer detectable at delayed posttests overall. Active construction of graphic organizers/story maps was more useful than simply exposing students to organizational graphics.
+
+Source: https://doi.org/10.1002/rrq.311
+
+**Reframe implication:** a representation such as an outline, timeline, cause/effect map, or comparison view should be evaluated against a specific task and outcome. Merely rendering structure visually is not sufficient evidence of benefit.
+
+### 67. Graphic organizers have supportive evidence in learning disabilities, with important scope limits
+
+A meta-analysis covering 16 studies and 808 students with learning disabilities found graphic-organizer use associated with moderate-to-large gains across vocabulary, comprehension, and inferential knowledge, depending on outcome, organizer type, and subject. A separate systematic review of computer-based graphic organizers found less promising comprehension results than results for some other academic outcomes.
+
+Sources:
+- https://doi.org/10.1177/073194871103400104
+- https://doi.org/10.1111/ldrp.12017
+
+**Reframe implication:** “graphic organizer” is evidence-supported enough to test, but the evidence does not justify assuming every automatically generated organizer will help. Computer-mediated delivery and organizer design are potential moderators.
+
+### 68. Main idea and visual-graphic-organizer strategies can behave differently by population
+
+A study comparing a main-idea extractor with a visual-graphic-organizer strategy in third-grade children with and without autism found the visual-graphic-organizer strategy outperformed the main-idea extractor in the reported comparison. The study explicitly examined question type as well as strategy effects.
+
+Source: https://www.sciencedirect.com/science/article/pii/S1750946723000697
+
+**Reframe implication:** representation effectiveness may depend on both reader population and question type. Experiments should not collapse literal, main-idea, inference, and other comprehension questions into one score.
+
+### 69. 5W+H has direct but very low-level evidence
+
+A 2024 single-subject study of one elementary student with moderate intellectual disability reported improvement after instruction using a 5W+1H strategy. The intervention emphasized question words, keywords, and visual images; the report noted that visual images were less useful for why/how questions than reliance on textual keywords.
+
+Source: https://doi.org/10.33394/jp.v11i4.12877
+
+**Reframe implication:** 5W+H is a reasonable experimental representation, especially for information-location tasks, but current evidence is far too limited to treat it as a broadly effective representation. Why/how also require special handling because they can involve inference or causal interpretation rather than direct extraction.
+
+### 70. New representation taxonomy for experiments
+
+The current evidence supports separating representations into at least four functional classes:
+
+1. **Structure exposure** — showing relationships or organization without requiring active construction.
+2. **Structure construction** — asking the reader to create/fill a map or organizer.
+3. **Information-location views** — e.g., 5W+H for locating explicitly stated entities/events/details.
+4. **Meaning-relation views** — e.g., cause/effect, sequence, comparison, or main-idea/supporting-detail representations.
+
+Reframe's automatic representations are primarily in classes 1, 3, and 4. Evidence from instructional interventions involving class 2 cannot automatically be transferred to an automatic representation. This distinction should be preserved in future evidence mapping.
+
+### 71. Updated experimental requirement
+
+For every representation, the research instrument should specify:
+
+- target task;
+- source text type;
+- expected mechanism;
+- population/context;
+- question type;
+- whether the representation exposes, reorganizes, or adds information;
+- semantic-fidelity risks;
+- immediate outcome;
+- transfer/unseen-content outcome;
+- reader preference separately from objective performance.
+
+**Current hypothesis:** Reframe should not ask whether an outline, timeline, 5W+H, or comparison view is “better.” It should test whether a particular representation improves a particular task for a particular reader/context while preserving source meaning.
