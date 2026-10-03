@@ -157,3 +157,57 @@ A separate patent, US20240086616A1, describes a reading assistant that keeps ori
 | Representation effectiveness | Must be experimentally demonstrated |
 
 The landscape should therefore be treated as a research input, not a claim of novelty.
+
+
+## 12. 2026 prior-art update — semantic adaptation and personalization are established capability areas
+
+The current scan found substantial overlap beyond presentation controls.
+
+### Academic systems and methods
+
+The 2025 TSAR shared task attracted 48 submissions from 20 teams for readability-controlled text simplification. Results emphasize that dependable control can require iterative generation and selection, and that readability targeting must be evaluated separately from semantic similarity.
+
+Source: https://aclanthology.org/2025.tsar-1.8/
+
+A 2025 paper demonstrates efficient on-device text simplification intended to keep sensitive text local to the device.
+
+Source: https://aclanthology.org/2025.tsar-1.7/
+
+### Open-source overlap
+
+ReadAble combines mobile OCR, text processing, summarization/simplification, and TTS. DyLexAid combines text simplification, TTS, and accessible reading modes.
+
+Sources:
+- https://github.com/nazarli-shabnam/ReadAble
+- https://github.com/JanSteinhauer/DyLexAid
+
+These projects reinforce that OCR, simplification, TTS, and accessibility-oriented reading modes are not sufficient differentiation.
+
+### Patent overlap
+
+US20240086616A1 describes a reading assistant using accessibility-tree semantics for extraction, user preferences for modified presentation, and side-by-side original/modified content with synchronized scrolling.
+
+Source: https://patents.google.com/patent/US20240086616A1/en
+
+Older patent families describe dynamically personalized reading instruction, tunable summaries, salient-information highlighting, comprehension aids, and adaptation based on user performance. A 2025 publication also describes personalized reading based on gaze and reading-behavior signals.
+
+Sources:
+- https://patents.google.com/patent/US20030093275A1/en
+- https://patents.google.com/patent/US7386453B2/en
+- https://patents.google.com/patent/US20250362743A1/en
+
+### Updated competitive conclusion
+
+The following are established capability areas rather than useful novelty claims by themselves:
+
+- presentation customization;
+- OCR/text acquisition;
+- text simplification;
+- TTS and synchronized reading;
+- highlighting/focus;
+- user preference profiles;
+- original/modified source alignment;
+- behavioral personalization;
+- on-device text transformation.
+
+The research gap should remain an effectiveness question: whether a reader-controlled representation layer can identify and deliver source-faithful representations that measurably improve a defined task, with prediction validated on unseen content and semantic/accessibility costs explicitly measured.
