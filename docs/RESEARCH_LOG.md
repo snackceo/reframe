@@ -1935,3 +1935,95 @@ Before production implementation, establish:
 - semantic transformations have source-recovery tests;
 - demonstration is separated from measurement;
 - matched unseen content and counterbalanced order are used where practical.
+
+
+## Research cycle 2026-10-03 — Fidelity, support layers, and adult evidence
+
+### 194. Recent GenAI adaptation research separates passage simplification from support-layer adaptation
+
+A 2026 study of 135 adult EAP learners compared original, unified-AI, and proficiency-differentiated AI materials. The differentiated materials did not primarily differ through large changes in passage-level structural complexity; the meaningful differences were often in functional support such as glosses, sentence unpacking, rhetorical cues, claim–evidence notes, and critical prompts. The study also included explicit academic-fidelity checking for terminology, stance, evidence relations, and unsupported additions.
+
+Source: https://doi.org/10.3389/fpsyg.2026.1887565
+
+**Reframe implication:** semantic support should not be modeled as simply “making text easier.” Reframe should distinguish changes to the source wording from support layers that help a reader work with the unchanged source.
+
+### 195. Support can be proficiency-sensitive without requiring wholesale rewriting
+
+The same 2026 EAP study found heterogeneous effects across proficiency groups, with differentiated support showing different magnitudes of benefit relative to a unified AI-adapted condition. Its strongest differences were associated with functional support rather than simple passage-complexity reduction.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/42661697/
+
+**Reframe implication:** the representation selector should be able to choose a support operation without necessarily rewriting the source. This strengthens the case for a reversible layer architecture: source remains intact while structure, glosses, cues, or other views are added around it.
+
+### 196. Academic fidelity must include discourse function, not only factual correctness
+
+The 2026 EAP adaptation study treated academic fidelity as preservation of disciplinary meaning, terminology, stance, hedging, claim–evidence relations, and genre function. This is broader than checking whether individual facts survived rewriting.
+
+Source: https://doi.org/10.3389/fpsyg.2026.1887565
+
+**Reframe implication:** Reframe's fidelity ledger should eventually include qualifiers, uncertainty, negation, evidence relationships, and discourse function where those properties matter to the task. A transformed view can be factually accurate sentence-by-sentence and still distort the author's argument.
+
+### 197. Visual additions continue to show a non-monotonic accessibility pattern
+
+A 2025 meta-analysis of visualization added to easy-to-read text for people with reading difficulties found no reliable overall comprehension benefit. Included studies involved adults with aphasia, intellectual disabilities, and adults with low literacy learning English; methodological quality was frequently questionable and visualization choices were highly heterogeneous.
+
+Source: https://doi.org/10.1080/17489539.2025.2551910
+
+A separate 2025 controlled study of symbolated text found significantly lower comprehension and slower reading when graphic symbols were paired with text for people with intellectual/developmental disabilities.
+
+Source: https://doi.org/10.1016/j.ridd.2025.104998
+
+**Reframe implication:** “visual support” cannot remain a single positive intervention category. Every added visual layer should have a defined target task and a measured coordination/interpretation cost.
+
+### 198. Evidence-chain representation is relevant to source traceability
+
+A 2026 ACL paper on document understanding introduced a retrieval approach that represents both physical document adjacency and semantic relevance as a graph, constructing chains of evidence for multi-hop questions rather than relying only on isolated retrieval matches.
+
+Source: https://aclanthology.org/2026.acl-long.445/
+
+**Reframe implication:** source recovery should preserve both the original location of evidence and the relationships used to construct a representation. For complex views, a single source-span pointer may be insufficient; the provenance model may need an ordered set or graph of supporting spans.
+
+### 199. Adaptive personalization can be evaluated before classroom deployment, but simulation is not human validation
+
+A 2026 ACL workshop paper proposes theory-grounded simulated learners for evaluating adaptive educational-reading policies before classroom deployment. The framework aligns reading materials with learning objectives and uses question answering as an observation channel while modeling encoding, integration, prior knowledge, and misconception revision.
+
+Source: https://aclanthology.org/2026.bea-1.63/
+
+**Reframe implication:** simulation could eventually help screen representation-selection policies before human testing, particularly for avoiding obviously unstable policies. However, simulated-reader results cannot establish real-world accessibility benefit; held-out human evaluation remains necessary.
+
+### 200. Adult dyslexia evidence reinforces persistent heterogeneity rather than a single accommodation profile
+
+Recent adult research continues to show substantial variation. A 2026 study of 101 adults compared compensated and non-compensated dyslexia groups and found different patterns across phonological awareness, technical-text reading, vocabulary, and word recognition. A 2025 adult font study found no significant reading-accuracy or efficiency differences across tested fonts despite differences in satisfaction and preference.
+
+Sources:
+- https://pubmed.ncbi.nlm.nih.gov/42442778/
+- https://pubmed.ncbi.nlm.nih.gov/41523822/
+
+**Reframe implication:** adult calibration should not assume that a diagnosis, a preferred font, or a single accessibility profile predicts the representation that will improve a particular task. Conditional evidence remains the safer model.
+
+### 201. Compensatory access and remediation must remain separate in adult research
+
+A computer-reader study of students with dyslexia found that many participants achieved better reading-related performance with the technology, while some performed worse; the authors characterized the technology as a compensatory aid and found no evidence that it supplied additional remediation beyond intensive reading intervention.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/24233995/
+
+**Reframe implication:** Reframe should initially measure whether a representation improves access to a task. Claims about improving the underlying reading skill require a separate longitudinal instructional study.
+
+### 202. Adult accessibility research should include functional reading tasks
+
+A 2025 randomized pilot with 44 young adults with intellectual/developmental disabilities found that instruction using functional texts improved use of reading-comprehension strategies and multiple-choice comprehension, while several functional outcomes did not differ significantly.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/40779715/
+
+**Reframe implication:** evaluation should include realistic reading tasks such as messages, emails, instructions, forms, and other everyday information—not only researcher-authored comprehension passages. Task ecology may change which representation is useful.
+
+### Research gate addition: provenance and support-layer separation
+
+Before production implementation, establish:
+- source wording versus support-layer changes as separate experimental variables;
+- discourse-level fidelity, including stance, hedging, negation, and evidence relations where task-relevant;
+- visual-support costs rather than assuming added graphics are beneficial;
+- provenance that can represent multiple supporting source spans and relationships;
+- simulation only as pre-screening, never as a substitute for human validation;
+- adult and functional-task evaluation;
+- compensatory access outcomes separated from remediation/learning outcomes.
