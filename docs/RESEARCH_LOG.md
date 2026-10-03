@@ -1794,3 +1794,67 @@ Before production implementation, establish:
 - vocabulary and sequence-demand conditions;
 - non-speech calibration and interaction paths;
 - whether representation benefit differs because of task demand rather than reader diagnosis.
+
+
+### 180. Representation effects can reverse by reader group
+
+A 2026 study of 166 third- and fourth-grade students compared the same informational content presented in descriptive versus narrative structure. Overall comprehension did not differ significantly, but low-achieving readers improved with the narrative structure while typical readers performed better with the original informational structure.
+
+Source: https://link.springer.com/article/10.1007/s11145-026-10791-8
+
+**Reframe implication:** the same semantic content can produce different outcomes depending on reader characteristics. Adaptive representation should therefore remain conditional and evidence-based rather than applying one universally “easier” structure.
+
+### 181. Ambiguous visualizations can distort rather than clarify
+
+A 2025 Reading Research Quarterly study with 120 university students found that participants often ignored or distorted an ambiguous graph when interpreting an accompanying informational text, and their reproductions of the graph were biased toward the text's argument.
+
+Source: https://doi.org/10.1002/rrq.70043
+
+**Reframe implication:** generated diagrams must be tested for interpretability and ambiguity. A visual representation that appears to externalize structure can introduce a competing or misleading interpretation.
+
+### 182. Representation proficiency may matter independently of reading proficiency
+
+Recent work on multimodal comprehension continues to show that successful text–visual integration requires learning how representations relate, not merely presenting both together.
+
+**Reframe implication:** Reframe should not assume that a reader who benefits from one representation automatically understands another representation's conventions. Calibration needs a short explanation/demonstration, while measurement should test transfer to unseen content without repeatedly teaching the representation.
+
+### 183. Visual support should be proficiency-sensitive
+
+2026 research on Chinese L2 reading reports that illustration type and proficiency interact, with segmented and concrete representations more suitable for lower proficiency readers and more integrated/abstract representations becoming useful at higher proficiency.
+
+Source: https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1770079/full
+
+**Reframe implication:** representation complexity should be treated as a variable. “Timeline” or “diagram” is not one fixed intervention; density, abstraction, segmentation, and relation explicitness can change its effect.
+
+### 184. Personalized technology can improve reading outcomes, but this is not evidence for automatic semantic selection
+
+A 2025 randomized study of 473 intermediate EFL learners found improved comprehension progress, engagement, and reduced reading anxiety with personalized technology-enhanced learning that included automated individualized feedback.
+
+Source: https://doi.org/10.1016/j.chbr.2025.100817
+
+**Reframe implication:** personalization has evidence as a broad learning approach, but Reframe still needs direct evidence that its representation-selection mechanism predicts and improves performance on held-out reading tasks.
+
+### 185. TTS effects remain population-dependent
+
+A 2026 eye-tracking study of junior-high students with dyslexia, ADHD-related reading difficulties, and typical development found that TTS affected groups differently, reinforcing that audio should not be treated as a universally beneficial accessibility mode.
+
+Source: https://doi.org/10.1007/s11145-025-10738-5
+
+**Reframe implication:** audio requires its own representation/calibration protocol. The reader's response to TTS should be measured by fluency, comprehension, interaction burden, and preference separately.
+
+### 186. Evidence increasingly supports separating visual, semantic, and interaction variables
+
+Across the current evidence, typography/spacing, semantic simplification, structural reorganization, diagrams, TTS, and representation switching have different mechanisms and different outcome profiles.
+
+**Reframe implication:** the first research instrument should manipulate one representation operation at a time whenever possible. Combining typography + simplification + diagram + TTS would make a positive or negative result uninterpretable.
+
+### Research gate addition: causal isolation
+
+Before production implementation, establish:
+- whether each representation operation has an independently measurable effect;
+- whether reader-group differences interact with representation;
+- whether representation complexity changes the effect;
+- whether ambiguous visuals introduce interpretation errors;
+- whether personalization improves held-out task outcomes rather than only preference;
+- whether TTS benefits are population/task dependent;
+- whether combined transformations can be evaluated only after their component effects are understood.
