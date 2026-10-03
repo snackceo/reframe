@@ -1661,3 +1661,69 @@ Before production implementation, establish:
 - whether any observed benefit persists on delayed or transfer tasks;
 - whether calibration itself teaches the reader the tested structure;
 - whether Reframe's claims remain limited to accessibility/task support unless instructional effects are independently demonstrated.
+
+
+### 166. Concept maps are promising but introduce a measurable time trade-off
+
+A 2025 ACL study evaluated an LLM-generated concept-mapping system across ten academic disciplines. In a small user evaluation (n=14), participants reported lower perceived cognitive load and completed comprehension assessments faster with concept maps at comparable accuracy, but spent more time interacting with the visualization.
+
+Source: https://aclanthology.org/2025.bea-1.58/
+
+**Reframe implication:** structural representations should measure both comprehension outcome and interaction time. A representation that reduces cognitive load but substantially increases navigation time may have a different net benefit depending on task.
+
+### 167. Concept-map generation quality depends on processing granularity
+
+The same study found section-level processing had higher concept-extraction precision while paragraph-level processing had higher recall.
+
+**Reframe implication:** semantic representations should not assume one universal extraction granularity. The transformation pipeline may need to preserve section/paragraph boundaries and expose uncertainty where extraction is incomplete.
+
+### 168. Inference is a distinct comprehension bottleneck for some autistic readers
+
+A 2025 eye-tracking study found autistic children had greater difficulty with discourse requiring bridging inferences and that lack of coherence reduced comprehension efficiency.
+
+Source: https://www.sciencedirect.com/science/article/pii/S3050656525001932
+
+**Reframe implication:** representations that expose explicit relationships may be useful research candidates for inference-heavy tasks, but the evidence does not establish that automatically adding inferred relationships improves comprehension. Inference-support views must clearly distinguish source statements from derived relationships.
+
+### 169. Automatic adaptation studies support explicit-vs-inferred question separation
+
+A study of automatic text adaptation for students with intellectual disability used both explicit-information and inference questions, allowing the researchers to distinguish effects on information that was directly stated from effects requiring inference.
+
+Source: https://doi.org/10.1080/17483107.2025.2536701
+
+**Reframe implication:** calibration tasks should deliberately include both literal retrieval and inference conditions. A representation can improve one while harming or failing to affect the other.
+
+### 170. Visual additions can invalidate comprehension measurement
+
+The same automatic-adaptation study deliberately removed pictures because images could reveal answers or shift the task from reading to visual interpretation, increasing cognitive load and reducing measurement validity.
+
+Source: https://doi.org/10.1080/17483107.2025.2536701
+
+**Reframe implication:** calibration passages should control non-textual cues. If a representation adds diagrams/icons, the experiment must determine whether the participant solved the intended reading task or used an alternative visual cue.
+
+### 171. Strong simplification evidence does not generalize to semantic representations
+
+A large randomized study of 4,563 participants across 31 texts found a 3.9 percentage-point absolute comprehension improvement from minimally-lossy simplification, with effects varying substantially by subject area.
+
+Source: https://arxiv.org/abs/2505.01980
+
+**Reframe implication:** simplification is now a particularly strong candidate for direct testing, but its evidence should not be transferred to Structure, Timeline, 5W+H, Comparison, or other representations without separate experiments.
+
+### 172. Visual accessibility and semantic simplification should remain independently testable
+
+A 2026 dyslexia-focused preprint proposes separating fidelity safety from rendered visual accessibility and reports bilingual evaluation across English and Chinese materials.
+
+Source: https://arxiv.org/abs/2608.13583
+
+**Reframe implication:** Reframe should preserve the separation between semantic transformation quality and presentation accessibility. A visual improvement should be measurable without requiring a semantic rewrite, and vice versa.
+
+### Research gate addition: representation-specific experiments
+
+Before production implementation, establish:
+- whether structural views improve literal retrieval;
+- whether they improve inference tasks;
+- whether interaction time offsets comprehension gains;
+- whether visual additions introduce alternate-answer cues;
+- whether extraction granularity affects representation quality;
+- whether simplification and structural reorganization produce different benefit/fidelity profiles;
+- whether semantic and visual transformations can be independently evaluated.
