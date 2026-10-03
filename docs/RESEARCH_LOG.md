@@ -1545,3 +1545,64 @@ Before production implementation, establish:
 - answerability testing for transformed claims;
 - explicit handling of omitted and inferred information;
 - transformation-level traceability back to source.
+
+
+### 154. Fidelity evaluation should test source-derived answerability
+
+The 2024 TACL human-evaluation framework evaluates simplified text by asking readers questions whose answers depend on information in the original text. It found that even the best tested supervised simplification system left at least 14% of questions unanswerable from its output.
+
+Source: https://aclanthology.org/2024.tacl-1.24/
+
+**Reframe implication:** every semantic representation that changes wording, ordering, or inclusion should be evaluated against source-derived questions, not only readability metrics or model similarity scores.
+
+### 155. Semantic simplification evidence is becoming more task-specific
+
+A 2026 scoping review of automated text simplification for patient education materials identified recurring concerns around linguistic quality, content fidelity, and actual understandability by readers. The evidence base spans multiple technologies and study designs rather than establishing one generally effective simplification method.
+
+Source: https://www.jmir.org/2026/1/e88365/
+
+**Reframe implication:** “simplification” should remain an operation with a defined target population, content domain, and task—not a universal accessibility transformation.
+
+### 156. Clinical simplification demonstrates why omission severity matters
+
+A 2026 blinded study comparing AI- and human-simplified orthopaedic patient education materials evaluated hallucinations, omissions, and inconsistencies against originals rather than treating lower reading level as sufficient evidence of quality.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/41747019/
+
+**Reframe implication:** Reframe's fidelity checks should classify errors by consequence, especially omitted constraints, changed facts, unsupported additions, and misleading rewording.
+
+### 157. Screen-reader failures often arise from interaction structure, not visual appearance
+
+A 2026 CHI study of mobile screen-reader accessibility identified navigation problems including unfocusable elements, unnatural navigation order, navigation loops, complex operations, and dynamic content changes. The study combined systematic review with user-experience investigation.
+
+Source: https://doi.org/10.1145/3772318.3791293
+
+**Reframe implication:** the Reframe sheet, representation selector, transformed reader, and source-recovery controls must be tested as a screen-reader interaction sequence, not merely checked for labels.
+
+### 158. Custom rendering is a particular accessibility risk
+
+The same CHI research identifies custom-rendered views and WebViews as potential sources of screen-reader navigation problems.
+
+**Reframe implication:** a native semantic accessibility tree should be treated as a first-class rendering requirement. Avoid making the transformed reading surface an opaque visual canvas.
+
+### 159. The transformation ledger should support error severity
+
+The current STATED / INFERRED / UNKNOWN / CONFLICTING state model is useful but insufficient for validation if all failures are treated equally.
+
+**Reframe implication:** add an error-impact dimension:
+- harmless presentation change;
+- recoverable omission;
+- task-relevant omission;
+- factual alteration;
+- unsupported inference;
+- accessibility/navigation failure.
+
+### Research gate addition: fidelity and accessibility failure taxonomy
+
+Before production implementation, establish:
+- source-derived answerability tests for semantic transformations;
+- omission/addition/error severity categories;
+- screen-reader navigation tests across the complete interaction sequence;
+- no navigation loops or inaccessible dynamic changes;
+- native semantic accessibility for transformed content;
+- preservation of source recovery and reading position under assistive technology.
