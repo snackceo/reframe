@@ -1858,3 +1858,80 @@ Before production implementation, establish:
 - whether personalization improves held-out task outcomes rather than only preference;
 - whether TTS benefits are population/task dependent;
 - whether combined transformations can be evaluated only after their component effects are understood.
+
+
+## Research cycle 2026-10-03 — Calibration, adaptation, and representation safety
+
+### 187. Perceived ease can move in the opposite direction from measured comprehension
+
+The 2026 publication of the TextAD study tested automatic lexical, syntactic, and discourse adaptations with 27 students with intellectual disability across three iterative groups. In later iterations, some comprehension measures favored adapted texts, while ratings of perceived difficulty, self-assessed comprehension, and interest did not consistently favor the version with better measured performance. The authors explicitly report substantial heterogeneity across participants.
+
+Source: https://doi.org/10.1080/17483107.2025.2536701
+
+**Reframe implication:** calibration must retain subjective preference/perceived clarity as a separate signal from objective task performance. A representation should not be promoted merely because readers report that it feels easier.
+
+### 188. Automatic adaptation effects can be task- and proficiency-specific
+
+A 2026 Frontiers study compared original and AI-adapted versions of the same source texts for inference-making and specific-information tasks in 48 university EFL learners. Text order was counterbalanced with parallel test forms. Intermediate-low learners performed better on adapted texts, while advanced-low learners showed comparable performance across versions, producing a significant interaction between text version and proficiency.
+
+Source: https://doi.org/10.3389/feduc.2026.1737903
+
+**Reframe implication:** representation selection should condition on task demand and reader/context evidence. A transformation that helps inference or information location for one population should not be assumed to help every reader or task.
+
+### 189. Semantic support should be evaluated at the operation level
+
+The TextAD study iterated through lexical substitution, syntactic adaptation, discourse-level changes, summaries, bullet lists, and explained keywords. Results did not support treating all adaptations as one intervention: lexical and syntactic changes showed promising effects in later rounds, while discourse-level adaptations and word definitions were less clear.
+
+Source: https://doi.org/10.1080/17483107.2025.2536701
+
+**Reframe implication:** Reframe experiments should isolate operations before combining them. “Simplification” is too coarse a treatment label; each transformation should have its own fidelity and task-benefit measurement.
+
+### 190. Visual scaffolding can create coordination cost even when users request it
+
+A 2026 conference paper on AI-driven reading scaffolds compared unmodified text, sentence segmentation, segmentation plus pictograms, and segmentation plus pictograms and keyword labels in a small within-subject pilot with 14 primary-school learners with special educational needs and disabilities. Responses were heterogeneous: some learners showed patterns consistent with benefits from segmentation/pictograms, while others showed patterns consistent with increased coordination costs.
+
+Source: https://doi.org/10.1007/978-3-032-29760-0_52
+
+**Reframe implication:** representation complexity must be measured as an independent variable. Calibration should test whether an added visual layer improves the target task after accounting for coordination/navigation burden.
+
+### 191. Source fidelity needs an explicit recoverability test, not only a quality score
+
+Recent adaptation research reinforces that semantic transformation can alter what is available to the reader. The TextAD study showed that adaptation outcomes varied by operation and that some concepts remained difficult despite changes to wording and structure. Separately, Reframe's prior fidelity research established that readability and semantic preservation cannot be treated as interchangeable.
+
+Source: https://doi.org/10.1080/17483107.2025.2536701
+
+**Reframe implication:** every semantic transformation experiment should include a source-recovery condition: when a reader encounters uncertainty or disagreement, can the reader locate the original supporting span and determine whether the transformed view omitted, altered, or inferred information?
+
+### 192. Calibration should test disagreement between preference and performance explicitly
+
+The combination of automatic-adaptation and digital-reading calibration evidence indicates at least four meaningful states:
+- preferred and objectively beneficial;
+- preferred but not objectively beneficial;
+- not preferred but objectively beneficial;
+- neither preferred nor beneficial.
+
+The 2026 TextAD results provide a direct example of perception/performance divergence, while prior digital-reading research also shows that self-assessment and actual comprehension can diverge.
+
+Sources:
+- https://doi.org/10.1080/17483107.2025.2536701
+- https://doi.org/10.1016/j.lindif.2025.102627
+
+**Reframe implication:** the calibration model should preserve disagreement instead of forcing a single “best mode.” Prediction error is itself useful evidence for deciding whether an adaptive selector is trustworthy.
+
+### 193. Demonstration and measurement need different success criteria
+
+Recent adaptation experiments use controlled comparisons of original and adapted texts, while the broader intervention literature distinguishes supported performance from independent transfer. This supports separating the onboarding demonstration phase from the measurement phase.
+
+**Reframe implication:** demonstration should establish what each representation does and how to interact with it. Measurement should then use unseen but matched content, minimal additional instruction, controlled task demands, and objective outcomes. If performance changes during measurement, the experiment should be able to distinguish representation benefit from learning the representation itself.
+
+### Research gate addition: calibration validity and recoverability
+
+Before production implementation, establish:
+- preference/perceived clarity and objective performance are stored separately;
+- task and proficiency/context are explicit conditioning variables;
+- individual representation operations are tested before combinations;
+- representation complexity and coordination cost are measured;
+- preference-performance disagreement is preserved rather than collapsed;
+- semantic transformations have source-recovery tests;
+- demonstration is separated from measurement;
+- matched unseen content and counterbalanced order are used where practical.
