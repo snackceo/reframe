@@ -1077,3 +1077,95 @@ This is an effectiveness question, not a claim that the underlying mechanisms ar
 On-device transformation can reduce the need to send sensitive text to a remote service, but local execution does not guarantee semantic accuracy, accessibility, or appropriate transformation behavior.
 
 **Updated rule:** privacy architecture and semantic validation are independent gates. A local model can still fail the research gate if it loses source facts, changes relationships, or does not improve the target task.
+
+
+## Research cycle 2026-10-02 — Calibration, adults, multilingual readers, and representation effects
+
+### 107. Preference is not a reliable proxy for comprehension
+
+A 2025 study of undergraduates reading multimodal material found that performance judgments were imperfect in both print and digital conditions. After a digital-reading intervention, comprehension and reading duration improved, but calibration accuracy declined.
+
+Source: https://www.sciencedirect.com/science/article/pii/S1041608025000020
+
+A separate 2022 study of 150 eighth graders found that reading medium affected main-idea comprehension and calibration bias, with larger calibration bias on screen; calibration bias mediated some comprehension differences.
+
+Source: https://www.sciencedirect.com/science/article/pii/S0360131522000914
+
+**Reframe implication:** Reader Calibration must not optimize solely for "which representation feels clearest." Preference and confidence are separate signals from objective task performance and must be validated against held-out content.
+
+### 108. Recent personalization evidence again separates fluency from comprehension
+
+A 2025 study of children with dyslexia and typical readers compared standard and preference-customized typography. Customization slightly improved reading fluency but produced no comprehension improvement and no differential comprehension benefit for the dyslexia group.
+
+Source: https://revistas.ucm.es/index.php/RLOG/en/article/view/101374
+
+**Reframe implication:** presentation personalization may improve access/fluency without improving understanding. Reframe experiments should report these outcomes separately rather than using reading speed as a proxy for comprehension.
+
+### 109. Typography remains context- and reader-dependent rather than universally corrective
+
+A 2025 study of digital letter spacing in Hebrew found developmental differences: increased spacing improved comprehension in second graders but showed an opposite trend in third graders. Reading rate remained stable. The study also found more accurate comprehension monitoring under individually optimal spacing.
+
+Source: https://www.mdpi.com/2227-7102/15/10/1306
+
+**Reframe implication:** even a low-level presentation variable can interact with reader development and language/script. Typography should remain an adjustable representation parameter, not a universal intervention.
+
+### 110. Adult assistive-technology evidence remains comparatively sparse
+
+A 2024 systematic literature review specifically examined current assistive technology for adults with dyslexia and identified a research gap beyond the child-focused literature.
+
+Source: https://research.jku.at/en/publications/words-unleashed-a-systematic-literature-review-study-on-the-use-o/
+
+A 2025 study of adults with dyslexia found no significant reading-accuracy or efficiency differences among tested font types, despite differences in satisfaction and preference.
+
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC12779878/
+
+**Reframe implication:** adult readers should be treated as a distinct evidence population. Child evidence cannot simply be assumed to generalize to adults.
+
+### 111. Multilingual disability research identifies the exact gaps relevant to Reframe
+
+A 2026 systematic review synthesized 28 studies of reading-comprehension interventions for multilingual learners with disabilities. The review found limited evidence, emphasized the need for linguistically accessible and responsive interventions, and noted that most research treats multilingual learners and disability separately.
+
+Source: https://stars.library.ucf.edu/jele/vol19/iss1/1/
+
+A 2025 systematic review of cross-linguistic syntactic awareness synthesized 23 studies and found evidence for a positive role of syntactic-awareness transfer in reading comprehension, while noting narrow language-pair coverage and a need for more longitudinal and experimental work and more adult participants.
+
+Source: https://ejournal.ukm.my/gema/article/view/92100
+
+A 2026 scoping review of second-language reading interventions likewise found the literature under-researched and dominated by English-reading contexts.
+
+Source: https://journals.us.edu.pl/index.php/TAPSLA/article/view/18499
+
+**Reframe implication:** multilingual support cannot be reduced to translation. Experiments should record language/script, vocabulary, syntax, morphology, and cross-language demands when relevant.
+
+### 112. DLD evidence reinforces the need to vary question type and genre
+
+A 2026 scoping review of 24 reading-comprehension intervention studies involving children with developmental language disorder found that most studies reported improvements, with all studies targeting vocabulary knowledge and morphological awareness reporting positive gains. The review also identified insufficient examination across genres and question types, limited multilingual representation, and substantial variation in dosage and measurement.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/41401742/
+
+**Reframe implication:** the research instrument should not collapse comprehension into one score. Question type and genre should be explicit experimental factors.
+
+### 113. Updated calibration model
+
+The evidence now supports a stricter Reader Calibration model:
+
+**preference/confidence signal → candidate representation → held-out task performance → prediction error → editable profile**
+
+The system should preserve cases where:
+- preference predicts performance;
+- performance improves without preference;
+- preference improves without performance;
+- neither changes reliably;
+- effects differ by task, language, content, or context.
+
+A stable "reader type" should not be inferred unless repeated held-out evidence supports that level of generalization.
+
+### 114. Research-gate expansion: population × language × task
+
+Before implementation, validation plans should specify the intended population and language context. Evidence from children with dyslexia, adults with dyslexia, DLD, multilingual learners, and other populations should not be pooled into a single assumption about "reading difficulty."
+
+**Updated research unit:**
+
+**reader population × language/script × content × task demand × representation operation × outcome**
+
+This is now the preferred unit for experimental planning.
