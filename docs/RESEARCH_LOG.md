@@ -867,3 +867,64 @@ Before adaptive semantic transformation is built, Reframe should demonstrate tha
 - transformation operations are identifiable;
 - harmful or uncertain transformations can be rejected or bypassed.
 
+
+
+## Research cycle 2026-10-02 — Working memory, executive function, and task-specific cognitive load
+
+### 85. Working memory is relevant, but should not become a diagnostic shortcut
+
+A 2024 systematic review/meta-analysis covering 40 studies and 3,168 children found substantially poorer performance by children with developmental language disorder on multiple verbal working-memory tasks. Findings for visuospatial working memory were less consistent.
+
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC11345193/
+
+**Reframe implication:** representations that reduce simultaneous verbal storage demands are plausible research targets, but Reframe should not infer a working-memory deficit from a user's representation preference.
+
+### 86. Executive functions are associated with reading outcomes
+
+A 2026 meta-analysis of 60 studies and 275 effect sizes found significant associations between executive functions and reading outcomes in children, with updating/working-memory measures showing the largest descriptive association. The review also emphasized that associations vary with measurement approach.
+
+Source: https://doi.org/10.1007/s10648-026-10160-5
+
+**Reframe implication:** task design matters. A representation should be evaluated under the cognitive demand it is intended to change rather than assuming that all comprehension tasks impose the same working-memory burden.
+
+### 87. DLD reading-comprehension evidence specifically points to self-regulation and question type
+
+A 2026 scoping review of 24 DLD reading-comprehension intervention studies found interventions targeting active self-regulation, word recognition, bridging processes, and extended discourse. Most studies reported some improvement, but the review identified major variation in dosage and measurement and limited multilingual representation. A separate 2024 systematic review identified expressive language, question type, and language-disorder history as factors associated with reading comprehension beyond the standard Active View of Reading components.
+
+Sources:
+- https://pubmed.ncbi.nlm.nih.gov/41401742/
+- https://pubmed.ncbi.nlm.nih.gov/38663332/
+
+**Reframe implication:** representations should be evaluated with explicit task goals and question types. A system that simply reduces text length or visual density may miss the actual bottleneck.
+
+### 88. Cognitive-load hypothesis for Reframe
+
+A representation may help when it reduces unnecessary simultaneous demands while preserving the information needed for the task.
+
+Candidate mechanisms:
+- reduce irrelevant visual information;
+- externalize relationships that must otherwise be held in working memory;
+- make relevant entities or events easier to locate;
+- reduce repeated navigation;
+- expose structure without adding unsupported content;
+- permit audio/visual coordination when appropriate.
+
+These are hypotheses, not established product effects.
+
+### 89. New experimental factor: demand decomposition
+
+The first research instrument should characterize each task by demands rather than only by representation:
+
+- retrieval vs integration;
+- local vs cross-sentence information;
+- literal vs inferential;
+- temporal/causal reasoning;
+- vocabulary burden;
+- amount of information that must be retained simultaneously;
+- navigation burden.
+
+The same representation may help one demand while harming another.
+
+### 90. New guardrail
+
+Do not use performance in a representation condition to label a reader as having a particular cognitive deficit. Reframe's research unit remains **reader × task × representation × content × outcome**, not diagnosis.
