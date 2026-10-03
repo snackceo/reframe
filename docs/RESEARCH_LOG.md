@@ -102,6 +102,97 @@ For example, automatically supplying a main idea may improve a main-idea questio
 
 **Reframe implication:** experiments must specify whether the goal is access to information, independent comprehension, learning, or remediation. These are different outcomes.
 
+## Research cycle 2026-10-02 — Comprehension architecture and semantic assistance
+
+### 27. Reading comprehension involves an evolving mental representation
+
+A 2024 review of situation-model research describes comprehension as constructing and updating a mental representation of what a text describes. New information is integrated with existing information and prior knowledge; when new information conflicts with what was previously represented, the reader may need to revise the representation.
+
+Source: https://www.jstage.jst.go.jp/article/sjpr/67/2/67_191/_article/-char/en
+
+**Reframe implication:** a useful representation may need to expose relationships and updates, not merely isolated facts. This makes timelines, causal/temporal relationships, entity tracking, and contradiction/exception handling legitimate research areas.
+
+It also creates a warning: extracting individual facts can be insufficient if comprehension depends on how those facts relate to one another.
+
+### 28. No single comprehension strategy emerges as a universal active ingredient
+
+A 2024 Bayesian network meta-analysis of 52 studies found no single reading-comprehension strategy that consistently produced the strongest effect. Main idea, text structure, and retell used together appeared promising, while background-knowledge instruction interacted with strategy effects. The studies were predominantly from English-speaking settings and involved grades 3–12.
+
+Source: https://doi.org/10.3102/00346543231171345
+
+**Reframe implication:** the product should not assume that one universal "dyslexia mode," "5W+H mode," or "summary mode" is the correct representation. A reader/task may need different representations at different moments.
+
+### 29. Inference is a particularly important boundary
+
+Inference is essential to comprehension and can be difficult for students with reading disabilities. Research and instructional literature explicitly treats inference as a skill that can be taught, including through graphic organizers.
+
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC12456325/
+
+A review of inferencing research also emphasizes that inference is defined, instructed, and assessed in different ways across studies.
+
+Source: https://doi.org/10.1007/s10758-023-09660-y
+
+**Reframe implication:** an automatic system that answers an inference question is doing something different from a system that merely makes source relationships easier to see. Those must be separate modes and separate experiments.
+
+### 30. Graphic representations have newer evidence in autism, but the evidence base is small
+
+A 2025 meta-analysis of pictorial/graphic representations in reading-comprehension interventions for autistic students identified only five eligible studies after screening more than 2,000 abstracts. The interventions included interactive categorization, videos modeling inference, graphic organizers, story mapping, and other multi-component approaches.
+
+Source: https://doi.org/10.1007/s10803-025-07014-4
+
+The small number of eligible studies is itself important. It limits generalization and makes it inappropriate to treat the findings as proof of a universal visual representation effect.
+
+### 31. 5W+H has an evidence-adjacent foundation, but Reframe's version is still untested
+
+A 2024 meta-analytical review of shared-text reading for students with intellectual disability identified teaching the meaning of WH-words as an evidence-supported instructional component and found benefits from shared-text reading interventions.
+
+Source: https://doi.org/10.1016/j.edurev.2024.100615
+
+**Important distinction:** teaching a learner what WH-words mean is not the same intervention as automatically converting arbitrary text into a Who/What/When/Where/Why/How display.
+
+**Reframe status:** the 5W+H representation remains a hypothesis. The literature supports studying question structure and WH concepts, but does not establish Reframe's automatic extraction algorithm as effective.
+
+### 32. Structure must preserve relationships, not just labels
+
+Situation-model research indicates that comprehension depends on integrating information into a coherent representation. Therefore, a future structural mode that displays only isolated entities or facts could lose important relationships such as:
+
+- who did what to whom;
+- when an event occurred;
+- what changed;
+- why an action occurred;
+- what condition applies;
+- what is uncertain;
+- what was denied;
+- what is an exception;
+- how two claims relate.
+
+**New design requirement:** semantic representations should preserve relationships and qualifiers, not merely extract nouns and verbs.
+
+### 33. New distinction: extraction versus explanation
+
+Reframe should separate:
+
+**Extraction:** identifying information explicitly present in the source.
+
+**Reorganization:** changing the structure in which that information is presented.
+
+**Inference:** deriving information that is not directly stated but is supported by the source and/or prior knowledge.
+
+**Explanation:** adding instructional material intended to help the reader understand.
+
+These four operations have different risks and should never be silently combined.
+
+### 34. New safety/fidelity principle for semantic modes
+
+A semantic representation should be able to distinguish at minimum:
+
+- **stated** — directly supported by source text;
+- **inferred** — derived rather than explicitly stated;
+- **unknown** — not established by available text;
+- **conflicting** — source contains incompatible or unresolved information.
+
+This is a research requirement, not yet an implementation specification.
+
 ## Current research conclusions
 
 ### Stronger conclusions
@@ -114,9 +205,11 @@ For example, automatically supplying a main idea may improve a main-idea questio
 - Audio/read-aloud is a legitimate representation family with existing evidence.
 - More visual content is not automatically more accessible.
 - Graphic/structural representations have a meaningful evidence base, but effects depend on context and transfer.
+- Situation-model research supports studying relationships and information updates, not only isolated facts.
 - Semantic extraction must be evaluated differently from formatting.
 - Source fidelity is a product requirement, not a cosmetic quality metric.
 - Assistive representation must not be confused with instructional remediation.
+- Extraction, reorganization, inference, and explanation should be treated as different operations.
 
 ### Still hypotheses
 
@@ -129,7 +222,9 @@ For example, automatically supplying a main idea may improve a main-idea questio
 - progressive assistance;
 - content-aware representation selection;
 - combining multiple representations;
-- whether reader preference predicts measured benefit.
+- whether reader preference predicts measured benefit;
+- whether exposing relationships improves comprehension without substituting for comprehension;
+- whether explicit provenance reduces semantic errors enough to make automatic extraction useful.
 
 ### New risks identified
 
@@ -138,6 +233,8 @@ For example, automatically supplying a main idea may improve a main-idea questio
 3. A support can improve task performance by doing part of the task for the reader.
 4. A strategy that works when explicitly taught may not work when automatically generated.
 5. A benefit on a researcher-created measure may not transfer to standardized or novel tasks.
+6. Extracting facts without preserving relationships can produce a misleading representation.
+7. Mixing extraction and inference without labeling them can make the transformed view appear more certain than the source.
 
 Therefore Reframe needs at least three validation dimensions:
 
