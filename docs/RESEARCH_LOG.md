@@ -2535,3 +2535,79 @@ The rendering test suite should independently verify:
 - source recovery.
 
 No production implementation begins from these findings; they define the research instrument and validation requirements first.
+
+
+## Research cycle 2026-10-03 — calibration construct validity and accessibility risk
+
+### 247. Calibration accuracy depends on question type and text genre
+
+A 2026 study of 407 primary and secondary students found comprehension calibration differed by genre and question type. Students showed different confidence/performance relationships for narrative versus expository texts and factual versus inferential questions.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/41684958/
+
+**Reframe implication:** confidence should not be treated as a context-free calibration signal. Reader Calibration should record genre/content type and question construct, especially distinguishing factual retrieval from inference.
+
+### 248. Target-reader evaluation can produce different conclusions from generic readability measures
+
+A study evaluating simplified German texts with people with and without intellectual disabilities compared multiple comprehensibility measures: comprehension questions, perceived difficulty, response time, and reading speed. Measures varied by reader group and simplification condition; comprehension questions were the most reliable measure for the target group, while reading speed provided useful process information.
+
+Source: https://arxiv.org/abs/2402.13094
+
+**Reframe implication:** accessibility transformations must be evaluated with the intended reader population when possible. Reading speed and perceived difficulty are supporting measures, not substitutes for task success.
+
+### 249. Accessibility has multiple conditions beyond perceptibility
+
+A 2026 analysis of Plain Language and Easy Language identifies eight accessibility conditions: retrievability, navigability, perceptibility, comprehensibility, linkability, pertinence, completeness, and actionability. It also reports that revisions often delete and add information, and that empirical outcomes differ between Plain Language and Easy Language.
+
+Source: https://www.aup-online.com/content/journals/10.5117/TET2026.2.002.PAND
+
+**Reframe implication:** Reframe's objective cannot be reduced to making text easier to perceive or comprehend. The representation must remain findable, navigable, linkable to its source, sufficiently complete for the task, and actionable when the task requires action.
+
+### 250. Simplification can improve comprehension while increasing semantic risk
+
+The same 2026 accessibility analysis reports that Easy Language revisions involving deletion and addition can outperform purely stylistic revisions in some empirical tests, while also highlighting tensions among accessibility conditions.
+
+Source: https://www.aup-online.com/content/journals/10.5117/TET2026.2.002.PAND
+
+**Reframe implication:** effective transformation and safe transformation are separate questions. A representation may improve a measured task outcome while simultaneously changing what information is available. Reframe therefore needs paired benefit and fidelity endpoints.
+
+### 251. Native/custom rendering differences are a concrete platform constraint
+
+Apple's 2026 reading-app guidance states that native text views provide line, word, and character navigation and selection through UITextInput; custom-rendered text must implement equivalent text-input behavior to provide the same VoiceOver and Speak Screen capabilities.
+
+Source: https://developer.apple.com/videos/play/wwdc2026/219/
+
+**Reframe implication:** the first mobile research instrument should prefer native text rendering wherever possible. Custom rendering should be introduced only when the representation requires it and should carry an explicit accessibility conformance test.
+
+### 252. Accessible reading-app requirements already cover many baseline capabilities
+
+The DAISY Reading Apps User Requirements, released October 2025, cover navigation, screen-reader support, read-aloud, embedded audio, visual adjustments, bookmarks, highlighting, notes, answer entry, and library management, based on user stories involving people with print disabilities.
+
+Source: https://daisy.org/activities/standards/reading-apps-user-requirements/
+
+**Reframe implication:** these capabilities should be treated as baseline accessibility requirements rather than the research novelty. Reframe research should concentrate on representation selection, task-specific benefit, provenance, fidelity, and calibration.
+
+### Research gate additions
+
+Reader Calibration must control for:
+- text genre;
+- task/question type;
+- reader population;
+- confidence calibration;
+- repeated-content/practice effects.
+
+Representation evaluation must measure:
+- task success;
+- perceived difficulty;
+- process/time measures;
+- completeness;
+- actionability;
+- retrievability;
+- navigability;
+- source linkability;
+- semantic fidelity.
+
+Platform strategy:
+- prefer native text/accessibility primitives for the research instrument;
+- isolate custom rendering to experimentally necessary representations;
+- validate custom rendering separately from semantic representation effectiveness.
