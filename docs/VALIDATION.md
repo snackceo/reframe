@@ -220,3 +220,39 @@ The purpose is to discover which representation patterns deserve engineering eff
 A feature earns implementation priority when evidence shows a meaningful benefit for a defined task or reader population and the benefit survives fidelity and accessibility checks.
 
 Do not prioritize a feature because it is technically impressive.
+
+## 14. Transfer-aware validation
+
+The MVP validation sequence must distinguish immediate task benefit from transfer.
+
+Minimum experimental levels:
+1. **Within-passage:** same source, same task, representation switched.
+2. **Held-out passage:** new source with the same task and representation type.
+3. **Structure transfer:** new source using a different text structure.
+4. **Task transfer:** new question type or task where appropriate.
+5. **Context transfer:** different reading context when context is part of the hypothesis.
+
+Calibration data should never be treated as sufficient evidence of a stable reader preference. Candidate selection must be evaluated on held-out material.
+
+## 15. Calibration evaluation
+
+Reader Calibration should report at least:
+- subjective preference;
+- perceived effort/clarity;
+- objective accuracy;
+- response time where appropriate;
+- rereading/navigation;
+- semantic-fidelity errors;
+- prediction accuracy on held-out passages.
+
+Representation order should be counterbalanced where practical to reduce order and fatigue effects.
+
+### Calibration outcome categories
+
+- **Supported:** preference and/or performance relationship replicates on held-out material.
+- **Performance-supported:** objective benefit exists despite weak preference agreement.
+- **Preference-only:** reader consistently prefers a representation without demonstrated task benefit.
+- **Uncertain:** insufficient evidence to distinguish representations.
+- **Harmful:** representation produces unacceptable semantic, accessibility, or task-performance costs.
+
+These are experimental evidence states, not diagnoses or permanent reader identities.
