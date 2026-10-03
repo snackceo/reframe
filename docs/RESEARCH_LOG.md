@@ -2758,3 +2758,72 @@ For any semantic transformation:
 - elaboration/explanation requires stricter provenance and validation than presentation-only operations.
 
 No new production implementation is authorized by these findings; they further define the research instrument and its evaluation harness.
+
+
+## Research cycle 2026-10-03 — fidelity taxonomy and target-reader validation
+
+### 267. Factuality needs a multidimensional error taxonomy
+
+ACL research on text simplification identifies three distinct error classes: information insertion, inappropriate substitution, and information deletion. These can occur simultaneously and differ in severity; conventional simplification metrics do not reliably capture all of them.
+
+Source: https://aclanthology.org/2022.acl-long.506/
+
+**Reframe implication:** the existing Reframe transformation ledger should retain separate insertion, substitution/alteration, and deletion fields rather than collapsing them into a single fidelity score.
+
+### 268. Information precision and recall provide a useful formal model
+
+The same work frames simplification fidelity as information precision and recall:
+- unsupported insertion reduces precision;
+- omission reduces recall;
+- inappropriate substitution can affect both.
+
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC9671157/
+
+**Reframe implication:** a representation can be highly similar to its source and still fail by either adding unsupported content or removing task-critical content. Fidelity diagnostics should test both directions.
+
+### 269. Current patient-education evidence confirms that high similarity is insufficient
+
+A 2026 scoping review of 31 studies of automated patient-education simplification found that LLMs often improved standardized readability, but target readability levels remained difficult to hit and content fidelity was inconsistent; high content similarity could coexist with compromised factual accuracy.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/42097602/
+
+**Reframe implication:** high-stakes domains require factual completeness/accuracy testing in addition to readability and similarity.
+
+### 270. Target-reader validation is still underused in high-stakes simplification
+
+The same 2026 review highlights gaps in linguistic correctness and layperson understandability evaluation.
+
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC13195379/
+
+**Reframe implication:** expert or model evaluation cannot establish user-facing effectiveness by itself. Reframe effectiveness claims should identify whether validation was performed with the intended reader population.
+
+### 271. Paragraph-level evaluation is more realistic than isolated-sentence evaluation
+
+The 2024 TACL study evaluated simplification at paragraph level because document context affects interpretation and allows readers to recover meaning through surrounding information.
+
+Source: https://aclanthology.org/2024.tacl-1.24/
+
+**Reframe implication:** source-faithful representations should be evaluated at the smallest realistic context that preserves the relationships the representation is intended to expose. Sentence-only tests may miss discourse-level failures.
+
+### 272. Source-derived questions should cover more than factoid retrieval
+
+The TACL framework notes that automatically generated questions often overrepresent factoid questions, limiting the scope of meaning-preservation evaluation.
+
+Source: https://aclanthology.org/2024.tacl-1.24/
+
+**Reframe implication:** Reframe's fidelity harness should deliberately include literal, relational, temporal, causal, inferential, and task/action questions when those constructs are relevant to the source.
+
+### Research gate additions
+
+The fidelity harness should report at least:
+- insertion/unsupported-content errors;
+- deletion/omission errors;
+- substitution/alteration errors;
+- severity;
+- information precision;
+- information recall;
+- source-context granularity;
+- question construct coverage;
+- target-reader validation status.
+
+A high similarity score, readability improvement, or fluent output cannot independently establish semantic safety.
