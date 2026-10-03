@@ -398,3 +398,36 @@ Evidence for one operation must not be transferred to another.
 The objective is not maximum visual simplification. A useful representation should reduce irrelevant competition while retaining information required for the target task.
 
 Any content-removal operation therefore requires a source-recovery path and should be evaluated for omission errors.
+
+
+## 22. Current prior-art constraint on semantic representations
+
+The research scan confirms substantial existing work on automatic simplification, personalized presentation, source/modified alignment, and behavioral adaptation. Reframe should treat formatting, highlighting, OCR, TTS, simplification, synchronized original/modified views, profiles, and behavior-informed adaptation as established capability categories rather than differentiation claims.
+
+The research question is whether specific representations produce measurable task benefit under controlled conditions while preserving source meaning.
+
+## 23. Transformation operation must remain explicit
+
+Current simplification research demonstrates that readability adjustment can trade off against meaning preservation. A representation record should therefore identify the operation performed rather than using a broad label such as "simplified."
+
+Candidate operation classes:
+- presentation-only;
+- extraction;
+- reorganization;
+- lexical substitution;
+- sentence splitting;
+- syntactic restructuring;
+- discourse reordering;
+- definition insertion;
+- inference;
+- explanation.
+
+A single representation may contain multiple operations, but those operations should remain inspectable for research and validation.
+
+## 24. Local execution is a privacy option, not an accuracy guarantee
+
+On-device text simplification has been demonstrated in current research, including quantized models designed to process sensitive text locally.
+
+Source: https://aclanthology.org/2025.tsar-1.7/
+
+Reframe may eventually use local models, remote models, or deterministic processing. The choice must be evaluated independently from representation effectiveness and semantic fidelity.
