@@ -409,3 +409,8 @@ DLD intervention research identifies insufficient variation in question types as
 - cross-sentence integration.
 
 The representation may help some question types while harming or failing to affect others.
+
+
+## 29. Reader-controlled switching requires a switching-cost condition
+
+Compare fixed-view conditions with reader-controlled switching. Measure task accuracy, completion time, number/timing of switches, return-to-source events, rereading/navigation, perceived effort, and semantic errors. Switching must be tested as an interaction cost rather than assumed beneficial.
