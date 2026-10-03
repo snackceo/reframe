@@ -211,3 +211,25 @@ The following are established capability areas rather than useful novelty claims
 - on-device text transformation.
 
 The research gap should remain an effectiveness question: whether a reader-controlled representation layer can identify and deliver source-faithful representations that measurably improve a defined task, with prediction validated on unseen content and semantic/accessibility costs explicitly measured.
+
+
+## 13. Personalization landscape update — preference is not effectiveness
+
+Recent research further weakens any assumption that user preference alone is sufficient personalization evidence. Preference-customized typography has produced fluency effects without comprehension effects, while reading research has shown that judgments of performance can be poorly calibrated.
+
+Sources:
+- https://revistas.ucm.es/index.php/RLOG/en/article/view/101374
+- https://www.sciencedirect.com/science/article/pii/S1041608025000020
+
+**Competitive implication:** a personalization feature should be evaluated on what it improves, not merely whether it is customizable. Reframe's research distinction remains empirical validation of representation benefit under defined tasks and held-out content.
+
+## 14. Population coverage is a competitive/research limitation
+
+Current literature remains substantially stronger for school-age readers than adults and is disproportionately centered on English. Recent reviews identify gaps for adults, multilingual learners with disabilities, and readers with DLD.
+
+Sources:
+- https://research.jku.at/en/publications/words-unleashed-a-systematic-literature-review-study-on-the-use-o/
+- https://stars.library.ucf.edu/jele/vol19/iss1/1/
+- https://pubmed.ncbi.nlm.nih.gov/41401742/
+
+This is not evidence that Reframe will work better for under-studied populations. It means validation should not silently generalize from better-studied populations.
