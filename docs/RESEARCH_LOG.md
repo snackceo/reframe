@@ -2425,3 +2425,113 @@ High-stakes semantic transformation should preserve, where relevant:
 - recoverability.
 
 Reader-process telemetry must remain an accessibility/research measure, not a diagnostic mechanism.
+
+
+## Research cycle 2026-10-03 — calibration reliability, elaboration risk, and platform accessibility
+
+### 239. Parallel-form reliability should be an explicit calibration requirement
+
+A 2026 *Cognitive Science* study shows why repeated reading measurements should use different texts measuring the same construct: rereading identical texts introduces memory effects, while parallel forms allow stability to be estimated across occasions and text order to be counterbalanced.
+
+Source: https://onlinelibrary.wiley.com/doi/10.1111/cogs.70121
+
+**Reframe implication:** calibration evidence should have a reliability status. A one-session preference or performance difference should be considered provisional until reproduced on matched unseen content.
+
+### 240. Semantic fidelity testing should distinguish omission from contradiction
+
+Reading-comprehension evaluation of text simplification demonstrates that a candidate can make source-derived questions unanswerable through deletion, even when conventional similarity metrics appear acceptable. The best system in that study still left at least 14% of questions unanswerable.
+
+Source: https://aclanthology.org/2024.tacl-1.24/
+
+**Reframe implication:** the fidelity harness should separately classify:
+- OMITTED — source information disappeared;
+- CONTRADICTED — candidate conflicts with source;
+- ALTERED — meaning changed without direct contradiction;
+- UNSUPPORTED — candidate adds information not supported by source;
+- PRESERVED — supported by source;
+- UNKNOWN — insufficient evidence to classify.
+
+### 241. Added explanations are not equivalent to simplification
+
+The 2026 READIxTSAR workshop includes a meta-evaluation of elaborative simplification. It reports that evaluating added explanatory content is difficult, smaller LLM judges can correlate poorly with human judgments, and informativeness is particularly subjective.
+
+Source: https://aclanthology.org/events/tsar-2026/
+
+**Reframe implication:** Reframe should treat explanation/elaboration as a separate operation from rewriting. Added information needs its own provenance and should not be represented as though it originated in the source.
+
+### 242. Elaborative content needs cohesion and informativeness checks
+
+The same 2026 work evaluates generated elaborations using cohesion and informativeness as separate quality dimensions and finds lower agreement among annotators for informativeness than cohesion.
+
+Source: https://aclanthology.org/events/tsar-2026/
+
+**Reframe implication:** an explanation can be coherent yet unnecessary, misleading, or insufficiently useful. Evaluation should therefore ask both “does this connect clearly?” and “does this add useful support without changing the task?”
+
+### 243. Human evaluation remains necessary for difficult semantic judgments
+
+The 2026 accessible-text generation literature continues to emphasize human participation, including generation-time guidance and systematic post-generation supervision, because automated metrics do not adequately capture user comprehension or normative accessibility requirements.
+
+Source: https://aclanthology.org/2026.lrec-1.574/
+
+**Reframe implication:** semantic transformations should carry a validation state and, where risk warrants, a human-review requirement. Automated checks are gates or triage signals, not universal proof of correctness.
+
+### 244. Custom-rendered reading must preserve native accessibility interaction
+
+Apple's 2026 reading-app accessibility guidance identifies granular navigation, continuous reading, and text selection as distinct requirements. For custom-rendered text, implementing the full text-input/accessibility interaction is required to provide VoiceOver and Speak Screen with the same granular navigation and selection behavior available in native text views.
+
+Source: https://developer.apple.com/videos/play/wwdc2026/219/
+
+**Reframe implication:** a transformed representation is not complete merely because it is visually accessible. The representation renderer must expose equivalent semantic text navigation, selection, and continuous-reading behavior. This becomes a first-class validation track for the eventual iOS instrument.
+
+### 245. Evaluation should separate transformation risk from rendering risk
+
+Research and platform guidance together imply two independent failure surfaces:
+1. the semantic/support transformation can be wrong;
+2. the rendering/accessibility layer can make correct content difficult or impossible to navigate.
+
+**Reframe implication:** experiment logs and test cases should identify the failing layer separately. A representation should not be discarded as semantically ineffective because its renderer introduced navigation problems, and a visually excellent renderer should not hide semantic transformation errors.
+
+### 246. Calibration should include a “no reliable benefit” outcome
+
+Parallel-form reliability research and the broader preference/performance literature support treating instability as information rather than forcing every reader into a preferred representation category.
+
+**Reframe implication:** the calibration profile should explicitly permit:
+- reliable benefit;
+- reliable preference without measured benefit;
+- measured benefit without preference;
+- inconsistent/unstable effect;
+- insufficient evidence;
+- task-specific benefit.
+
+### Research gate additions
+
+The calibration schema should include:
+- evidence count;
+- number of distinct content forms;
+- task construct;
+- representation condition;
+- effect direction;
+- reliability status;
+- confidence/preference separately;
+- objective outcome separately.
+
+The transformation ledger should include:
+- operation type;
+- source spans;
+- provenance;
+- semantic status;
+- risk level;
+- validation status;
+- review requirement;
+- reversibility/source recovery.
+
+The rendering test suite should independently verify:
+- semantic accessibility tree;
+- reading order;
+- line/word/character navigation;
+- continuous reading;
+- selection;
+- reading-position preservation across representation changes;
+- source recovery.
+
+No production implementation begins from these findings; they define the research instrument and validation requirements first.
