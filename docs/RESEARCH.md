@@ -387,3 +387,16 @@ It may instead become:
 That is a much more general and testable system.
 
 The product should remain open to discovering that some proposed modes are ineffective, unnecessary, or useful only for particular content types.
+
+
+## Research scope expansion
+
+Reframe research is intentionally broader than dyslexia alone. Before implementation, the evidence program must separately map reading disabilities, learning disabilities, language-related disabilities, cognitive processes relevant to reading, reading comprehension, other developmental and acquired conditions, accessibility and assistive technology, and the distinction between educational remediation and assistive representation.
+
+A dedicated research-gate map is planned to track populations, mechanisms, evidence strength, conflicting findings, intervention evidence, accessibility evidence, failure conditions, semantic risk, and claim boundaries. No proposed representation should be treated as clinically or educationally established merely because it is intuitively plausible.
+
+The scope specifically includes dyslexia; specific reading comprehension difficulties; decoding, fluency, and comprehension; cross-linguistic and orthographic differences; reading and written-expression learning difficulties; mathematics where language interacts with the task; developmental language disorder and receptive/expressive language; vocabulary, morphology, syntax, discourse, inference, and comprehension monitoring; working memory, attention, processing speed, and executive functions; ADHD; autism; intellectual/developmental disabilities; sensory disabilities; acquired reading/language disorders; traumatic brain injury; text-to-speech; speech-to-text; alternative presentation; simplification; personalization; multimodal learning; cognitive accessibility; and user-controlled adaptations.
+
+**Research gate:** evidence → competing explanations → hypothesis → explicit uncertainty → controlled test → revised hypothesis.
+
+**Until the research coverage is sufficiently mature, Reframe remains in research mode and no implementation decision should be treated as scientifically justified.**
