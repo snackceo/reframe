@@ -146,3 +146,32 @@ A decision is not permanent merely because it is documented.
 10. What privacy and consent boundaries follow from those requirements?
 
 **Consequence:** The first implementation, when the gate is met, should be a research instrument/prototype rather than a full product or system-wide HUD.
+
+
+## D013 — Technology direction remains provisional
+
+**Decision:** Reframe will document a cross-platform technology direction before implementation, with Kotlin Multiplatform currently the leading candidate for a shared semantic/core layer and native iOS/Android integration.
+
+**Why:** Reframe targets both iOS and Android, while the product concept depends heavily on platform capabilities such as accessibility, content acquisition, text rendering, OCR, audio, and potentially on-device intelligence. A shared core can reduce duplicated semantic logic while native layers preserve platform-specific capabilities.
+
+**Boundary:** This is a provisional technology direction, not authorization to begin implementation. Flutter and React Native remain alternatives until the research and platform-feasibility gate is complete. Moshi is a library-level dependency, not an application architecture.
+
+**Consequence:** Technology documentation can evolve during research without forcing premature implementation.
+
+## D014 — Research gate precedes product implementation
+
+**Decision:** Do not begin full product implementation until the research gate has been sufficiently completed.
+
+**Minimum gate:**
+1. target reading/access problems are explicitly defined;
+2. relevant mechanisms and competing explanations are mapped;
+3. populations and evidence limitations are documented;
+4. proposed representations are separated into evidence-supported approaches and hypotheses;
+5. conflicting evidence is recorded;
+6. measurable outcomes are defined;
+7. semantic-fidelity requirements are defined;
+8. privacy/source-acquisition risks are mapped;
+9. platform feasibility is researched;
+10. the first prototype is defined as a research instrument rather than a full product.
+
+**Consequence:** The next work is research synthesis, evidence mapping, competitive/prior-art review, and technology feasibility—not feature implementation.
