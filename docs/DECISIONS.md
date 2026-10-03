@@ -162,6 +162,26 @@ Sources:
 
 **First build when the gate is met:** a small research instrument capable of controlled representation comparisons. It should not begin as the final system-wide HUD.
 
+## D018 — Reader calibration is a hypothesis, not a diagnosis
+
+**Decision:** Investigate an onboarding experience in which the reader sees the same content through multiple representations and selects which presentation is clearest or most useful.
+
+**Why:** Research on personalized/adaptive learning supports studying individualized presentation, and direct studies have tested personalized visual/audio parameters. However, preference does not necessarily equal improved comprehension, and preferences may vary by task or content.
+
+**Proposed concept:** Use a short, controlled representation-calibration experience before normal reading. Present equivalent content through multiple candidate representations, capture reader preference, and where appropriate measure objective performance on comparable content.
+
+**Important boundary:** The calibration must not be presented as a dyslexia test, disability assessment, clinical screen, or determination of a universally correct reading mode.
+
+**Consequence:** The eventual preference profile should be editable, reversible, and potentially task-specific rather than a permanent "reader type."
+
+## D019 — Never assume one preferred mode for all reading tasks
+
+**Decision:** Reframe should investigate task-specific representation preferences rather than assuming each reader has one global optimal format.
+
+**Why:** A reader could reasonably prefer different representations for continuous reading, locating facts, understanding events, reviewing a long document, or listening. Existing personalization evidence also shows context-dependent effects.
+
+**Consequence:** If calibration is eventually implemented, it should test representations against tasks rather than asking only "Which format do you like?"
+
 ## Reconsideration rule
 
 A decision should be revisited when:
