@@ -137,3 +137,23 @@ The research question that remains worth testing is narrower:
 **Can a reader-controlled representation layer provide measurable task-specific benefit by switching between source-faithful semantic views, while preserving navigation, accessibility semantics, and source fidelity?**
 
 That is a research hypothesis rather than a uniqueness claim.
+
+
+## 11. Semantic prior-art update
+
+Open-source projects now identified in the research scan include ReadAble, Dyslexa, Readapt, and ClearPath. Their capabilities overlap with OCR, simplification, TTS, highlighting, visual customization, reading modes, word support, and other reading assistance. This reinforces that Reframe's differentiation cannot rest on assembling these functions.
+
+A separate patent, US20240086616A1, describes a reading assistant that keeps original and simplified/reformatted views together with synchronized scrolling. This is relevant prior art for source-context preservation.
+
+**Updated landscape distinction:**
+
+| Concept | Meaning for Reframe research |
+|---|---|
+| Presentation accommodation | Mature prior art; not sufficient differentiation |
+| Source alignment | Existing prior art; useful requirement |
+| Semantic source fidelity | Must be explicitly tested; not guaranteed by alignment |
+| Task-specific representation | Core research hypothesis |
+| Reader calibration | Research hypothesis |
+| Representation effectiveness | Must be experimentally demonstrated |
+
+The landscape should therefore be treated as a research input, not a claim of novelty.
