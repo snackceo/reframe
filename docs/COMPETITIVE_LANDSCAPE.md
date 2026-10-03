@@ -233,3 +233,11 @@ Sources:
 - https://pubmed.ncbi.nlm.nih.gov/41401742/
 
 This is not evidence that Reframe will work better for under-studied populations. It means validation should not silently generalize from better-studied populations.
+
+## 15. Reader-controlled presentation is established prior art
+
+A 1988 study directly investigated reader-controlled computerized presentation of text, including self-pacing and regression control.
+
+Source: https://doi.org/10.1177/001872088803000408
+
+Reader control itself is not a defensible novelty claim. Reframe's narrower research question concerns control over alternate semantic/structural representations and measurable task benefit.
