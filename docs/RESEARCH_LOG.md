@@ -1244,3 +1244,64 @@ Before production implementation, the research instrument should be able to test
 - semantic fidelity;
 - negative effects from added visual/semantic elements;
 - domain/content dependence of adaptive selection.
+
+## Research cycle 2026-10-02 — Representation switching, multimodal cues, and source navigation
+
+### 122. Switching between text and diagrams can carry a comprehension cost
+
+Research on multi-text, multimodal reading found that navigation patterns matter: some text-to-diagram switches were negatively associated with higher-level comprehension strategies and performance, with authors suggesting that some switches may indicate confusion rather than productive integration.
+
+Source: https://doi.org/10.1016/j.learninstruc.2020.101401
+
+**Reframe implication:** representation switching should not be measured only by whether readers switch. The system must distinguish productive switching from recovery/confusion switching. A switch event is an interaction signal, not evidence of successful adaptation.
+
+### 123. Preference and observed performance can diverge in multimodal support
+
+A 2026 study of multilingual students with developmental disabilities using metacognitive and multimodal cueing reported higher accuracy with digital anaphoric cueing than paper-based cueing, while students preferred the paper condition. This is direct evidence that preference and measured performance can point in different directions.
+
+Source: https://doi.org/10.1177/00224669251393231
+
+**Reframe implication:** Reader Calibration must record preference separately from objective outcome. The adaptive layer should be allowed to recommend a representation the reader did not initially prefer, while preserving explicit override.
+
+### 124. Automatic text adaptation still benefits from reader-in-the-loop iteration
+
+A 2025 exploratory TextAD study tested lexical, syntactic, and discourse adaptations with 27 students with intellectual disability over three iterative rounds. Overall comprehension gains were not significant, although later lexical and syntactic adaptations showed promising results and substantial heterogeneity.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/40749139/
+
+**Reframe implication:** adaptation should be experimentally decomposed by operation. “Simplification” is too coarse a variable for deciding what helped.
+
+### 125. Easy-to-read formatting has measurable effects outside diagnosed populations
+
+A 2026 eye-tracking study of 24 university students without cognitive disabilities found higher comprehension in Easy-to-Read formatting than in a hard-to-read condition, along with some eye-movement patterns compatible with reduced processing demand.
+
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC13296324/
+
+**Reframe implication:** representation effects should not automatically be restricted to diagnosed populations. However, this does not establish that the same formatting benefits readers with disabilities or that it generalizes across tasks.
+
+### 126. Visual representation evidence remains population- and intervention-dependent
+
+A 2025 meta-analysis of pictorial/graphic representations for K–12 students with autism synthesized only five single-case experimental studies. It reported an overall positive Tau-U estimate but substantial variation across modalities and instructional contexts.
+
+Source: https://doi.org/10.1007/s10803-025-07014-4
+
+**Reframe implication:** the evidence supports testing carefully selected visual representations, but not treating “visual support” as a single intervention class.
+
+### 127. Alternate text is established instructional practice, but differs from automatic representation
+
+Research on alternate texts for adolescents with learning disabilities describes readability-controlled alternate texts as a way to support access to content-area curriculum.
+
+Source: https://doi.org/10.1177/1053451213480031
+
+**Reframe implication:** alternate-text accessibility has prior art. Reframe's research question remains whether multiple source-traceable representations can provide task-specific access while retaining the original source and measuring semantic cost.
+
+### Updated research gate
+
+The first research instrument should also capture representation-switch events and classify them where possible as:
+- productive task support;
+- source verification;
+- uncertainty/recovery;
+- repeated cycling;
+- abandonment of the representation.
+
+This should be analyzed alongside comprehension, time, and semantic fidelity rather than treated as a simple engagement metric.
