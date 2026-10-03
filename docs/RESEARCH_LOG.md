@@ -2611,3 +2611,76 @@ Platform strategy:
 - prefer native text/accessibility primitives for the research instrument;
 - isolate custom rendering to experimentally necessary representations;
 - validate custom rendering separately from semantic representation effectiveness.
+
+
+## Research cycle 2026-10-03 — task-form calibration, inference support, adult evidence, and implementation fidelity
+
+### 253. Calibration should distinguish post-task confidence from pre-task prediction
+
+The 2026 study of 407 students measured confidence after answering comprehension questions and found that calibration varied by text genre and factual versus inferential question type.
+
+Source: https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1668045/full
+
+**Reframe implication:** Reader Calibration should specify whether a confidence signal is predictive (“How well will I do?”) or postdictive (“How well did I do?”). These are different measurements and should not be merged.
+
+### 254. Parallel forms can be operationalized without changing the construct
+
+A 2026 AI-adapted reading study used two parallel test forms, counterbalanced original/adapted-version order, counterbalanced passage order, identical comprehension questions across versions, randomized answer-choice order, and fixed time windows.
+
+Source: https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2026.1737903/full
+
+**Reframe implication:** this provides a concrete template for early Reframe experiments: matched passages, counterbalanced representation order, fixed task windows where appropriate, identical outcome constructs, and randomized response positions.
+
+### 255. Literal and inferential tasks can be cleanly separated experimentally
+
+The same 2026 study explicitly defined specific-information questions as requiring location of stated details and inference questions as requiring integration across sentences to infer implied intent, emotion, or causal relationships.
+
+Source: https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2026.1737903/full
+
+**Reframe implication:** early representation experiments should not mix literal retrieval and inference questions into one composite score. Each representation should be evaluated against the task demand it is intended to support.
+
+### 256. Adult literacy evidence remains limited and heterogeneous
+
+A September 2026 systematic review of adult literacy interventions identified only 15 eligible peer-reviewed studies from 2010–2025. Decoding showed the most consistent gains; fluency was mixed; comprehension results varied considerably by assessment type. High attrition, variable dosage, and inconsistent fidelity reporting were recurring methodological problems.
+
+Source: https://www.kyreadingresearch.org/resource/effective-adult-reading-interventions/
+
+**Reframe implication:** adult validation should not simply import school-age intervention assumptions. Reframe should report adult evidence separately and document functional context, assessment type, and attrition.
+
+### 257. Adult dyslexia continues to show heterogeneous language-processing differences
+
+A 2025 ERP/behavioral study of adults with dyslexia found lower overall accuracy than nonimpaired readers and group differences in phonological, orthographic, and semantic processing during sentence reading.
+
+Source: https://doi.org/10.1016/j.ijpsycho.2025.113209
+
+**Reframe implication:** adult dyslexia should not be represented as a single visual-formatting problem. Semantic, orthographic, and phonological demands remain potentially distinct mechanisms requiring separate representation hypotheses.
+
+### 258. Inference support can be modeled as evidence + knowledge + integration
+
+Reading-disability guidance explicitly decomposes inference into locating text evidence, activating background knowledge, and integrating the two, with a graphic organizer used to make those operations visible.
+
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC12456325/
+
+**Reframe implication:** an inference representation should preserve the distinction between source evidence and reader knowledge. A generated “Why?” answer should not be displayed as though it were directly stated by the source.
+
+### 259. Instructional fidelity is itself an experimental variable
+
+Technology-assisted dyslexia intervention research explicitly measures treatment fidelity, including adherence and quality, because differences in delivery can affect outcomes.
+
+Source: https://www.mdpi.com/2227-7102/15/11/1460
+
+**Reframe implication:** Reframe experiments should log whether participants actually received the intended representation condition. Renderer bugs, skipped transformations, fallback behavior, and unintended personalization are protocol deviations, not merely engineering telemetry.
+
+### Research gate additions
+
+The experimental protocol should explicitly define:
+- predictive vs postdictive confidence;
+- parallel-form construction;
+- counterbalancing;
+- fixed versus self-paced timing;
+- literal versus inferential task scoring;
+- adult-specific evidence reporting;
+- source evidence vs reader knowledge in inference representations;
+- treatment/representation fidelity checks.
+
+A failed fidelity check should invalidate or flag that trial rather than silently entering it into calibration data.
