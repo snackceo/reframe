@@ -2027,3 +2027,76 @@ Before production implementation, establish:
 - simulation only as pre-screening, never as a substitute for human validation;
 - adult and functional-task evaluation;
 - compensatory access outcomes separated from remediation/learning outcomes.
+
+
+## Research cycle 2026-10-03 — functional Easy Read, human oversight, and multilingual fidelity
+
+### 203. Images in Easy Read do not reliably improve comprehension
+
+A 2026 pilot study with nine adults with intellectual disabilities compared Easy Read health information with and without images. Including images did not produce a statistically significant improvement in learning scores, although performance was more variable without images and participants described images as important to the reading experience.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/41928410/
+
+**Reframe implication:** subjective value and measured comprehension can diverge again in an adult accessibility population. Visual layers should therefore be optional, task-specific, and evaluated with both objective outcomes and reader-reported usefulness.
+
+### 204. Functional reading tasks are a necessary validation domain
+
+A randomized pilot with 44 young adults with intellectual/developmental disabilities used functional materials such as text messages and emails. The intervention improved use of reading-comprehension strategies and multiple-choice comprehension, but did not significantly improve every functional outcome.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/40779715/
+
+**Reframe implication:** a research instrument should include ecologically realistic tasks in addition to standardized passages. A representation can improve question accuracy without necessarily improving the ability to compose a response, summarize, or act on information.
+
+### 205. Maintenance and transfer should be measured separately from immediate access
+
+A 2026 follow-up of the FRAME randomized trial examined whether improvements in reading-comprehension strategy use and comprehension questions persisted six months after intervention. This reinforces the distinction between immediate task access and durable learning/strategy change.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/42659048/
+
+**Reframe implication:** Reframe's initial endpoint should remain compensatory access to information. If later research investigates learning or remediation, it needs separate delayed and transfer measures rather than treating immediate comprehension as evidence of durable skill improvement.
+
+### 206. Human oversight is becoming an explicit design component of accessible text generation
+
+A 2026 ACL paper proposes a human-in/on-the-loop framework for accessible text generation, arguing that automated simplification and metric-driven evaluation can miss user comprehension and normative accessibility requirements. The framework incorporates human guidance during generation, post-generation review, standards-aligned checklists, trigger rules, and accessibility KPIs.
+
+Source: https://aclanthology.org/2026.lrec-1.574/
+
+**Reframe implication:** high-risk semantic transformations should have an explicit review/validation path. Reframe should not treat an automatic readability score or model confidence as sufficient evidence that a transformation is accessible or faithful.
+
+### 207. Multilingual simplification infrastructure is still less mature than English
+
+A 2026 ACL paper on multilingual text simplification reports that high-quality training/evaluation datasets remain scarce outside English and introduces sentence-aligned resources covering Catalan, English, French, Italian, and Spanish.
+
+Source: https://aclanthology.org/2026.bucc-1.8/
+
+**Reframe implication:** multilingual support requires language-specific evaluation infrastructure, not merely a multilingual model. Source alignment and fidelity tests should be language-aware, and unsupported languages should not silently inherit English-derived assumptions.
+
+### 208. Meaning preservation is becoming a first-class evaluation target for simplification
+
+A 2026 EACL paper on German text simplification developed a human-evaluated dataset and reports stronger correlation with human judgments for meaning preservation and fluency than common automatic text-simplification metrics.
+
+Source: https://aclanthology.org/2026.eacl-long.131/
+
+**Reframe implication:** automated fidelity metrics can be useful screening signals but should not be the sole acceptance criterion. Reframe's transformation ledger should support human-evaluable meaning-preservation checks, especially for high-impact transformations.
+
+### 209. Accessibility generation should expose an intervention boundary
+
+The 2026 human-in/on-the-loop and multilingual simplification work suggests a useful architecture boundary: source content, transformation/support operation, and validation should remain distinguishable. This makes it possible to reject a generated layer without rejecting the source, and to compare the same source under multiple independently evaluated operations.
+
+Sources:
+- https://aclanthology.org/2026.lrec-1.574/
+- https://aclanthology.org/2026.bucc-1.8/
+- https://aclanthology.org/2026.eacl-long.131/
+
+**Reframe implication:** preserve an explicit transformation object between semantic source state and rendered representation. It should carry operation type, language, affected spans, fidelity status, validation state, and reversibility/source-recovery information.
+
+### Research gate addition: functional validation and human oversight
+
+Before production implementation, establish:
+- functional reading tasks alongside passage-based comprehension;
+- immediate access outcomes separately from delayed learning/remediation outcomes;
+- reader-reported value separately from measured task performance;
+- explicit human-review/validation paths for high-risk semantic transformations;
+- language-specific fidelity/evaluation coverage;
+- meaning preservation as an acceptance criterion rather than a readability proxy;
+- an explicit intervention boundary so generated support can be rejected or replaced without mutating the source.
