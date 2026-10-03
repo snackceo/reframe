@@ -5,208 +5,102 @@
 
 This log records research cycles, what changed, and what the evidence means for Reframe. A research finding does not automatically become a product decision.
 
-## Research cycle 2026-10-02 — Representation, typography, language, and assistive technology
+## Research cycle 2026-10-02 — Semantic and structural representations
 
-### 1. Specialized fonts are not a sufficient theory
+### 19. Graphic organizers have a meaningful evidence base, but context matters
 
-A 2026 meta-analysis examined 15 empirical studies, 91 effect sizes, and 688 dyslexic students and found no consistent or reliable reading-performance advantage for dyslexia-specific fonts over standard fonts. The pooled effect was negligible.
+A meta-analysis of graphic-organizer studies involving students with learning disabilities reviewed 16 articles and 808 participants. Across conditions, graphic organizers were associated with gains in vocabulary, comprehension, and inferential knowledge. However, effects varied by organizer type, measure, subject, and transfer condition.
 
-Source: https://pubmed.ncbi.nlm.nih.gov/42536336/
+Source: https://doi.org/10.1177/073194871103400104
 
-**Implication:** typography remains a representation variable, but specialized-font selection should not be the central intervention.
+An earlier synthesis of 21 intervention studies also found overall improvement in reading comprehension, but noted that gains seen during initial organizer use did not necessarily transfer to later or novel comprehension tasks.
 
-### 2. Spacing deserves controlled testing, but evidence is not universal
+Source: https://pubmed.ncbi.nlm.nih.gov/15493233/
 
-A 2024 study reported that increased inter-word spacing reduced migration errors and improved comprehension scores in its dyslexic participants, while discussing mixed prior findings and possible downsides from excessive spacing.
+**Reframe implication:** structure extraction is worth testing, but a successful supported-task effect does not automatically establish independent transfer or a universal benefit.
 
-Source: https://onlinelibrary.wiley.com/doi/full/10.1002/dys.1787
+### 20. Computer-based organizers are not automatically effective
 
-**Implication:** spacing belongs in the representation inventory, but should remain a controllable variable rather than a hard-coded "optimal" setting.
+A systematic review of 12 studies on computer-based graphic organizers for students with learning disabilities found encouraging findings in some academic outcomes but less promising comprehension results. The review found no evidence that these tools were efficacious without explicit instruction and guided practice.
 
-### 3. General format readability matters beyond dyslexia
+Source: https://onlinelibrary.wiley.com/doi/10.1111/ldrp.12017
 
-A 2024 study of 51 children in grades 3–5 examined fonts and character-spacing conditions across narrative passages and measured reading speed and comprehension.
+**Reframe implication:** a digital representation should not be assumed to work merely because the same conceptual structure has educational evidence. Reframe must distinguish an assistive interface from an instructional intervention.
 
-Source: https://www.mdpi.com/2227-7102/14/8/854
+### 21. Main idea and higher-level comprehension are established research targets
 
-**Implication:** visual-presentation research should include general readers as well as disability-specific populations, helping distinguish general readability effects from disability-specific effects.
+A synthesis of informational-text interventions for elementary students with learning disabilities found that many studies targeted fact acquisition and main-idea identification. Cognitive-strategy interventions and graphic-organizer study guides showed encouraging outcomes, while the review identified relatively little research targeting higher-level comprehension skills.
 
-### 4. Visual-design evidence is promising but should be weighted cautiously
+Source: https://pubmed.ncbi.nlm.nih.gov/24958632/
 
-A 2026 systematic literature review of 21 articles on visual design for children with dyslexia reported recurring support for spacing, line spacing, simple layouts, clear hierarchy, and moderate contrast, while identifying gaps in classroom implementation and empirical validation.
+**Reframe implication:** main-idea extraction is a legitimate research target, but Reframe should test whether automatically exposing a main idea provides access without replacing the reader's own comprehension process.
 
-Source: https://alishlah.ahfpublishing.id/alishlah/article/view/9416
+### 22. Reading-comprehension strategies are multi-component
 
-**Implication:** layout and hierarchy are worth testing, but this synthesis should not be treated as equivalent to a large randomized evidence base.
+A Bayesian network meta-analysis covering 52 studies of students with reading difficulties examined combinations of main idea, inference, text structure, retell, prediction, self-monitoring, and graphic organizers. The evidence base is largely from English-speaking populations.
 
-### 5. Reading comprehension is not one mechanism
+Source: https://doi.org/10.3102/00346543231171345
 
-A systematic review of reading-comprehension factors in children with developmental language disorder identified oral language as essential and also highlighted expressive language, question type, and language-disorder history as relevant factors. A later scoping review of interventions covered self-regulation, word recognition, bridging processes, and extended discourse and identified gaps in multilingual populations, genres, and question types.
+**Reframe implication:** there is no justification for assuming one representation is universally sufficient. Reframe should investigate task-specific combinations and whether the reader can select among them.
 
-Sources: https://pubmed.ncbi.nlm.nih.gov/38663332/ ; https://pubmed.ncbi.nlm.nih.gov/41401742/
+### 23. 5W+H is a task representation, not a neutral summary
 
-**Implication:** a 5W+H mode, timeline, definitions, or another structural representation cannot be justified merely by saying it "helps comprehension." The mechanism and task must be specified.
+The research on main idea, questioning, inference, and text structure indicates that a 5W+H view belongs in the semantic-extraction class. It changes the representation of information rather than merely changing typography.
 
-### 6. Cross-linguistic generalization remains a hard constraint
+For a source sentence such as:
 
-A meta-analysis of 79 dyslexia studies involving 14,947 participants found that orthographic depth moderated some reading outcomes and reported an Anglo-Saxon/English-language bias in the literature.
+> The committee reviewed the proposal and decided to postpone the project until next year.
 
-Source: https://link.springer.com/article/10.1007/s11881-021-00226-0
-
-A 2024 systematic review of systematic reviews on multilingual learners likewise found that both first-language and English oral/reading skills are relevant to English reading comprehension.
-
-Source: https://link.springer.com/article/10.1007/s10648-024-09942-6
-
-**Implication:** an algorithm designed around English sentence structure, spelling, morphology, or visual presentation cannot be assumed to generalize to other languages/scripts.
-
-### 7. Semantic processing deserves its own research track
-
-A 2024 systematic review and meta-analysis of N400 studies included 20 studies and found differences between readers with dyslexia and typically developing readers in lexico-semantic processing, with effects moderated by modality, task type, age, and orthography.
-
-Source: https://pubmed.ncbi.nlm.nih.gov/38128616/
-
-**Implication:** reading should not be treated as only a visual decoding problem. Semantic processing and language comprehension require their own hypotheses and outcome measures.
-
-### 8. Text-to-speech is evidence-supported but reader/task dependent
-
-A meta-analysis of text-to-speech and related read-aloud tools found a positive average effect on reading comprehension for students with reading difficulties, while noting meaningful variability and the need to identify moderators.
-
-Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC5494021/
-
-**Implication:** audio belongs in the representation system, but should be tested as a mode with measurable outcomes rather than treated as a universal answer.
-
-## Research cycle 2026-10-02 — New evidence: representation quality, semantic fidelity, adults, and generalization
-
-### 9. Dyslexia-specific fonts remain a weak product foundation
-
-The 2026 font meta-analysis remains particularly important because it directly tests the common "special font" hypothesis and found a negligible pooled effect. Reframe should therefore avoid building its identity around font substitution.
-
-Source: https://pubmed.ncbi.nlm.nih.gov/42536336/
-
-### 10. Visualizations cannot be assumed to improve comprehension
-
-A 2025 meta-analytic review examined whether adding pictures/visualizations to easy-to-read texts improved comprehension among people with reading difficulties. Eight studies with 13 effect sizes were included. The analysis did not support the general assumption that adding visualizations automatically improves understanding; the authors also noted methodological and visualization-quality problems.
-
-Source: https://www.tandfonline.com/doi/full/10.1080/17489539.2025.2551910
-
-**Reframe implication:** the future system should not equate "more visual" with "more accessible." Visual structure must be tied to a specific task and tested for actual comprehension benefit.
-
-### 11. Adult low-literacy evidence deserves separate treatment
-
-A 2025 systematic review of adults with low literacy skills in alphabetic orthographies found differences at skill, information-processing, and neurobiological levels and reported that these adults can show profiles closer to developmental dyslexia than to literate adults on some measures.
-
-Source: https://www.sciencedirect.com/science/article/pii/S1747938X2400068X
-
-**Reframe implication:** adult low literacy cannot simply be treated as adult dyslexia, and neither should be assumed to represent all adult readers. The adult research track needs separate populations and outcomes.
-
-### 12. Assistive technology can help, but implementation matters
-
-A 2025 systematic review of digital competencies and assistive technologies for students with learning disabilities reported positive findings for tools including text-to-speech and adaptive learning, while emphasizing individualized implementation and training. The population and educational context are specific, so this cannot be generalized directly to Reframe.
-
-Source: https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2025.1640556/full
-
-**Reframe implication:** technology should be evaluated as a complete interaction, not merely as a feature list. Training, discoverability, task fit, and user control can affect whether a representation is useful.
-
-### 13. Mobile and multilingual reading need first-class research tracks
-
-The multilingual systematic review found four broad clusters relevant to English reading comprehension in multilingual learners: oral language, phonological awareness, decoding/oral reading fluency, and reading comprehension. It also emphasized the importance of skills in both the learner's first language and English.
-
-Source: https://link.springer.com/article/10.1007/s10648-024-09942-6
-
-**Reframe implication:** future experiments should record language, orthography, proficiency, and whether the reader is processing a first or additional language. Mobile testing should also be separated from desktop testing because display size, input method, and reading context change the task.
-
-### 14. A new validation rule: representation quality is not enough
-
-The current evidence suggests three independent validation questions:
-
-1. **Legibility/access:** can the reader perceive and navigate the representation more easily?
-2. **Task performance:** can the reader complete the intended comprehension or information-extraction task more accurately/efficiently?
-3. **Semantic fidelity:** did the transformation preserve the source's important meaning, qualifiers, relationships, uncertainty, negation, and exceptions?
-
-A representation should not be considered successful merely because it scores well on the first dimension.
-
-### 15. New research hypothesis: semantic extraction is a distinct intervention class
-
-Reframe's proposed modes such as 5W+H, noun/verb emphasis, timelines, lists, and explicit relationships are not merely formatting changes. They may be **semantic extraction**: converting implicit relationships in prose into an explicit representation.
-
-This is a major architectural and research distinction.
-
-For example:
-
-**Source:** a paragraph describing a committee's decision, participants, timing, and future action.
-
-**Possible representation:**
+A representation might expose:
 
 - Who: committee
 - What: decided to postpone the project
 - When: next year
-- Why: only if the source states a reason
 
-The system must never invent a missing field. An empty/unknown field is different from an inferred fact.
+But a missing field must remain missing. If the source does not state where, why, or how, Reframe must not infer those fields.
 
-### 16. Semantic extraction creates a new failure class
+**Research implication:** 5W+H should be tested against literal question-answering accuracy, inference accuracy, omission rate, and source-fidelity errors—not simply user preference.
 
-A visual transformation can usually preserve the original text. Semantic extraction can introduce errors such as:
+### 24. Graphic structure can support comprehension without proving remediation
 
-- assigning an action to the wrong person;
-- turning a possibility into a fact;
-- losing negation;
-- losing temporal qualifiers;
-- confusing cause and correlation;
-- merging separate entities;
-- omitting exceptions;
-- converting an implied relationship into an asserted relationship;
-- answering a 5W+H field with information that was not actually stated.
+The evidence for graphic organizers and comprehension strategies largely comes from instructional contexts where learners are taught to use the strategy. This is materially different from a passive overlay that automatically transforms arbitrary content.
 
-**Reframe implication:** any semantic mode requires explicit provenance and source comparison. The original source should remain accessible, and extracted claims should be traceable back to source spans when possible.
+**Reframe implication:** evidence that a teacher-taught graphic organizer helps does not prove that an automatically generated HUD provides the same benefit. This is a central research boundary.
 
-### 17. Proposed representation taxonomy
+### 25. New experimental model
 
-The representation inventory should now be separated into four classes:
+The evidence now supports a more precise experimental unit:
 
-**Class A — Presentation transformations**
-- spacing;
-- line spacing;
-- font/weight;
-- contrast;
-- emphasis;
-- chunking;
-- layout.
+**Reader × content × task × representation × assistance level → outcome**
 
-**Class B — Structural transformations**
-- bullets;
-- headings;
-- sentence/phrase segmentation;
-- lists;
-- tables;
-- timelines;
-- comparison layouts.
+Assistance level should distinguish:
 
-**Class C — Semantic extraction**
-- 5W+H;
-- entity/action/object extraction;
-- main idea;
-- key facts;
-- relationships;
-- definitions.
+- original text;
+- presentation-only transformation;
+- structural transformation;
+- semantic extraction;
+- interactive guidance;
+- audio/multimodal support.
 
-**Class D — Modality transformations**
-- text-to-speech;
-- synchronized audio/highlighting;
-- speech-to-text where appropriate;
-- multimodal combinations.
+Outcomes should include:
 
-The classes should not be evaluated with one universal success metric.
+- literal comprehension;
+- inferential comprehension;
+- information-location accuracy;
+- recall;
+- task completion time;
+- rereading/navigation;
+- subjective effort;
+- preference;
+- semantic fidelity.
 
-### 18. New research conclusion
+### 26. New failure hypothesis: support can become substitution
 
-The strongest emerging product hypothesis is not "Reframe makes text easier."
+A representation may improve performance because it performs part of the comprehension task for the reader. That can be useful for access, but it changes what is being measured.
 
-It is:
+For example, automatically supplying a main idea may improve a main-idea question while providing little evidence that the reader independently understood the passage.
 
-> **Reframe lets a reader choose or test representations that expose the information structure needed for the current task, while preserving access to the original source.**
-
-That hypothesis is broader than dyslexia and does not require assuming one neurological mechanism.
+**Reframe implication:** experiments must specify whether the goal is access to information, independent comprehension, learning, or remediation. These are different outcomes.
 
 ## Current research conclusions
 
@@ -219,8 +113,10 @@ That hypothesis is broader than dyslexia and does not require assuming one neuro
 - Cross-language and orthographic generalization is a first-class constraint.
 - Audio/read-aloud is a legitimate representation family with existing evidence.
 - More visual content is not automatically more accessible.
+- Graphic/structural representations have a meaningful evidence base, but effects depend on context and transfer.
 - Semantic extraction must be evaluated differently from formatting.
 - Source fidelity is a product requirement, not a cosmetic quality metric.
+- Assistive representation must not be confused with instructional remediation.
 
 ### Still hypotheses
 
@@ -228,16 +124,20 @@ That hypothesis is broader than dyslexia and does not require assuming one neuro
 - 5W+H representation;
 - timeline representation;
 - explicit entity/action structure;
-- main-idea extraction;
+- automatic main-idea extraction;
 - automatic mode selection;
 - progressive assistance;
 - content-aware representation selection;
 - combining multiple representations;
 - whether reader preference predicts measured benefit.
 
-### New risk identified
+### New risks identified
 
-A representation can improve readability while failing to improve comprehension, or improve a task by removing information that should have remained available. Semantic transformations add a second risk: the system can introduce information that was not actually in the source.
+1. A representation can improve readability without improving comprehension.
+2. A semantic transformation can introduce information not present in the source.
+3. A support can improve task performance by doing part of the task for the reader.
+4. A strategy that works when explicitly taught may not work when automatically generated.
+5. A benefit on a researcher-created measure may not transfer to standardized or novel tasks.
 
 Therefore Reframe needs at least three validation dimensions:
 
