@@ -305,3 +305,37 @@ The same representation can have different effects on different demands.
 A candidate representation may be useful when it externalizes information relationships or reduces unnecessary simultaneous demands without removing information required for the task.
 
 This remains an experimental mechanism hypothesis. Performance differences must not be interpreted as evidence of an individual cognitive deficit.
+
+
+## 21. Current validation constraint from semantic-adaptation research
+
+Recent text-simplification research shows that readability control and meaning preservation can diverge. Every semantic transformation experiment must report these separately.
+
+Minimum semantic-fidelity checks for rewritten or reorganized content:
+- source-fact answerability;
+- omission rate;
+- altered relationships;
+- altered certainty/negation;
+- attribution errors;
+- unsupported additions.
+
+Source: https://aclanthology.org/2024.tacl-1.24/
+
+## 22. Held-out prediction is required for calibration
+
+Existing prior art demonstrates that personalization can use explicit preferences, stored profiles, performance signals, or behavioral signals such as gaze. None should be treated as a validated predictor of representation benefit until the relationship replicates on unseen content.
+
+A calibration experiment should separate:
+1. signal acquisition;
+2. candidate representation selection;
+3. held-out evaluation;
+4. prediction error;
+5. reader override.
+
+## 23. Local processing remains subject to the same research gate
+
+On-device transformation can reduce exposure of sensitive source content to remote services, but local execution does not establish usefulness or fidelity.
+
+If a local model is used, validation must still test target-task benefit, semantic fidelity, latency, failure behavior, accessibility, and fallback to source.
+
+Source: https://aclanthology.org/2025.tsar-1.7/
