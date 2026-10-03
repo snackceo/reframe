@@ -460,3 +460,83 @@ Before implementation, the next evidence cycle should map each proposed represen
 **target processing demand → relevant population → evidence for analogous intervention → expected benefit → semantic risk → measurable outcome → known failure conditions.**
 
 This is now a required research artifact for deciding what belongs in the first prototype.
+
+
+## 18. Research update — reading difficulty is multidimensional
+
+Recent systematic reviews strengthen the reason for keeping Reframe broader than dyslexia while avoiding the assumption that all reading difficulty has the same mechanism. A 2024 systematic review of developmental language disorder (DLD) reading comprehension identifies multiple factors affecting comprehension. A later scoping review found interventions targeting word recognition, vocabulary/morphological knowledge, bridging processes, discourse, and self-regulation, while noting gaps in multilingual populations, genre/question diversity, and dosage.
+
+Sources: https://pubmed.ncbi.nlm.nih.gov/38663332/ ; https://pubmed.ncbi.nlm.nih.gov/41401742/
+
+A 2026 systematic review comparing developmental dyslexia, DLD, and their comorbidity reported different profiles across decoding, fluency, and comprehension, with comorbidity producing broader difficulty. This supports testing mechanisms separately rather than mapping diagnosis directly to a representation.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/42053752/
+
+For Reframe, relevant variables should remain distinct: decoding demand, language comprehension, vocabulary/morphology, syntax, discourse/inference, working memory/executive demands, attention, task requirements, content structure, and reader preference.
+
+## 19. Intervention evidence changes the product boundary
+
+Reading-intervention evidence reinforces the distinction between helping someone access information and changing the underlying reading skill. Reviews find benefits from explicit/systematic instruction for foundational reading skills, while comprehension effects are generally smaller or more variable.
+
+Sources: https://pubmed.ncbi.nlm.nih.gov/37416303/ ; https://pubmed.ncbi.nlm.nih.gov/42609867/
+
+Reframe should therefore measure access to a task rather than imply that a presentation transformation treats or remediates a reading disability.
+
+## 20. Language and comprehension need separate research tracks
+
+DLD evidence indicates that vocabulary, morphology, syntax, discourse, and executive functions can all be relevant to academic and reading outcomes. These mechanisms should not be collapsed into a visual-accessibility hypothesis.
+
+Sources: https://pubmed.ncbi.nlm.nih.gov/36382072/ ; https://pubmed.ncbi.nlm.nih.gov/39188807/
+
+Research tracks should ask separately whether presentation reduces visual/navigation demands, whether structure makes relationships easier to locate, whether language-support representations reduce processing demands, and when transformation crosses from access support into instruction.
+
+## 21. Autism and other developmental populations
+
+Systematic reviews of autistic reading interventions report improvements in targeted areas including comprehension, vocabulary, fluency, and phonological awareness. Studied approaches include explicit instruction, visualization, main-idea/vocabulary work, question generation, graphic organizers, prediction, and technology-supported interventions.
+
+Sources: https://pubmed.ncbi.nlm.nih.gov/35728668/ ; https://pubmed.ncbi.nlm.nih.gov/33396646/ ; https://pubmed.ncbi.nlm.nih.gov/24218240/
+
+These findings are not evidence that Reframe's representations work. They support treating main idea, inference, organization, and task strategy as distinct research mechanisms.
+
+## 22. Stronger research taxonomy
+
+The research program should separate four layers:
+
+**A — Underlying difficulty/mechanism:** decoding, fluency, vocabulary, morphology, syntax, discourse/inference, attention, working memory/executive function, visual/oculomotor factors, sensory access.
+
+**B — Task demand:** read accurately, find a fact, understand gist, compare alternatives, follow steps, remember details, identify 5W+H, integrate information across a document.
+
+**C — Representation intervention:** spacing, emphasis, chunking, structural extraction, list/outline, timeline, comparison, definitions, audio, synchronized highlighting, wording simplification.
+
+**D — Outcome:** accuracy, comprehension, time, rereading, navigation, recall, effort, confidence, preference, semantic errors.
+
+The central experimental unit should therefore become:
+
+**mechanism × task × representation × content × reader → outcome**
+
+rather than diagnosis → mode.
+
+## 23. Research contradictions and limits
+
+Do not assume that a representation that helps decoding will help comprehension; that preference equals objective benefit; that findings in children generalize to adults; that findings in one language/orthography generalize to another; that an instructional strategy is automatically an accessibility representation; or that technology-supported instruction proves the transformation itself caused the benefit.
+
+## 24. Provisional evidence map
+
+| Area | Evidence signal | Reframe relevance | Unknown |
+|---|---|---|---|
+| Dyslexia/decoding | Strong intervention evidence, heterogeneous profiles | Keep decoding distinct from presentation | Which representations help access without replacing instruction |
+| Reading comprehension | Multifactorial | Structural/task representations are hypotheses | Which improve objective comprehension |
+| DLD/language | Language, vocabulary, morphology, syntax and discourse matter | Definitions/structure/language support merit testing | Which transformations help which profiles |
+| Autism | Targeted reading interventions can help | Main idea, inference, structure and task support merit study | Generalization to Reframe representations |
+| Audio/TTS | Positive average evidence with heterogeneity | Legitimate multimodal representation family | Which readers/tasks benefit most |
+| Personalization | Accessibility guidance supports user-controlled adaptation | Strong alignment with reader control | Which preferences predict objective gains |
+| Simplification | Recognized accessibility technique | Potentially useful but high semantic risk | Fidelity and comprehension tradeoffs |
+| Visual presentation | Relevant but not a complete theory | Test spacing/emphasis/grouping as variables | Individual/task-specific effects |
+
+This is a research map, not an evidence ranking.
+
+## 25. Research gate — expanded
+
+Before implementation, the research program must sufficiently answer: target access problems; mechanisms and competing explanations; populations and limitations; evidence-supported versus hypothetical representations; conflicting evidence; measurable outcomes; unacceptable semantic failures; deterministic versus generative transformations; privacy/source-acquisition risks; platform requirements; smallest useful research instrument; and findings that would cause a representation to be abandoned or narrowed.
+
+**Until this gate is sufficiently mature, Reframe remains in research mode and implementation decisions remain provisional.**
