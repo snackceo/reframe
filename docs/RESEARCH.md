@@ -400,3 +400,63 @@ The scope specifically includes dyslexia; specific reading comprehension difficu
 **Research gate:** evidence → competing explanations → hypothesis → explicit uncertainty → controlled test → revised hypothesis.
 
 **Until the research coverage is sufficiently mature, Reframe remains in research mode and no implementation decision should be treated as scientifically justified.**
+
+
+## 18. Evidence update — technology-assisted reading support
+
+Research reviewed in the current cycle strengthens the case for studying assistive representations, but does not validate Reframe's specific semantic modes.
+
+### Text-to-speech
+
+A meta-analysis of text-to-speech and related read-aloud tools for students with reading disabilities found a positive average effect on reading comprehension, while noting meaningful variation between studies and the need to identify moderators. citeturn0search0
+
+A 2023 study of children with reading and language difficulties found higher comprehension with TTS than silent reading in its tested conditions. It did not find a significant comprehension difference between TTS with highlighting and TTS without highlighting. The authors also reported differences between children classified as dyslexia-only and those with reading and language impairment. citeturn0search1
+
+**Implication:** Audio is worth treating as a representation, but synchronized highlighting should not be assumed to add benefit merely because it is intuitively attractive. TTS effects also appear sensitive to reader characteristics.
+
+### Technology-based reading interventions
+
+A 2026 meta-analysis of 30 randomized controlled trials involving 4,851 students with reading difficulties found a small-to-moderate overall effect for technology-based reading interventions. The analysis reported no significant moderation by the examined learner, intervention, setting, or duration variables. This evidence concerns technology-based interventions broadly, not Reframe's representation model, and therefore cannot establish that a particular interface transformation is effective. citeturn0search6
+
+**Implication:** Technology is a legitimate research domain for reading support, but product claims must remain tied to the specific intervention being tested.
+
+### Dyslexia-specific fonts
+
+A 2026 meta-analysis of 15 studies, 91 effect sizes, and 688 dyslexic students found no consistent or reliable reading-performance benefit from dyslexia-specific fonts compared with standard fonts; the pooled effect was negligible. citeturn0search13
+
+**Implication:** This is useful disconfirming evidence for a font-centered product strategy. Reframe should continue treating typography as one adjustable presentation variable rather than the product's therapeutic mechanism.
+
+### Developmental language disorder and reading
+
+A 2024 systematic review examined factors associated with reading comprehension in children with developmental language disorder and emphasized the high rate of co-occurring reading difficulties. citeturn0search4
+
+A 2026 scoping review of reading-comprehension interventions for populations with developmental language disorder found a literature base spanning multiple intervention targets and highlighted gaps in the evidence. citeturn0search8turn0search12
+
+A 2026 systematic review specifically examining children with comorbid developmental dyslexia and developmental language disorder synthesized evidence across four languages and distinguished shared from distinct reading characteristics. citeturn0search5
+
+**Implication:** The broader research scope is justified. Reading difficulty cannot be modeled solely as a dyslexia-versus-no-dyslexia distinction; language ability and comorbidity can materially change the reading profile and response to support.
+
+### AI evidence requires caution
+
+A 2025 systematic review of AI-based interventions for students with learning disabilities reported promising results in some stronger studies but also substantial methodological limitations and risk of bias. The review explicitly called for stronger randomized and longitudinal evidence and cautioned about long-term effects such as cognitive offloading. citeturn0search11
+
+**Implication:** AI should remain an implementation option, not the research premise. Reframe should first establish whether a representation is useful and safe, then determine whether AI is necessary to produce or select it.
+
+### Updated research conclusions
+
+The current evidence supports these narrower statements:
+
+- Assistive technology can improve some reading outcomes, but effects depend on the intervention and population.
+- TTS has evidence worth incorporating into the representation inventory, with reader-specific and feature-specific questions still open.
+- Font changes alone should not be treated as the central mechanism.
+- Language-related difficulties and comorbidities materially broaden the research problem.
+- AI evidence is promising but not strong enough to justify making AI the product premise.
+- Reframe's semantic representations — noun/verb emphasis, 5W + H, timelines, relationship views, and similar transformations — remain **unvalidated hypotheses**.
+
+### New research priority
+
+Before implementation, the next evidence cycle should map each proposed representation to:
+
+**target processing demand → relevant population → evidence for analogous intervention → expected benefit → semantic risk → measurable outcome → known failure conditions.**
+
+This is now a required research artifact for deciding what belongs in the first prototype.
