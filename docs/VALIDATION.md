@@ -284,3 +284,24 @@ Representation selection should be evaluated as a conditional relationship:
 **reader × task × content/structure × representation operation → outcome**
 
 A reader may benefit from different representations for different tasks or content structures. Profiles should preserve uncertainty and remain editable.
+
+## 19. Demand decomposition
+
+Experiments should describe the cognitive/task demand being manipulated, not only the representation.
+
+Record, where applicable:
+- retrieval vs integration;
+- local vs cross-sentence information;
+- literal vs inferential questions;
+- temporal/causal reasoning;
+- vocabulary burden;
+- simultaneous information-retention demand;
+- navigation burden.
+
+The same representation can have different effects on different demands.
+
+## 20. Cognitive-load hypothesis
+
+A candidate representation may be useful when it externalizes information relationships or reduces unnecessary simultaneous demands without removing information required for the task.
+
+This remains an experimental mechanism hypothesis. Performance differences must not be interpreted as evidence of an individual cognitive deficit.
