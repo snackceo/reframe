@@ -380,3 +380,21 @@ Each representation experiment should predefine the task it is intended to suppo
 - cross-sentence integration.
 
 This prevents a representation from appearing effective merely because it improves one narrow question type while harming another.
+
+## 20. Attention-operation taxonomy
+
+Attention-related representations are distinct operations:
+
+- **Emphasis:** visually mark selected information.
+- **Focus:** reduce or mask competing information.
+- **Tracking:** dynamically indicate current reading position.
+- **Structural externalization:** expose relationships among information.
+- **Content removal:** remove information judged extraneous.
+
+Evidence for one operation must not be transferred to another.
+
+## 21. Visual competition guardrail
+
+The objective is not maximum visual simplification. A useful representation should reduce irrelevant competition while retaining information required for the target task.
+
+Any content-removal operation therefore requires a source-recovery path and should be evaluated for omission errors.
