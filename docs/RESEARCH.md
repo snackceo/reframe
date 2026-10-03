@@ -242,3 +242,148 @@ Current confidence:
 - **Unknown:** whether an AI model can reliably select or generate the right representation without introducing unacceptable semantic errors.
 
 Those unknowns define the product research agenda.
+
+## 13. Important distinction: accessibility support vs. reading instruction
+
+Reframe is an assistive representation concept, not a replacement for evidence-based reading instruction.
+
+The International Dyslexia Association's current definition emphasizes difficulties with word reading and/or spelling and notes that targeted instruction remains important. IDA describes Structured Literacy as an explicit, systematic approach to teaching the structure of written language. Reframe should therefore be positioned as something that can help a person access information, not as a tool that teaches the underlying reading skill or treats dyslexia. 
+
+This distinction matters to product claims:
+
+- **Instruction:** builds reading and language skills.
+- **Representation:** changes how already-existing information is presented.
+- **Accommodation/support:** reduces barriers to accessing information.
+- **Reframe:** currently belongs primarily in the latter two categories.
+
+Reframe should not imply that easier presentation eliminates the need for appropriate instruction or clinical/educational support.
+
+## 14. A stronger theoretical direction: reduce extraction cost
+
+The research and accessibility guidance suggest a more useful product abstraction than "make text easier."
+
+A reader must perform several operations when processing connected text:
+
+1. locate relevant information;
+2. identify boundaries between ideas;
+3. determine relationships between entities and actions;
+4. track time, conditions, negation, and uncertainty;
+5. integrate information across sentences;
+6. retain enough structure to answer a question or complete a task.
+
+Reframe can investigate whether different representations reduce the work required for one or more of these operations.
+
+Examples:
+
+- **Chunking** may expose boundaries.
+- **Emphasis** may expose salient elements.
+- **5W + H** may expose common information slots.
+- **Timeline** may expose temporal relationships.
+- **Comparison** may expose explicit contrasts.
+- **Lists** may expose item boundaries.
+- **Definitions** may reduce vocabulary lookup cost.
+- **Audio** may provide an alternative decoding pathway.
+
+These are mechanisms to investigate, not established effects of Reframe.
+
+This leads to a stronger hypothesis:
+
+> Reframe may be useful when it makes the information structure that a reader needs for a task more directly perceivable.
+
+That hypothesis is broader than dyslexia and can be tested without assuming a single neurological explanation.
+
+## 15. Reader-controlled adaptation is consistent with accessibility guidance
+
+W3C cognitive accessibility guidance explicitly recommends adaptation and personalization, including allowing users to select preferred alternatives and supporting simplification. It also recommends that users control when content changes and that interfaces provide a way to return to a familiar version. citeturn0search0turn0search5turn0search13
+
+This aligns with a key Reframe interaction principle:
+
+**Do not make the representation change mysterious.**
+
+A reader should be able to understand:
+
+- what mode is active;
+- what changed;
+- switch modes;
+- return to source;
+- turn automatic behavior off.
+
+Automatic adaptation can eventually be explored, but it should remain reversible and subordinate to reader control.
+
+## 16. New research questions
+
+The next research cycle should investigate:
+
+### RQ1 — What is the unit of assistance?
+
+Is the most useful transformation applied to:
+
+- a word;
+- a phrase;
+- a sentence;
+- a paragraph;
+- a section;
+- an entire document?
+
+### RQ2 — What problem is the reader solving?
+
+Does a representation help primarily with:
+
+- decoding;
+- locating;
+- grouping;
+- sequencing;
+- extracting;
+- comparing;
+- remembering;
+- understanding vocabulary;
+- following instructions?
+
+### RQ3 — Does representation need to be content-aware?
+
+For example:
+
+- narrative → character/action structure;
+- instructions → ordered steps;
+- event → date/time/location;
+- news → 5W + H;
+- comparison → aligned alternatives;
+- technical material → definitions + structure.
+
+### RQ4 — Can one representation be parameterized?
+
+Instead of many independent modes, perhaps a small number of underlying controls can generate many useful views:
+
+- density;
+- grouping;
+- emphasis;
+- hierarchy;
+- modality;
+- wording transformation.
+
+### RQ5 — When should the system intervene?
+
+Possible triggers:
+
+- explicit request;
+- reader preference;
+- content structure;
+- repeated rereading;
+- navigation behavior;
+- task context.
+
+Behavioral inference should be treated as a later research area because it creates privacy and false-positive risks.
+
+## 17. Research implication
+
+The long-term algorithm may not be:
+
+**dyslexia → special format**
+
+It may instead become:
+
+**content + task + reader preference → representation**
+
+That is a much more general and testable system.
+
+The product should remain open to discovering that some proposed modes are ineffective, unnecessary, or useful only for particular content types.
