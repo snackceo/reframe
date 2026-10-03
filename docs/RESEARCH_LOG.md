@@ -534,3 +534,8 @@ Priority order now adds:
 **Do not begin production implementation yet.**
 
 The calibration concept is now a research hypothesis and should be tested in the eventual research instrument before becoming a permanent onboarding system.
+
+
+## Research cycle 2026-10-02 — Prior-art update
+
+DAISY's 2025 Reading Apps User Requirements establish navigation, semantic structure, read-aloud, synchronized text/audio, visual adjustments, bookmarking, highlighting, and reversibility as core accessibility requirements. Existing assistive products already provide many presentation-level features. Reframe therefore needs to validate its semantic representation, representation-selection, and source-fidelity hypotheses rather than treating a larger accessibility feature set as differentiation.
