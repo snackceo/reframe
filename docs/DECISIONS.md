@@ -112,3 +112,37 @@ A decision should be revisited when:
 - the product boundary changes.
 
 A decision is not permanent merely because it is documented.
+
+
+## D013 — Technology direction remains research-gated
+
+**Decision:** Reframe will target iOS and Android. Kotlin Multiplatform is the current leading technology candidate for shared core logic, with native platform layers retained where native accessibility and system integration matter.
+
+**Status:** Provisional; not an implementation lock.
+
+**Why:** Reframe needs substantial shared semantic logic while also requiring deep mobile-platform integration. KMP provides a path to share domain logic without requiring the entire product to abandon native platform APIs.
+
+**Alternatives retained:** Flutter and React Native remain viable alternatives until the platform comparison is complete.
+
+**Explicit non-decision:** Moshi is not an application architecture choice; it is a Kotlin serialization library and is not being selected as Reframe's stack.
+
+**Consequence:** The technology choice must be validated against research findings and platform feasibility before implementation. Documentation may describe the candidate direction, but no production architecture should be built from this decision alone.
+
+## D014 — Research gate precedes implementation
+
+**Decision:** Do not begin Reframe implementation until the research program has sufficiently mapped the relevant reading, learning, language, cognitive, developmental, acquired, and accessibility evidence.
+
+**Minimum gate questions:**
+
+1. What reading/access problems are documented?
+2. Which mechanisms or processing demands are implicated?
+3. Which populations and contexts have been studied?
+4. Which interventions or assistive technologies have evidence?
+5. Where does evidence conflict or remain uncertain?
+6. Which Reframe representations have defensible hypotheses?
+7. How will comprehension, effort, task performance, and semantic fidelity be measured?
+8. What failure modes could make a representation harmful, misleading, or unnecessarily difficult?
+9. What platform capabilities are actually required by the validated research prototype?
+10. What privacy and consent boundaries follow from those requirements?
+
+**Consequence:** The first implementation, when the gate is met, should be a research instrument/prototype rather than a full product or system-wide HUD.
