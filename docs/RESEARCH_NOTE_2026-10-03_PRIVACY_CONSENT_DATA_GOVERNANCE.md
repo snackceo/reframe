@@ -431,3 +431,160 @@ The product should retain the smallest conditional evidence necessary to improve
 - ICO storage limitation — https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/storage-limitation/
 - ICO special-category data/inference — https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/lawful-basis/special-category-data/what-is-special-category-data/
 - FTC privacy by design — https://www.ftc.gov/sites/default/files/documents/public_statements/privacy-design-and-new-privacy-framework-u.s.federal-trade-commission/120613privacydesign.pdf
+
+
+## 23. Research consent is a separate product state
+
+If Reframe's calibration work becomes human-subject research, ordinary product use and research participation must be represented as separate states.
+
+HHS/OHRP describes informed consent as an ongoing process requiring sufficient information for an informed decision, comprehension, voluntariness, and an opportunity to withdraw. A signed form alone is not the complete consent process.
+
+Therefore a future research instrument should record, independently:
+
+- PRODUCT_USE
+- PERSONALIZATION_ENABLED
+- RESEARCH_PARTICIPATION
+- MODEL_IMPROVEMENT_PARTICIPATION
+
+These states must not be inferred from one another.
+
+## 24. Research data needs a confidentiality model, not merely de-identification
+
+Removing a name does not automatically make a behavioral dataset harmless. Repeated reading behavior, unusual task combinations, rare accessibility configurations, source metadata, timestamps, and study participation can become identifying when combined.
+
+HHS/OHRP specifically treats privacy and confidentiality as distinct considerations in human-subject research.
+
+For Reframe, the research data model should distinguish:
+
+- direct identifiers;
+- quasi-identifiers;
+- source-content identifiers;
+- study identifiers;
+- device/session identifiers;
+- behavioral evidence;
+- derived representation profiles.
+
+The research pipeline should minimize the ability to join these categories unless the protocol requires it.
+
+## 25. Secondary use must be explicit
+
+A future request such as "use existing calibration data to train a new representation model" must not automatically be treated as covered by "use calibration to personalize Reframe."
+
+HHS guidance on future research use emphasizes reasonable notice of categories/purposes of future research and associated risks when consent is used for future use of identifiable data.
+
+Therefore Reframe should maintain an explicit use-authorization state for research data:
+
+- PERSONALIZATION_ONLY
+- RESEARCH_ALLOWED
+- MODEL_TRAINING_ALLOWED
+- THIRD_PARTY_PROCESSING_ALLOWED
+
+These are policy states, not assumptions.
+
+## 26. Android AccessibilityService should be treated as privileged acquisition
+
+Current Google Play policy is especially important for Reframe.
+
+Google states that apps using AccessibilityService for purposes other than qualifying accessibility tools must satisfy disclosure/consent requirements, and that data collection must be strictly limited to disclosed purposes. Google also says developers should use narrower APIs or permissions where possible.
+
+Android's technical documentation additionally warns that retrieving window content can expose private user information.
+
+Therefore:
+
+> Reframe should not make AccessibilityService the assumed universal Android ingestion mechanism.
+
+It should be an explicitly scoped acquisition mode with a demonstrated user need.
+
+Acquisition research should compare:
+
+1. share/import;
+2. document picker;
+3. clipboard/user selection;
+4. OCR;
+5. AccessibilityService;
+6. other platform-supported acquisition mechanisms.
+
+The least-privileged mechanism that satisfies the use case should be preferred.
+
+## 27. Android 17 makes the acquisition decision more consequential
+
+Google's 2026 Android security update states that Android 17 will remove accessibility-service access from apps that are not labeled as accessibility tools.
+
+This is a current platform-policy constraint, not merely a theoretical privacy concern.
+
+Reframe therefore needs to avoid an architecture that assumes unrestricted AccessibilityService availability across Android versions.
+
+The research gate should establish a fallback acquisition path that remains useful without AccessibilityService.
+
+## 28. Model privacy boundary should be explicit in every trial
+
+Apple's current Foundation Models architecture distinguishes on-device models from Private Cloud Compute/server models, and Apple describes PCC as stateless computation in which received personal data is used only to fulfill the request and is not accessible after the response.
+
+For Reframe, every generative transformation trial should therefore be attributable to:
+
+- execution location;
+- provider;
+- model;
+- model version;
+- representation version;
+- prompt/instruction version;
+- semantic-operation version;
+- protocol version.
+
+A trial whose execution boundary is unknown should not be treated as equivalent to a controlled local trial.
+
+## 29. No silent privacy downgrade
+
+A particularly important failure mode is:
+
+local model unavailable → silently send source text to cloud model
+
+That must not happen.
+
+The model adapter should implement an explicit policy:
+
+- LOCAL_ONLY — fail safely if local execution is unavailable.
+- LOCAL_PREFERRED — obtain permission before crossing to a cloud boundary.
+- CLOUD_ALLOWED — clearly disclose the applicable provider/data handling.
+
+The default for sensitive source material should not be an invisible downgrade.
+
+## 30. Current research gate additions
+
+Before production implementation, the privacy gate now requires evidence for:
+
+- least-privilege acquisition;
+- non-AccessibilityService fallback on Android;
+- Android Play disclosure/consent implications;
+- product versus research consent states;
+- secondary-use authorization;
+- research confidentiality and re-identification controls;
+- model execution-location provenance;
+- no-silent-cloud-fallback behavior;
+- data deletion and withdrawal semantics.
+
+## Current consolidated rule
+
+> Reframe should learn enough to help, but collect no more than the current purpose requires, and never silently expand the purpose.
+
+The resulting boundary is:
+
+content acquisition → semantic understanding → representation → reader
+
+with independent governance layers for:
+
+personalization | research | model training | external processing
+
+No production implementation has begun.
+
+## Sources added
+
+- HHS/OHRP informed consent — https://www.hhs.gov/ohrp/regulations-and-policy/guidance/faq/informed-consent/index.html
+- HHS/OHRP electronic informed consent — https://www.hhs.gov/ohrp/regulations-and-policy/guidance/use-electronic-informed-consent-questions-and-answers/index.html
+- HHS/OHRP research privacy/confidentiality — https://www.hhs.gov/ohrp/education-and-outreach/online-education/considerations-for-reviewing-human-subjects-research/protecting-research-participants-privacy-data-confidentiality/index.html
+- HHS/OHRP future research use of data — https://www.hhs.gov/ohrp/sachrp-committee/recommendations/attachment-c-faqs-recommendations-and-glossary-informed-consent-and-research-use-of-biospecimens-and-associated-data/index.html
+- Google Play AccessibilityService policy — https://support.google.com/googleplay/android-developer/answer/10964491
+- Android AccessibilityService documentation — https://developer.android.com/guide/topics/ui/accessibility/views/service
+- Android 2026 security/privacy changes — https://blog.google/security/whats-new-in-android-security-privacy-2026/
+- Apple Foundation Models — https://machinelearning.apple.com/research/introducing-third-generation-of-apple-foundation-models
+- Apple Private Cloud Compute security — https://security.apple.com/documentation/private-cloud-compute/
