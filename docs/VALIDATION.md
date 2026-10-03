@@ -339,3 +339,73 @@ On-device transformation can reduce exposure of sensitive source content to remo
 If a local model is used, validation must still test target-task benefit, semantic fidelity, latency, failure behavior, accessibility, and fallback to source.
 
 Source: https://aclanthology.org/2025.tsar-1.7/
+
+
+## 24. Calibration must distinguish preference, confidence, and performance
+
+Recent research shows that readers' performance judgments can be poorly calibrated and can change independently of comprehension. Therefore Reader Calibration should separately record:
+
+- representation preference;
+- perceived clarity/effort;
+- confidence or judgment of performance;
+- objective task accuracy;
+- response time where appropriate;
+- rereading/navigation;
+- semantic-fidelity errors.
+
+Sources:
+- https://www.sciencedirect.com/science/article/pii/S1041608025000020
+- https://www.sciencedirect.com/science/article/pii/S0360131522000914
+
+A calibration model must be evaluated on held-out content rather than validated only on the passages used to build the preference profile.
+
+## 25. Separate fluency/access outcomes from comprehension outcomes
+
+Recent typography-personalization research found small fluency benefits without comprehension improvement. Therefore Reframe should not use faster reading, lower rereading, or higher preference as a proxy for understanding.
+
+Source: https://revistas.ucm.es/index.php/RLOG/en/article/view/101374
+
+For each experiment, define in advance whether the intended benefit is:
+- access/legibility;
+- fluency;
+- information location;
+- comprehension;
+- recall;
+- learning/transfer;
+- reduced navigation burden.
+
+## 26. Population and language must be explicit experimental variables
+
+Evidence gaps are especially important for adults, multilingual readers, and readers with developmental language disorder. Studies should record population and language/script rather than treating all reading difficulties as one group.
+
+Sources:
+- https://research.jku.at/en/publications/words-unleashed-a-systematic-literature-review-study-on-the-use-o/
+- https://stars.library.ucf.edu/jele/vol19/iss1/1/
+- https://pubmed.ncbi.nlm.nih.gov/41401742/
+
+## 27. Multilingual validation requirement
+
+For multilingual research, translation equivalence is insufficient. Where relevant, record:
+- language and script;
+- vocabulary burden;
+- morphology;
+- syntax;
+- cross-language transfer demands;
+- culturally specific references;
+- question-language relationship.
+
+This prevents an apparent representation effect from being confused with a language-specific mismatch.
+
+## 28. Question-type coverage requirement
+
+DLD intervention research identifies insufficient variation in question types as a limitation. Reframe experiments should deliberately separate at least:
+- literal retrieval;
+- vocabulary/meaning;
+- paraphrase;
+- main idea;
+- inference;
+- temporal relation;
+- causal relation;
+- cross-sentence integration.
+
+The representation may help some question types while harming or failing to affect others.
