@@ -241,3 +241,27 @@ A 1988 study directly investigated reader-controlled computerized presentation o
 Source: https://doi.org/10.1177/001872088803000408
 
 Reader control itself is not a defensible novelty claim. Reframe's narrower research question concerns control over alternate semantic/structural representations and measurable task benefit.
+
+## 16. Structural/presentation separation is established accessibility architecture
+
+W3C Technique G140 describes separating information and structure from presentation so alternate presentations can be generated while retaining semantic relationships.
+
+Source: https://www.w3.org/WAI/WCAG21/Techniques/general/G140.html
+
+A semantic intermediate representation is consistent with established accessibility architecture. Reframe should focus on empirical effectiveness and implementation quality.
+
+## 17. Adaptive reading has domain-dependent outcomes
+
+A 2026 BEA paper evaluating adaptive educational readings with simulated learners reported different outcomes across subject domains, including positive, inconclusive, and neutral-to-slightly-negative results.
+
+Source: https://aclanthology.org/2026.bea-1.63/
+
+Adaptive reading is an active research area with context dependence. Reframe should not treat AI adaptation itself as differentiation.
+
+## 18. Negative evidence belongs in the competitive landscape
+
+A 2025 study of symbolated texts for people with IDD found lower comprehension and slower reading when graphic symbols were added to text.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/40168874/
+
+Feature inventories are insufficient for comparison. The landscape should distinguish capability from evidence, population, task, and outcome.
