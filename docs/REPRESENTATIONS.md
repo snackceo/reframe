@@ -431,3 +431,26 @@ On-device text simplification has been demonstrated in current research, includi
 Source: https://aclanthology.org/2025.tsar-1.7/
 
 Reframe may eventually use local models, remote models, or deterministic processing. The choice must be evaluated independently from representation effectiveness and semantic fidelity.
+
+
+## 25. Personalization is not equivalent to comprehension benefit
+
+Recent studies show that preference-customized presentation can improve fluency without improving comprehension, and that typography effects can vary by developmental level and language/script.
+
+Sources:
+- https://revistas.ucm.es/index.php/RLOG/en/article/view/101374
+- https://www.mdpi.com/2227-7102/15/10/1306
+
+Therefore representation preferences should be modeled as conditional signals rather than universal reader traits.
+
+## 26. Representation profiles should be conditional
+
+A future profile should be capable of representing:
+- task-specific preferences;
+- language/script-specific settings;
+- content/structure-specific settings;
+- situational/context effects;
+- uncertainty;
+- explicit reader overrides.
+
+Avoid a single global label such as "5W+H reader" or "visual reader" unless repeated held-out evidence demonstrates that level of stability.
