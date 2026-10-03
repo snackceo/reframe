@@ -252,7 +252,85 @@ Training eligibility must be a deliberate state, not an implicit consequence of 
 
 NIST recommends assessing privacy risks across the data lifecycle and considering re-identification and de-identification risks.
 
-## 14. Minimum technical requirements before production
+## 14. Accessibility acquisition is a high-risk data boundary
+
+Reframe should prefer **user-selected content** and ordinary document/text import over broad device-level observation.
+
+On Android, an AccessibilityService can receive UI events and, if configured, retrieve active-window content and accessibility node trees. Android explicitly warns that inspecting the view hierarchy can expose private user information. Accessibility services are intended to assist users with disabilities and are explicitly enabled by the user.
+
+Therefore, an eventual Android integration that reads other apps should be treated as a privileged acquisition mode, not the default ingestion path. It should have:
+
+- explicit user activation;
+- package/app allowlisting where technically possible;
+- minimal event/content scope;
+- no background collection beyond the requested task;
+- immediate local processing where possible;
+- aggressive source-text redaction from logs;
+- clear indication when Reframe is reading another app;
+- a shutdown/disable control;
+- separate privacy documentation and testing.
+
+On iOS, protected resources are permission-gated and Apple advises apps to access only the data/resources required for their job. Reframe should therefore favor supported import/share/accessibility mechanisms rather than attempting to build a broad screen-observation pipeline.
+
+This creates an important architectural rule:
+
+> **Acquisition capability should be narrower than representation capability.**
+
+Reframe should not require broad device observation merely because it can transform text.
+
+## 15. Screen capture and sensitive rendered views
+
+Reframe may display sensitive source material. Screen capture, mirroring, recording, and remote-control scenarios therefore belong in the threat model.
+
+Apple provides APIs for detecting active screen capture so apps can selectively protect sensitive content. Reframe should research a platform-appropriate response rather than automatically blocking all capture, because blanket blocking can interfere with legitimate accessibility, teaching, support, or user workflows.
+
+Potential responses include:
+- warning;
+- hiding especially sensitive fields;
+- reducing exposure of transient data;
+- allowing ordinary content to remain shareable.
+
+The correct behavior should be determined by sensitivity and user need.
+
+## 16. Model execution and privacy
+
+The model adapter should expose execution location as an explicit property:
+
+- **LOCAL_DEVICE**
+- **PRIVATE_CLOUD/CONTROLLED_PROVIDER**
+- **EXTERNAL_PROVIDER**
+
+The representation pipeline should know which boundary was crossed.
+
+Apple's current Foundation Models framework supports on-device language models and also supports larger server-side/Private Cloud Compute configurations. Apple also warns that sending personal images or other sensitive inputs to external model providers can introduce provider-specific privacy and training-data risks.
+
+For Reframe, this implies:
+
+1. local deterministic transformations first;
+2. local model inference when sufficient;
+3. controlled cloud inference only when justified;
+4. provider-specific data-use terms recorded in the model adapter;
+5. no silent fallback from local to external processing;
+6. user-visible disclosure when a sensitive source must leave the device.
+
+## 17. Model/version drift is also a privacy-governance issue
+
+A reader profile can become difficult to interpret if model behavior changes while the profile remains unchanged.
+
+Apple's current Foundation Models documentation notes that on-device model behavior can change with operating-system updates and recommends testing prompts against updated model versions.
+
+Therefore each derived representation observation should be attributable to at least:
+
+- representation version;
+- model/provider identifier;
+- model version where available;
+- prompt/instruction version where generative;
+- semantic-operation version;
+- calibration protocol version.
+
+Otherwise an apparent change in reader performance could actually be a model or representation change.
+
+## 18. Minimum technical requirements before production
 
 Research should establish requirements for:
 
@@ -273,11 +351,13 @@ Research should establish requirements for:
 - model-training eligibility state;
 - audit/provenance records;
 - schema/version migration;
-- accessible privacy controls.
+- accessible privacy controls;
+- acquisition-mode audit logs;
+- model/representation version attribution.
 
 Android recommends app-private storage and encryption for sensitive data. Apple provides data-protection classes for application files and databases.
 
-## 15. Children and readers needing additional support
+## 19. Children and readers needing additional support
 
 If Reframe is available to children or populations needing additional support, privacy design should become stricter rather than weaker.
 
@@ -293,7 +373,7 @@ Potential requirements:
 
 Current ICO guidance gives children's privacy additional consideration within privacy-by-design/default processes.
 
-## 16. Research gaps still open
+## 20. Research gaps still open
 
 Before implementation, research should resolve:
 
@@ -309,23 +389,26 @@ Before implementation, research should resolve:
 10. child/teen participation policy if in scope;
 11. de-identification requirements for aggregate research;
 12. re-identification risk from rare behavior combinations;
-13. jurisdiction-specific legal review.
+13. jurisdiction-specific legal review;
+14. privileged acquisition architecture for Android accessibility/screen content;
+15. screen-capture behavior for sensitive rendered content;
+16. model/representation versioning and profile invalidation rules.
 
-## 17. Gate implications
+## 21. Gate implications
 
 The privacy gate is not satisfied merely by writing a privacy policy.
 
 Before production implementation, Reframe needs a documented:
 
-**data map → purpose map → threat model → retention schedule → consent model → deletion model → local/cloud boundary → research-data boundary → model-training boundary**
+**data map → purpose map → threat model → retention schedule → consent model → deletion model → acquisition boundary → local/cloud boundary → research-data boundary → model-training boundary → version/provenance model**
 
 Only after these decisions are sufficiently researched should implementation begin.
 
-## 18. Current conclusion
+## 22. Current conclusion
 
 > **Reframe should learn from readers without needing to permanently learn who they are.**
 
-The product should retain the smallest conditional evidence necessary to improve representation selection, keep source content separate from telemetry, prefer on-device processing where practical, make research/model-training reuse explicit, and treat sensitive inference as a prohibited product identity rather than a personalization target.
+The product should retain the smallest conditional evidence necessary to improve representation selection, keep source content separate from telemetry, prefer on-device processing where practical, make research/model-training reuse explicit, constrain privileged acquisition, record model/representation provenance, and treat sensitive inference as a prohibited product identity rather than a personalization target.
 
 ## Sources
 
@@ -334,9 +417,15 @@ The product should retain the smallest conditional evidence necessary to improve
 - Apple privacy — https://www.apple.com/privacy/
 - Apple developer privacy guidance — https://developer.apple.com/design/human-interface-guidelines/privacy/
 - Apple Platform Security — https://help.apple.com/pdf/security/en_CA/apple-platform-security-guide-v.pdf
+- Apple Foundation Models — https://developer.apple.com/documentation/FoundationModels/
+- Apple Foundation Models updates — https://developer.apple.com/documentation/updates/foundationmodels
+- Apple sensitive-content screen capture — https://developer.apple.com/documentation/swiftui/protecting-sensitive-content-when-screen-sharing
+- Apple protected resources — https://developer.apple.com/documentation/uikit/requesting-access-to-protected-resources
 - Android privacy — https://developer.android.com/privacy
 - Android privacy/security — https://developer.android.com/quality/privacy-and-security
 - Android security checklist — https://developer.android.com/privacy-and-security/security-tips
+- Android AccessibilityService — https://developer.android.com/reference/android/accessibilityservice/AccessibilityService
+- Android accessibility service guidance — https://developer.android.com/guide/topics/ui/accessibility/views/service
 - ICO data protection by design/default — https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/accountability-and-governance/guide-to-accountability-and-governance/data-protection-by-design-and-by-default
 - ICO data minimisation — https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/data-minimisation/
 - ICO storage limitation — https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/storage-limitation/
