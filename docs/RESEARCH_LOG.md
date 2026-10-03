@@ -2684,3 +2684,77 @@ The experimental protocol should explicitly define:
 - treatment/representation fidelity checks.
 
 A failed fidelity check should invalidate or flag that trial rather than silently entering it into calibration data.
+
+
+## Research cycle 2026-10-03 — fidelity-first transformation and target-reader validation
+
+### 260. Readability is not a coherent proxy for simplification quality
+
+The 2026 READIxTSAR meta-evaluation found traditional readability measures correlated poorly with human judgments and automatic simplification metrics. Meaning preservation showed the strongest and most consistent relationship with the evaluated quality dimensions.
+
+Source: https://aclanthology.org/events/tsar-2026/
+
+**Reframe implication:** readability scores can be diagnostics, but cannot serve as the primary acceptance criterion for a semantic transformation.
+
+### 261. Elaborative simplification is especially difficult to evaluate automatically
+
+The same 2026 workshop found that smaller LLM judges correlated poorly with human judgments of generated elaborations. Informativeness also showed substantially lower inter-annotator agreement than cohesion.
+
+Source: https://aclanthology.org/events/tsar-2026/
+
+**Reframe implication:** added explanations need stricter provenance and higher validation requirements than purely presentational changes.
+
+### 262. Health-information simplification exposes a major validation gap
+
+A 2026 scoping review of automated patient-education simplification identified 20 studies evaluating content fidelity, but found two major gaps: no included study assessed linguistic correctness systematically, and understandability was evaluated by experts rather than laypeople. The review also found that high similarity/readability did not guarantee content accuracy or layperson understanding.
+
+Source: https://www.jmir.org/2026/1/e88365/
+
+**Reframe implication:** high-stakes representations require target-reader validation plus content verification. Expert review and automated metrics cannot substitute for testing with the intended reader population.
+
+### 263. High similarity can coexist with factual problems
+
+The same review found that automated similarity measures could be high while factual accuracy varied substantially across studies. For GPT-4.0, reported automated F1 accuracy measures ranged from 72% to 92% across different studies.
+
+Source: https://www.jmir.org/2026/1/e88365/
+
+**Reframe implication:** semantic similarity is a screening signal, not proof of factual fidelity.
+
+### 264. Target-reader evaluation is a separate requirement from expert evaluation
+
+The patient-education review explicitly identifies the absence of layperson testing as a major evidence gap.
+
+Source: https://www.jmir.org/2026/1/e88365/
+
+**Reframe implication:** Reframe's eventual effectiveness studies should include the target reader population rather than relying solely on researchers, clinicians, accessibility specialists, or language experts.
+
+### 265. Fidelity-preserving visual accessibility is an active 2026 research direction
+
+A July 2026 preprint, DFT-GEN, combines protected-span preservation with deterministic controls over visual-unit length, chunk spacing, source/task separation, highlighting budget, and reviewable risk flags. It evaluates fidelity separately from rendered visual accessibility and reports a controlled dyslexic-adult pilot in which answerability was preserved while effort decreased.
+
+Source: https://arxiv.org/abs/2608.13583
+
+**Caveat:** this is a preprint and should not be treated as established efficacy evidence.
+
+**Reframe implication:** this independently supports the architecture direction already emerging in Reframe: preserve task-critical source spans, separate semantic fidelity from visual accessibility, and make risky transformations reviewable.
+
+### 266. Source/task separation is becoming a concrete transformation control
+
+DFT-GEN explicitly treats source/task separation and protected spans as controllable rendering/transformation parameters.
+
+Source: https://arxiv.org/abs/2608.13583
+
+**Reframe implication:** the transformation model should be able to mark task-critical spans as protected. A representation operation should declare whether it is permitted to modify, reorder, visually emphasize, or omit each protected span.
+
+### Research gate additions
+
+For any semantic transformation:
+- target-reader testing is required for effectiveness claims;
+- expert review and automated metrics are supporting evidence, not substitutes;
+- similarity/readability cannot pass a transformation by themselves;
+- target-reader comprehension and source-derived answerability are separate acceptance tests;
+- protected/task-critical spans should be representable;
+- visual accessibility and semantic fidelity must remain separately scored;
+- elaboration/explanation requires stricter provenance and validation than presentation-only operations.
+
+No new production implementation is authorized by these findings; they further define the research instrument and its evaluation harness.
