@@ -345,3 +345,192 @@ Priority order:
 **Do not begin production implementation yet.**
 
 The next acceptable build target is a deliberately small **research instrument** after the representation hypotheses and outcome measures are sufficiently specified. The first instrument should compare representations; it should not attempt to become the final system-wide HUD.
+
+
+## Research cycle 2026-10-02 — Reader calibration and personalization
+
+### 35. Personalization has evidence, but preference is not the same as benefit
+
+A global meta-analysis of personalized/adaptive learning technologies found a positive aggregate effect on reading literacy, while also identifying multiple moderators. This supports studying personalization, but does not establish that self-selected presentation modes improve comprehension for every reader or task.
+
+Source: https://doi.org/10.1016/j.edurev.2023.100587
+
+A 2025 study of children with dyslexia and typical readers compared standard versus preference-customized typography. Customization slightly improved reading fluency but did not improve comprehension. This is directly relevant to Reframe's proposed setup flow: a reader can have a genuine preference without that preference predicting an objective comprehension gain.
+
+Source: https://doi.org/10.5209/rlog.101374
+
+**Reframe implication:** onboarding should collect preferences as hypotheses to test, not treat them as diagnoses or proven optimal settings.
+
+### 36. Individualized visual manipulation can work for a subgroup
+
+Research on visual crowding found a subgroup of adults with dyslexia who read faster when letter, word, and line spacing were increased. The study explicitly framed this as personalization to an individual's visual characteristics.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/29679920/
+
+A 2024 study likewise found increased inter-word spacing improved standardized comprehension scores for participants with dyslexia and reduced migration errors, although it was a small study and should not be generalized to all readers.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/39139062/
+
+**Reframe implication:** a calibration system is scientifically plausible when it tests a representation against an individual rather than assuming a group diagnosis determines the correct setting.
+
+### 37. Calibration should include performance, not only preference
+
+A personalization web-app study with 78 school-aged participants tested automatically selected visual and text-to-speech parameters against standard settings and reported advantages for personalized parameters. However, the study concerned visual/audio parameter personalization rather than Reframe's semantic representations.
+
+Source: https://www.mdpi.com/2414-4088/8/1/5
+
+A separate study of automatic text adaptation for students with intellectual disability iteratively tested lexical, syntactic, and discourse adaptations. Overall comprehension gains were not significant, although later rounds showed promising lexical and syntactic effects and substantial heterogeneity.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/40749139/
+
+**Reframe implication:** calibration should not simply ask "Which version do you like?" It should combine:
+- preference;
+- task performance;
+- effort/difficulty;
+- rereading/navigation;
+- and semantic fidelity where transformation occurs.
+
+### 38. Proposed Reader Calibration protocol
+
+The proposed onboarding experiment should use the same passage and the same task across multiple representations.
+
+Potential sequence:
+
+1. Show a short passage.
+2. Show several representations of the same passage.
+3. Ask which representation feels clearest.
+4. Repeat with a different passage/content type.
+5. Optionally ask the reader to answer a factual or structural question.
+6. Record objective performance separately from preference.
+7. Allow the reader to revise selections.
+8. Repeat across task types where useful.
+9. Create an initial preference profile only after multiple observations.
+
+Candidate representation families:
+- Original;
+- presentation/spacing;
+- emphasis;
+- chunking;
+- outline/list;
+- 5W+H;
+- timeline;
+- comparison;
+- definitions;
+- audio.
+
+**Important:** this should not be framed as a diagnostic test. It is a product calibration procedure.
+
+### 39. Avoid premature profiling
+
+The profile should not initially say:
+
+> "This reader is a 5W+H reader."
+
+A better hypothesis representation is:
+
+> "For information-location tasks, this reader has repeatedly preferred and/or performed better with 5W+H."
+
+This preserves task and content context.
+
+The profile should also permit:
+- no stable preference;
+- different representations for different tasks;
+- different settings for different content types;
+- insufficient evidence;
+- explicit reader override.
+
+### 40. Calibration itself needs validation
+
+The calibration procedure creates a new research question:
+
+**Does a short onboarding calibration predict later benefit on unseen content?**
+
+A useful experiment would compare:
+- self-selected preference;
+- calibration based on objective performance;
+- fixed/default representation;
+- potentially random representation assignment.
+
+The important outcome is not whether the reader can pick a favorite view. It is whether calibration improves subsequent performance on new material.
+
+### 41. New design principle: preference is a signal, not ground truth
+
+Reframe should treat:
+- preference as one signal;
+- observed performance as another;
+- task as context;
+- content as context;
+- source fidelity as a constraint.
+
+No single signal should automatically determine the representation.
+
+### 42. Calibration should not overfit to onboarding passages
+
+A setup test can accidentally teach the system the quirks of its own sample passages.
+
+Therefore, eventual validation must include:
+- calibration passages;
+- unseen test passages;
+- multiple content types;
+- multiple task types;
+- counterbalanced representation order where practical.
+
+A representation should be considered useful only if the effect survives beyond the examples used during setup.
+
+## Research cycle 2026-10-02 — Personalized semantic adaptation
+
+### 43. Automatic text adaptation remains uncertain
+
+A 2025 exploratory study involving students with intellectual disability tested automatic lexical, syntactic, and discourse adaptations over multiple rounds. Overall comprehension gains were not significant, although later iterations showed promising lexical and syntactic effects and substantial heterogeneity.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/40749139/
+
+**Reframe implication:** semantic transformation should be treated as an empirical intervention, not assumed to work because a transformed passage looks simpler.
+
+### 44. Personalization should be layered
+
+Current evidence suggests a safer hierarchy:
+
+**Reader choice → measured outcome → repeated observation → optional adaptive suggestion**
+
+rather than:
+
+**diagnosis → automatic transformation**
+
+Automatic selection should remain an advanced stage after the underlying representations have demonstrated measurable utility.
+
+### 45. New research question
+
+**Can a short reader-calibration procedure identify representations that improve performance on unseen content, while preserving reader control and source fidelity?**
+
+This is now a first-class Reframe research question.
+
+## Current research conclusions — personalization update
+
+- Personalization is scientifically plausible.
+- Preference alone is insufficient evidence of benefit.
+- Individual differences can matter even within the same diagnostic group.
+- Visual personalization may improve fluency or reduce specific visual difficulties without improving comprehension.
+- Semantic personalization is less established and requires stronger validation.
+- Calibration should test transfer to unseen content.
+- A useful reader profile should be task- and content-conditioned rather than diagnosis-based.
+- Automatic adaptation should come after representation validation, not before it.
+
+## Next research cycle
+
+Priority order now adds:
+
+1. Validate the Reader Calibration hypothesis against existing personalization research.
+2. Investigate whether preference predicts objective performance.
+3. Study calibration/transfer methods and counterbalancing.
+4. Continue semantic/structural representation evidence.
+5. Continue adult and multilingual evidence.
+6. Investigate attention, working memory, and task-specific effects.
+7. Continue mobile/digital reading and prior-art research.
+8. Reassess platform requirements only after the first research instrument is defined.
+
+## Build status
+
+**Do not begin production implementation yet.**
+
+The calibration concept is now a research hypothesis and should be tested in the eventual research instrument before becoming a permanent onboarding system.
