@@ -231,3 +231,46 @@ The first question is:
 Which representations actually help readers, for which content, and with what tradeoffs?
 
 Architecture should follow that evidence.
+
+
+## 14. Provisional platform and technology direction
+
+**Status:** Research-gated / provisional. This is a direction, not a final implementation decision.
+
+Reframe targets **iOS and Android**. The leading ecosystem under investigation is **Kotlin Multiplatform (KMP)** because it can share core Kotlin logic while retaining native platform integration. This choice is not final until the research gate and platform-feasibility review are complete.
+
+### Candidate direction
+
+- **Shared core:** Kotlin Multiplatform.
+- **iOS application layer:** native Swift/SwiftUI where platform-native behavior or accessibility integration is important.
+- **Android application layer:** Kotlin with Android/Jetpack APIs.
+- **Shared UI:** Compose Multiplatform is an option, not a requirement. Native UI remains available where it provides better platform integration.
+- **Semantic core:** shared, platform-independent Kotlin domain logic for source models, semantic structures, representations, transformation metadata, and fidelity rules.
+- **OCR / text acquisition:** prefer native platform capabilities first; exact APIs and cross-platform abstractions remain research items.
+- **Text-to-speech:** prefer native platform capabilities first; exact abstraction remains a research item.
+- **AI/ML:** provider- and model-agnostic. Local/on-device and remote processing remain separate options subject to privacy, latency, quality, and evidence requirements.
+- **Storage:** local-first bias; exact persistence technology remains undecided.
+- **Backend:** not required by the architecture. Introduce one only if a demonstrated product requirement requires it.
+- **Testing:** shared semantic/fidelity tests plus platform-specific UI, accessibility, integration, and performance tests.
+
+### Why this remains provisional
+
+The technology choice must be evaluated against the actual research findings, especially:
+
+1. access to text from real mobile reading contexts;
+2. native accessibility APIs and system integration;
+3. OCR and document/image handling;
+4. text rendering and interaction;
+5. text-to-speech;
+6. on-device processing;
+7. offline behavior;
+8. semantic transformation testability;
+9. privacy boundaries;
+10. performance and battery cost;
+11. maintainability of shared versus native code.
+
+Flutter and React Native remain viable alternatives until this comparison is completed. They are not rejected; KMP is simply the current leading candidate.
+
+**Moshi is not the Reframe stack.** Moshi is a Kotlin JSON serialization library, whereas the stack decision concerns the application/platform ecosystem, shared core, native integrations, and supporting services.
+
+No implementation should begin solely because this provisional direction is documented.
