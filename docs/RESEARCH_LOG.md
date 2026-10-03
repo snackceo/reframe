@@ -788,3 +788,82 @@ The system should retain uncertainty when evidence is insufficient and permit ta
 Before Reframe can claim that calibration identifies a useful representation for a reader, evidence should demonstrate prediction beyond the calibration material. At minimum, a prototype experiment should include held-out passages and counterbalanced representation order.
 
 **Updated hypothesis:** A reader-controlled calibration can identify useful representation/task relationships only if subjective preference and performance are evaluated separately and the learned relationship predicts benefit on unseen content without unacceptable semantic-fidelity costs.
+
+## Research cycle 2026-10-02 — Automatic adaptation, semantic fidelity, and calibration signals
+
+### 78. Human comprehension can directly test semantic fidelity of a transformation
+
+Agrawal and Carpuat (TACL 2024) evaluated text simplification by asking readers comprehension questions about the original content after reading simplified versions. Even the strongest supervised automatic system left at least 14% of questions unanswerable from the simplified content.
+
+Source: https://aclanthology.org/2024.tacl-1.24/
+
+**Reframe implication:** semantic fidelity should not be evaluated only with readability metrics, lexical overlap, or model-based similarity. Reader-answerable source-fact questions provide a direct behavioral test of whether a representation retained information.
+
+### 79. Automatic adaptation evidence supports involving readers during development
+
+A 2025 exploratory TextAD study tested lexical, syntactic, and discourse adaptations with 27 students with intellectual disability across three iterative rounds. Overall comprehension gains were not significant, although later lexical and syntactic adaptations showed promising results. Importantly, self-reported comprehension and perceived difficulty did not consistently align with actual comprehension.
+
+Source: https://doi.org/10.1080/17483107.2025.2536701
+
+**Reframe implication:** reader participation is valuable for discovering useful transformations, but self-report cannot substitute for behavioral validation. Iterative reader-in-the-loop research should be part of Reframe's development methodology.
+
+### 80. Simplification is not one operation
+
+Current text-adaptation research distinguishes lexical, syntactic, and discourse-level transformations. These can have different effects. A representation that changes only vocabulary is fundamentally different from one that restructures clauses or discourse relations.
+
+**Reframe implication:** Reframe should record the transformation operations used to create a representation rather than labeling the result simply "simplified."
+
+Candidate operation metadata:
+- lexical substitution;
+- sentence splitting;
+- syntactic restructuring;
+- discourse reordering;
+- explicit definition insertion;
+- information extraction;
+- information reorganization;
+- inference/explanation.
+
+### 81. Readability improvement can coexist with meaning loss
+
+The 2024 text-simplification study demonstrates that a transformation can appear successful under conventional simplification metrics while still making source facts unavailable to readers. Separate medical-text research likewise evaluates readability and content fidelity as distinct outcomes.
+
+Sources:
+- https://aclanthology.org/2024.tacl-1.24/
+- https://pubmed.ncbi.nlm.nih.gov/39667051/
+
+**Reframe implication:** "easier to read" must never be used as a proxy for "better understood" or "faithful to the source."
+
+### 82. New semantic-fidelity experiment design
+
+For any representation that rewrites or reorganizes language, construct a source-fact question set before transformation.
+
+Measure:
+1. source condition accuracy;
+2. representation condition accuracy;
+3. unanswered/unsupported items;
+4. omission errors;
+5. changed relationship errors;
+6. changed certainty/negation errors;
+7. attribution errors;
+8. reader-reported clarity.
+
+A representation should be considered semantically risky when it improves task performance while causing systematic loss of source facts or relationships.
+
+### 83. Calibration should learn transformation suitability, not merely a "reading style"
+
+The current evidence argues against a single latent label such as "this reader is an outline reader." The useful unit is closer to:
+
+**reader × task × content/structure × representation operation → outcome**
+
+The same reader may benefit from lexical simplification for vocabulary-heavy material, a timeline for chronological material, and an outline for expository structure. The profile should therefore remain conditional and editable.
+
+### 84. Research-gate addition
+
+Before adaptive semantic transformation is built, Reframe should demonstrate that:
+- a representation produces measurable benefit on a defined task;
+- benefit survives held-out content;
+- reader preference does not substitute for performance;
+- semantic fidelity is measured behaviorally;
+- transformation operations are identifiable;
+- harmful or uncertain transformations can be rejected or bypassed.
+
