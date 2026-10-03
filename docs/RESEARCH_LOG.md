@@ -2100,3 +2100,62 @@ Before production implementation, establish:
 - language-specific fidelity/evaluation coverage;
 - meaning preservation as an acceptance criterion rather than a readability proxy;
 - an explicit intervention boundary so generated support can be rejected or replaced without mutating the source.
+
+
+## Research cycle 2026-10-03 — task decomposition, inference, and fidelity testing
+
+### 210. Literal and inferential comprehension should be separate calibration targets
+
+Recent reading-disability guidance and research explicitly distinguish questions whose answers are stated in the text from inference-demanding questions that require connecting textual clues with background knowledge. A 2024 practice review describes inference as a multi-step process: identify relevant text, activate knowledge, then integrate the two. A 2026 eye-tracking study likewise found different reading/re-reading behavior for literal versus inferential question types.
+
+Sources:
+- https://pmc.ncbi.nlm.nih.gov/articles/PMC12456325/
+- https://onlinelibrary.wiley.com/doi/10.1111/1467-9817.70018
+
+**Reframe implication:** calibration should not use a single generic “comprehension” score. At minimum, task labels should distinguish literal retrieval from inference. A representation that improves finding stated information may not improve constructing an inference.
+
+### 211. Re-reading is an informative behavior, not simply failure
+
+The 2026 eye-tracking study found that lower-achieving readers spent more effort reading passages and questions and were less likely to obtain correct answers from searches; when higher-achieving readers reread, rereading was more associated with successful literal-question answering.
+
+Source: https://onlinelibrary.wiley.com/doi/10.1111/1467-9817.70018
+
+**Reframe implication:** rereading events should be logged with context rather than counted as universally negative. The research instrument should distinguish productive source verification from confusion-driven repeated searching.
+
+### 212. Graphic representations have task-dependent limits
+
+A 2025 meta-analysis of pictorial/graphic representations for autistic students included only five single-case studies and used heterogeneous outcomes including story-element questions, literal questions, inferential questions, general comprehension, and Maze tasks. The review notes that overly simple organizer structures may be inadequate for inferencing.
+
+Source: https://doi.org/10.1007/s10803-025-07014-4
+
+**Reframe implication:** a representation's information structure must match the task. Reframe should not treat “graphic organizer” as one treatment. Organizer topology, information density, interaction model, and question type should be recorded separately.
+
+### 213. Inference support should preserve the boundary between text evidence and reader knowledge
+
+Instructional research on reading disabilities commonly separates what the text explicitly says from what the reader already knows before combining them into an inference. This provides a useful model for Reframe's semantic state model.
+
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC12456325/
+
+**Reframe implication:** an inference-oriented view should expose provenance such as:
+- TEXT EVIDENCE;
+- READER/PRIOR KNOWLEDGE REQUIRED;
+- INFERENCE;
+rather than rendering the inferred statement as though it were directly stated by the source.
+
+### 214. Meaning-preservation testing should use question answerability, not only textual similarity
+
+Human evaluation of automatic simplification has shown that sentence-level similarity and readability measures are insufficient for determining whether readers can recover information from transformed text. In the 2024 TACL evaluation, even the strongest tested automatic simplification system left at least 14% of questions unanswerable from the simplified content.
+
+Source: https://aclanthology.org/2024.tacl-1.24/
+
+**Reframe implication:** the fidelity test harness should include source-derived questions with an explicit UNANSWERABLE state. Similarity or readability scores can be secondary diagnostics, but they should not be the acceptance criterion for a semantic transformation.
+
+### Research gate addition: task-specific comprehension and provenance
+
+Before production implementation, establish:
+- literal retrieval and inference as separate experimental task classes;
+- productive versus confusion-driven rereading/search behavior;
+- representation topology and density as experimental variables;
+- explicit separation of source evidence, required prior knowledge, and inference;
+- source-derived answerability tests with an UNANSWERABLE outcome;
+- textual similarity/readability treated as secondary diagnostics rather than semantic acceptance criteria.
