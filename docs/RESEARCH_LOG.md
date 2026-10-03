@@ -2330,3 +2330,98 @@ The evaluation instrument must now explicitly record:
 - functional-task success where applicable.
 
 A representation cannot be considered validated solely because it increases a generic comprehension score.
+
+
+## Research cycle 2026-10-03 — calibration reliability, provenance diagnostics, and human oversight
+
+### 231. Individual reader calibration requires reliability evidence
+
+A 2026 Cognitive Science study on individual differences in reading emphasizes parallel-forms reliability across separate occasions because repeating identical texts introduces memory and practice effects. The study specifically uses different texts measuring the same underlying construct and counterbalances text order.
+
+Source: https://onlinelibrary.wiley.com/doi/10.1111/cogs.70121
+
+**Reframe implication:** a Reader Calibration profile should not become “stable” after one short session. Repeated matched tasks should be used to estimate whether a representation preference/performance effect is reproducible.
+
+### 232. Preference and performance calibration can diverge
+
+A 2025 multimodal reading study found that participants' comprehension and reading duration improved after a digital-reading intervention while calibration accuracy worsened.
+
+Source: https://www.sciencedirect.com/science/article/abs/pii/S1041608025000020
+
+**Reframe implication:** self-reported confidence/clarity remains a separate signal. The profile must not substitute subjective confidence for observed task performance.
+
+### 233. Automated semantic-fidelity testing can move beyond similarity metrics
+
+The 2026 ACL Cross-Examination Framework treats source and candidate text as separate knowledge bases, generating verifiable questions and evaluating Coverage, Conformity, and Consistency. It identified omissions and factual contradictions that traditional metrics such as BLEU/BERTScore can miss.
+
+Source: https://aclanthology.org/2026.acl-long.1761/
+
+**Reframe implication:** the existing source-derived question/UNANSWERABLE concept can be extended into a multi-dimensional fidelity harness. Candidate representations should be tested for omitted, contradicted, and altered source facts rather than relying primarily on similarity.
+
+### 234. Human-in/on-the-loop oversight is increasingly treated as infrastructure
+
+A 2026 LREC paper proposes human-in-the-loop generation plus human-on-the-loop supervision, with standards-aligned checklists, trigger rules, and accessibility KPIs.
+
+Source: https://aclanthology.org/2026.lrec-1.574/
+
+**Reframe implication:** Reframe should model review/validation as an explicit state rather than an informal last step. High-risk transformations can trigger additional validation instead of receiving identical treatment to low-risk formatting changes.
+
+### 235. Easy-to-Read generation still requires expert and guideline-based evaluation
+
+A 2026 ECAI paper introduced ETR-fr, a dataset of 523 aligned text pairs and a 36-question manual evaluation aligned with European Easy-to-Read guidelines. The authors report that generative systems can overfit the generation task and that lightweight models generalized better in their political test set.
+
+Source: https://journals.sagepub.com/doi/10.3233/FAIA251224
+
+**Reframe implication:** guideline compliance and model benchmark performance should be treated as separate dimensions. Domain transfer needs explicit testing rather than assumed generalization.
+
+### 236. Plain language can introduce perspective and stance drift
+
+A 2026 AI & Society analysis argues that accessibility-oriented simplification can erase terminology, intent, perspective, or emotional/stance information, especially in high-stakes disability, benefits, healthcare, and rights communication.
+
+Source: https://link.springer.com/article/10.1007/s00146-026-03044-3
+
+**Reframe implication:** for high-stakes material, source fidelity must include terminology, modality, negation, stance, and socially meaningful framing—not just proposition-level truth. This supports a stronger distinction between presentation support and semantic rewriting.
+
+### 237. Recent adult IDD medical-text work supports participatory validation, but evidence is small
+
+A 2026 study of an AI tool for simplifying after-visit medical summaries involved five adults with intellectual/developmental disabilities. Participants preferred the simplified versions and showed improved comprehension in message testing, but the sample was very small and the authors call for broader implementation and longer-term research.
+
+Source: https://onlinelibrary.wiley.com/doi/full/10.1111/jppi.70061
+
+**Reframe implication:** participatory adult validation is necessary for high-stakes functional reading, but small qualitative/user-test studies should not be treated as general efficacy evidence.
+
+### 238. Multimodal comprehension assessment can incorporate behavior, but should not become a proxy diagnosis
+
+A 2026 multimodal assessment study combined reading behavior and cross-modal information with comprehension outcomes and reported reliability/validity measures across device types.
+
+Source: https://www.sciencedirect.com/org/science/article/pii/S1548109326000410
+
+**Reframe implication:** interaction/eye-tracking signals may help characterize representation processing, but Reframe should use them as task-process measures rather than infer disability status or reader “type.”
+
+### Research gate additions
+
+Calibration now requires:
+- parallel-form reliability rather than repeated identical stimuli;
+- counterbalanced order;
+- repeated evidence before treating a preference/performance relationship as stable;
+- separate confidence/preference from observed benefit.
+
+Transformation validation now requires:
+- Coverage;
+- Conformity;
+- Consistency;
+- source-span provenance;
+- explicit omission/contradiction states;
+- review/validation state;
+- higher-risk trigger rules.
+
+High-stakes semantic transformation should preserve, where relevant:
+- terminology;
+- negation;
+- modality;
+- stance;
+- emotional/social meaning;
+- source provenance;
+- recoverability.
+
+Reader-process telemetry must remain an accessibility/research measure, not a diagnostic mechanism.
