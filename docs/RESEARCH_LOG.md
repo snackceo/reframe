@@ -1169,3 +1169,78 @@ Before implementation, validation plans should specify the intended population a
 **reader population × language/script × content × task demand × representation operation × outcome**
 
 This is now the preferred unit for experimental planning.
+
+
+## Research cycle 2026-10-02 — Reader control, alternate presentation, and adaptive selection
+
+### 115. Reader-controlled presentation is not a new interaction concept
+
+A 1988 experimental study explicitly investigated “reader-controlled computerized presentation of text,” including self-pacing and regression control in rapid serial visual presentation. The study found no comprehension or reading-speed difference attributable to the input method used to control presentation speed, while allowing reader control changed how participants adjusted speed.
+
+Source: https://doi.org/10.1177/001872088803000408
+
+**Reframe implication:** reader control should be treated as an established interaction principle, not a novelty claim. The research question is what the reader is controlling: Reframe is interested in switching among semantic/structural representations, not merely controlling presentation speed.
+
+### 116. Separating structure from presentation is an established accessibility architecture principle
+
+W3C Technique G140 describes separating information and structural encoding from presentation so that user agents and assistive technologies can generate alternate presentations while retaining semantic structure. It specifically describes meaningful transformations such as reordering sections or generating lists from structural information.
+
+Source: https://www.w3.org/WAI/WCAG21/Techniques/general/G140.html
+
+**Reframe implication:** the architecture should preserve semantic structure independently of rendering. Alternate representations should be derived from a structured intermediate rather than mutating the source presentation directly.
+
+### 117. Adaptive reading benefit is context-dependent even in controlled simulation
+
+A 2026 BEA paper proposed a theory-grounded simulated-learner framework for testing adaptive educational reading policies before classroom deployment. Across three sampled subject ontologies, adaptive reading produced a significant improvement in computer science, smaller inconclusive gains in inorganic chemistry, and neutral-to-slightly-negative results in general biology.
+
+Source: https://aclanthology.org/2026.bea-1.63/
+
+**Reframe implication:** adaptive selection should not be assumed to generalize across content domains. Held-out evaluation should include multiple content types and should be capable of detecting no-benefit or negative-benefit conditions.
+
+### 118. Accessibility alternatives can become counterproductive when added information competes with the text
+
+A 2025 study of symbolated texts for people with intellectual and developmental disabilities found significantly lower comprehension and slower reading with graphic symbols added to text compared with text alone.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/40168874/
+
+**Reframe implication:** “more support” is not a monotonic design principle. Every added representation element needs a task-based benefit test and an interference/omission check.
+
+### 119. Current personalization evidence supports an evidence loop rather than preference-only adaptation
+
+A 2024 global meta-analysis found a positive aggregate effect for personalized/adaptive learning technologies in K–12 reading literacy (g = 0.29), while identifying multiple moderators. A separate 2026 adaptive-reading framework found domain-dependent results, and recent personalized typography work shows that preference-based customization can affect fluency without necessarily improving comprehension.
+
+Sources:
+- https://doi.org/10.1016/j.edurev.2023.100587
+- https://aclanthology.org/2026.bea-1.63/
+- https://doi.org/10.5209/rlog.101374
+
+**Reframe implication:** the calibration loop should be explicit: preference signal → candidate representation → objective outcome on held-out material → update or reject the preference hypothesis. A preference that does not predict benefit should not be silently converted into an adaptive rule.
+
+### 120. New research requirement: test representation switching itself
+
+The literature establishes reader-controlled presentation and adaptive personalization separately, but does not establish that switching among source-faithful semantic representations improves comprehension for readers with reading/access difficulties.
+
+**Research gap:** test whether switching among representations is beneficial compared with a fixed representation, while controlling content and task and measuring transition cost, source fidelity, and task performance.
+
+### 121. New experimental variables: switching cost and representation persistence
+
+A multi-view system introduces costs that single-view assistive tools do not necessarily expose. Experiments should measure:
+- time to switch;
+- number of switches;
+- whether switching interrupts comprehension;
+- whether readers return to the original source;
+- whether a representation remains useful after switching;
+- whether frequent switching reflects successful self-regulation or uncertainty/confusion.
+
+These variables should be reported separately from comprehension accuracy.
+
+## Updated research gate additions
+
+Before production implementation, the research instrument should be able to test:
+- fixed representation versus reader-controlled switching;
+- preference prediction on held-out passages;
+- switching cost;
+- source recovery;
+- semantic fidelity;
+- negative effects from added visual/semantic elements;
+- domain/content dependence of adaptive selection.
