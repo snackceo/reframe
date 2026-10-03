@@ -256,3 +256,31 @@ Representation order should be counterbalanced where practical to reduce order a
 - **Harmful:** representation produces unacceptable semantic, accessibility, or task-performance costs.
 
 These are experimental evidence states, not diagnoses or permanent reader identities.
+## 16. Behavioral semantic-fidelity testing
+
+For any representation that rewrites or reorganizes language, construct source-fact questions from the original before transformation.
+
+Compare source and representation conditions for:
+- factual accuracy;
+- unsupported or unanswerable facts;
+- omissions;
+- altered relationships;
+- altered certainty or negation;
+- attribution errors;
+- reader-reported clarity.
+
+Readability scores or perceived ease must not be treated as semantic-fidelity measures.
+
+## 17. Transformation-level logging
+
+Experiments should record the operations used to create each representation, such as lexical substitution, sentence splitting, syntactic restructuring, discourse reordering, definition insertion, extraction, reorganization, inference, or explanation.
+
+This makes it possible to determine which operation produced benefit or failure instead of attributing an outcome to a broad label such as "simplified."
+
+## 18. Conditional selection
+
+Representation selection should be evaluated as a conditional relationship:
+
+**reader × task × content/structure × representation operation → outcome**
+
+A reader may benefit from different representations for different tasks or content structures. Profiles should preserve uncertainty and remain editable.
