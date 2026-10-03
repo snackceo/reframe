@@ -1305,3 +1305,77 @@ The first research instrument should also capture representation-switch events a
 - abandonment of the representation.
 
 This should be analyzed alongside comprehension, time, and semantic fidelity rather than treated as a simple engagement metric.
+
+
+## Research cycle 2026-10-02 — Setup and app-surface research
+
+### 128. Accessible reading applications already establish a broad baseline for the reading surface
+
+The DAISY Reading Apps User Requirements, formally published in 2025, contains more than 120 requirements across 11 themes including navigation, screen-reader support, read aloud, visual adjustments, bookmarking, highlighting, notes, answer entry, and library management. The requirements were developed with people with print disabilities, accessibility experts, developers, and other stakeholders.
+
+Sources:
+- https://daisy.org/activities/standards/reading-apps-user-requirements/
+- https://daisy.org/news-events/articles/reading-apps-user-requirements-published/
+
+**Reframe implication:** these capabilities should be treated as accessibility baseline requirements. Reframe should not use basic TTS, visual customization, navigation, or bookmarking as its central differentiation.
+
+### 129. Reader needs are contextual rather than one fixed accessibility configuration
+
+DAISY user stories describe readers changing presentation and interaction according to content and task. Examples include changing font size and spacing, switching between visual reading and read aloud, using cleaner views, and requiring different navigation levels.
+
+Source: https://daisy.org/activities/standards/reading-apps-user-requirements/user-stories/
+
+**Reframe implication:** setup should not produce a single permanent accessibility mode. Preferences should remain editable and may be conditional on task, content, language, or context.
+
+### 130. Setup should establish control before personalization
+
+Existing accessible reading systems expose many controls, while research on calibration shows that preference and objective performance can diverge. A long questionnaire risks collecting self-description that does not predict task benefit.
+
+**Reframe implication:** the first-run flow should establish what Reframe does, provide basic presentation controls, then use a small controlled representation calibration with the same content/task across conditions. Setup should be skippable and revisitable.
+
+### 131. The reader screen should be the product center of gravity
+
+Current accessible reading systems such as EasyReader and Kibo organize their experience around opening content, reading, navigation, audio, and adjustable presentation rather than an AI-centric dashboard.
+
+Sources:
+- https://daisy.org/info-help/guidance-training/reading-systems/easyreader-for-ios-and-android-getting-started-guide/
+- https://daisy.org/guidance/info-help/guidance-training/reading-systems/kibo-app-overview/
+
+**Reframe implication:** Reframe should use a small home surface and make the reader the primary screen. Representation controls should appear in context instead of forcing the reader into a separate assistant workflow.
+
+### 132. Interface adaptation needs reading-position recovery
+
+A 2025 CHI mobile-reading study designed an iOS reading application with explicit recovery cues because readers can lose their reading position after interface adaptations. The study used a reading ruler and a cue marking the text being read before adaptation.
+
+Source: https://doi.org/10.1145/3706598.3713367
+
+**Reframe implication:** switching representations must preserve or visibly recover reading position. Representation switching should be treated as a state transition with a navigation cost, not just a button click.
+
+### 133. Current provisional setup and screen architecture
+
+Based on the evidence and prior Reframe research, the provisional first-run flow is:
+
+**Welcome → basic presentation preferences → representation calibration → second task → editable preferences → Home → Reader**
+
+The provisional normal-use surface is:
+
+**Home → Reader → Reframe sheet → representation → Source recovery**
+
+Settings/profile remains secondary.
+
+The setup should not ask readers to identify as dyslexic, ADHD, autistic, visual learners, or any other fixed category. The product should learn conditional evidence about representations and tasks instead.
+
+**Status:** UX hypothesis; requires usability testing before implementation.
+
+## Research gate addition: setup and UI
+
+Before production implementation, research should establish:
+
+- whether setup can remain short without losing useful calibration information;
+- whether the same-content/same-task comparison is understandable to readers;
+- whether one-at-a-time or side-by-side comparison reduces bias and interaction burden;
+- whether readers understand the difference between Original and a transformed representation;
+- whether source recovery is discoverable;
+- whether switching preserves reading position;
+- whether the proposed small representation sheet is accessible with screen readers and large text;
+- whether the first research instrument should include automatic recommendations at all.
