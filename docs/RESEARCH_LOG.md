@@ -45,7 +45,7 @@ Source: https://doi.org/10.3102/00346543231171345
 
 ### 23. 5W+H is a task representation, not a neutral summary
 
-The research on main idea, questioning, inference, and text structure indicates that a 5W+H view belongs in the semantic-extraction class. It changes the representation of information rather than merely changing typography.
+The research on main idea, questioning, inference, and text structure indicates that a 5W+H view belongs to the semantic-extraction class. It changes the representation of information rather than merely changing typography.
 
 For a source sentence such as:
 
@@ -193,6 +193,80 @@ A semantic representation should be able to distinguish at minimum:
 
 This is a research requirement, not yet an implementation specification.
 
+## Research cycle 2026-10-02 — Personalization and onboarding hypothesis
+
+### 35. A reader-selected setup is scientifically plausible, but preference is not the same as benefit
+
+A 2024 global meta-analysis of personalized/adaptive learning technologies for K–12 reading literacy synthesized 27 studies and found a positive aggregate effect (g = 0.29), while also finding substantial context dependence and multiple moderators. The literature distinguishes simple adaptable systems, where learners choose presentation options, from adaptive systems that change content delivery using performance, preferences, or other learner information.
+
+Source: https://doi.org/10.1016/j.edurev.2023.100587
+
+**Reframe implication:** a setup experience in which the same passage is shown through multiple representations is consistent with an established personalization concept. However, Reframe should not assume that the representation a reader prefers is the representation that objectively helps most.
+
+### 36. Direct evidence exists for personalized reading parameters
+
+A 2024 validation study tested an automated procedure for selecting personalized visual and text-to-speech parameters in 78 school-aged participants, including children with atypical reading skills. The study reported advantages for personalized parameters in its reading/writing tests, with a larger text-to-speech personalization advantage for dyslexic readers.
+
+Source: https://www.mdpi.com/2414-4088/8/1/5
+
+A more recent study of 60 children aged 7–12 found that preference-based text customization slightly improved reading fluency but did not improve reading comprehension; the authors also reported that the dyslexia and typical-reader groups selected broadly similar configurations apart from font size.
+
+Source: https://doi.org/10.5209/rlog.101374
+
+**Reframe implication:** personalization deserves its own experimental track. It may affect fluency, comfort, or experience without necessarily improving comprehension.
+
+### 37. The proposed onboarding test should be a preference-and-performance probe, not a diagnostic test
+
+The proposed setup concept is now defined as a **representation calibration** rather than a dyslexia test.
+
+A possible flow is:
+
+1. Show the same short passage in several representations.
+2. Let the reader choose which representation feels clearest/easiest.
+3. Optionally ask what they prefer for different tasks rather than asking for a single universal favorite.
+4. Measure simple objective outcomes on comparable passages.
+5. Save the reader's choices as editable preferences.
+6. Allow the reader to override the chosen representation at any time.
+
+Candidate representations can include:
+
+- original text;
+- spacing/typography changes;
+- emphasis of selected linguistic categories;
+- chunked text;
+- bullets/outline;
+- 5W+H extraction;
+- timeline/event structure;
+- key facts/entity-action structure;
+- read-aloud/synchronized text;
+- progressive assistance.
+
+**Critical boundary:** this should not be presented as diagnosing dyslexia, identifying a disability, or determining a clinically correct reading mode.
+
+### 38. The same content should drive the comparison
+
+If onboarding shows different passages for different modes, differences in content can contaminate the result. The research prototype should therefore use equivalent or repeated content across representations and rotate presentation order where practical.
+
+**Research implication:** the onboarding experience can itself become an experiment: representation is the variable; the content and task are controlled as much as practical.
+
+### 39. Preference should be multidimensional
+
+A reader may prefer one representation for one purpose and another for a different purpose. For example:
+
+- visual emphasis for reading continuously;
+- 5W+H for locating facts;
+- timeline for events;
+- audio for long passages;
+- original text for close reading.
+
+Therefore, Reframe should avoid creating a single permanent "reader type" from onboarding.
+
+### 40. Personalization should be reversible and non-diagnostic
+
+The onboarding result should be treated as an editable preference profile, not a diagnosis or immutable cognitive profile. Research should test whether preferences remain stable across content types, tasks, fatigue, language, and time.
+
+**New hypothesis:** Reframe may eventually learn a **task-specific representation profile**, rather than a single user-wide mode.
+
 ## Current research conclusions
 
 ### Stronger conclusions
@@ -210,6 +284,8 @@ This is a research requirement, not yet an implementation specification.
 - Source fidelity is a product requirement, not a cosmetic quality metric.
 - Assistive representation must not be confused with instructional remediation.
 - Extraction, reorganization, inference, and explanation should be treated as different operations.
+- Personalization is worth studying, but preference and objective benefit must be measured separately.
+- A reader-selected onboarding experience can be a research instrument as well as a product mechanism, provided it is not presented as diagnosis.
 
 ### Still hypotheses
 
@@ -224,7 +300,9 @@ This is a research requirement, not yet an implementation specification.
 - combining multiple representations;
 - whether reader preference predicts measured benefit;
 - whether exposing relationships improves comprehension without substituting for comprehension;
-- whether explicit provenance reduces semantic errors enough to make automatic extraction useful.
+- whether explicit provenance reduces semantic errors enough to make automatic extraction useful;
+- whether a short onboarding calibration predicts which representation helps a reader on later tasks;
+- whether representation preference is stable or task/content dependent.
 
 ### New risks identified
 
@@ -235,12 +313,18 @@ This is a research requirement, not yet an implementation specification.
 5. A benefit on a researcher-created measure may not transfer to standardized or novel tasks.
 6. Extracting facts without preserving relationships can produce a misleading representation.
 7. Mixing extraction and inference without labeling them can make the transformed view appear more certain than the source.
+8. A preference-calibration test can create a false sense of personalization if preferences are not stable across tasks and content.
+9. Optimizing for preference alone could select a comfortable representation that does not improve the intended outcome.
 
 Therefore Reframe needs at least three validation dimensions:
 
 1. **Legibility/access**
 2. **Task benefit**
 3. **Source/semantic fidelity**
+
+Personalization adds a fourth research dimension:
+
+4. **Preference-to-benefit relationship**
 
 ## Next research cycle
 
@@ -251,7 +335,7 @@ Priority order:
 3. Adult reading-disability and adult low-literacy evidence.
 4. Multilingual and non-English/non-Latin evidence.
 5. Attention, working memory, and executive-function interactions with reading presentation.
-6. User-controlled personalization versus automatically selected adaptations.
+6. User-controlled personalization versus automatically selected adaptations, including whether preferences predict measured benefit.
 7. Mobile/digital reading contexts.
 8. Prior art/open-source systems that transform or adapt reading presentation.
 9. Platform feasibility only after research determines what the first experiment actually requires.
