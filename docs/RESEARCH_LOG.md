@@ -1379,3 +1379,102 @@ Before production implementation, research should establish:
 - whether switching preserves reading position;
 - whether the proposed small representation sheet is accessible with screen readers and large text;
 - whether the first research instrument should include automatic recommendations at all.
+
+
+## Research cycle 2026-10-02 — Calibration presentation, comparison order, and interaction cost
+
+### 134. Preference should not determine calibration validity
+
+Research comparing reading media repeatedly finds that readers can prefer one presentation while performing better with another. Studies of both adults and school-age readers have found preference-performance mismatches.
+
+Sources:
+- https://doi.org/10.1080/00220973.2016.1143794
+- https://doi.org/10.1016/j.compedu.2018.08.001
+
+**Reframe implication:** calibration cannot be a preference picker. Each candidate representation needs an objective task measure whenever it is intended to affect comprehension or information retrieval.
+
+### 135. Confidence is useful, but it is not a substitute for performance
+
+Recent multimodal-reading research found comprehension can improve while calibration accuracy worsens. Calibration research defines the construct as the relationship between predicted and actual performance.
+
+Sources:
+- https://doi.org/10.1016/j.lindif.2025.102627
+- https://pubmed.ncbi.nlm.nih.gov/9769183/
+
+**Reframe implication:** confidence should be collected as a separate metacognitive signal. High confidence must never be treated as evidence that a representation worked.
+
+### 136. Counterbalancing is required when comparing representations
+
+Controlled reading research uses counterbalanced presentation or text-version order to reduce familiarity and carryover effects. Recent AI-adapted reading research also uses parallel forms and counterbalanced original/adapted order.
+
+Source:
+- https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2026.1737903/full
+
+**Reframe implication:** calibration should not always run Original → Focus → Structure → 5W+H → Listen. Representation order should be randomized or counterbalanced, with practical constraints for audio and learning effects.
+
+### 137. One-at-a-time and side-by-side are different experiments
+
+Side-by-side comparison allows direct visual comparison but adds simultaneous display density and source-comparison effects. One-at-a-time reduces simultaneous competition but increases memory and switching demands.
+
+Sources:
+- https://doi.org/10.1016/j.learninstruc.2020.101396
+- https://doi.org/10.1145/3706598.3713879
+- https://doi.org/10.1145/3706598.3713367
+
+**Reframe implication:** the first calibration instrument should use one-at-a-time presentation as the primary controlled condition. A separate usability experiment should compare it with side-by-side presentation.
+
+### 138. Calibration should use matched parallel passages
+
+Repeating exactly the same passage across many representations can teach the answer rather than reveal a representation effect. Completely different passages confound representation with content.
+
+**Reframe implication:** use matched parallel passages and equivalent task structures for later calibration rounds. A single repeated passage may be used only for the initial demonstration.
+
+### 139. Demonstration and measurement should be separate
+
+A strong setup flow should contain:
+
+1. Demonstration: one short passage explaining what Reframe does.
+2. Calibration round: unseen passage/task with controlled representation comparisons.
+3. Second calibration round: different passage/task to test stability.
+4. Preference/performance review: explain that preferences are editable and conditional.
+
+**Reframe implication:** the welcome demonstration should not become the evidence used to build the reader profile.
+
+### 140. Interaction cost belongs in representation benefit
+
+Mobile and hybrid-display research shows that a representation can improve legibility while switching or compensatory behavior removes the practical benefit.
+
+Sources:
+- https://doi.org/10.1145/3706598.3713879
+- https://doi.org/10.1145/3706598.3713367
+
+**Reframe implication:** evaluate net representation benefit using task outcome together with relevant interaction cost rather than optimizing accuracy alone.
+
+### Updated setup hypothesis
+
+**Explain → Demonstrate → Calibrate on unseen content → Test a second task/content condition → Save conditional evidence → Start reading**
+
+Minimum calibration data:
+- representation condition;
+- task type;
+- content identifier;
+- objective accuracy;
+- response time where meaningful;
+- rereading/navigation events;
+- preference;
+- perceived difficulty;
+- confidence;
+- source-recovery actions;
+- switching events.
+
+### Updated research gate: calibration
+
+Before production implementation, establish:
+- whether one-at-a-time comparison is usable;
+- whether side-by-side introduces display-density or source-comparison confounds;
+- how many unseen passages are needed for stable prediction;
+- whether preference predicts later performance;
+- whether performance benefit persists on held-out content;
+- whether switching cost changes net benefit;
+- whether audio requires a separate calibration protocol;
+- whether calibration remains accessible with large text and screen readers.
