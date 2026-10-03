@@ -1002,3 +1002,78 @@ These operations have different evidence bases and different failure modes.
 ### 98. Updated research-gate requirement
 
 A visual representation should not be considered beneficial merely because it reduces gaze dispersion, fixation time, or perceived effort. The experiment must establish whether the attentional change improves the target task without removing information required for comprehension.
+
+
+## Research cycle 2026-10-02 — Current semantic-assistance prior art and on-device adaptation
+
+### 99. 2026 research activity confirms semantic adaptation is an active field
+
+The 2026 READIxTSAR workshop combines research on readability, text simplification, accessibility, and reading difficulties, with 18 papers in the proceedings. This confirms that semantic adaptation for reading access remains an active research area rather than a settled engineering problem.
+
+Source: https://aclanthology.org/volumes/2026.readi-1/
+
+**Reframe implication:** semantic transformation should remain an empirical research area, not a solved capability delegated to a general-purpose language model.
+
+### 100. Controlled readability and meaning preservation remain in tension
+
+TSAR 2025 included 48 submissions from 20 teams to a shared task on readability-controlled text simplification. The organizers reported that dependable controlled simplification often required iterative processes and evaluated systems for both readability-level accuracy and semantic similarity. A separate TSAR 2025 report describes a trade-off between precise readability adjustment and faithful meaning preservation.
+
+Sources:
+- https://aclanthology.org/2025.tsar-1.8/
+- https://aclanthology.org/2025.tsar-1.12/
+
+**Reframe implication:** readability control and semantic fidelity must remain separate objectives. Reaching a target reading level does not validate an accessibility transformation.
+
+### 101. On-device simplification is technically plausible and privacy-relevant
+
+A 2025 TSAR paper describes on-device text simplification intended to keep sensitive text local, reporting model-size reductions of up to 75% with limited benchmark degradation using quantization and controllable transformations.
+
+Source: https://aclanthology.org/2025.tsar-1.7/
+
+**Reframe implication:** local semantic transformation is a credible research direction, but local execution does not establish semantic fidelity or task benefit.
+
+### 102. Gaze-guided adaptation adds another personalization signal
+
+A 2026 EACL study used gaze information to control reading ease and reported measurable changes in reading time and perceived difficulty, with effects largely associated with lexical-processing features.
+
+Source: https://aclanthology.org/2026.eacl-long.107/
+
+**Reframe implication:** personalization can use behavioral/context signals beyond explicit preference, but such signals should not be interpreted as evidence of a disability or cognitive state.
+
+### 103. Open-source implementations confirm capability overlap
+
+ReadAble combines mobile OCR, text processing, summarization/simplification, and TTS for dyslexia-oriented reading assistance. DyLexAid combines text simplification, TTS, and accessible reading modes in a Swift application.
+
+Sources:
+- https://github.com/nazarli-shabnam/ReadAble
+- https://github.com/JanSteinhauer/DyLexAid
+
+**Reframe implication:** OCR, simplification, TTS, and accessible reading modes are already represented in open-source projects. Reframe's research value depends on validating representation selection and source fidelity, not assembling these capabilities alone.
+
+### 104. Patent prior art materially overlaps with personalization and source-preserving transformation
+
+US20240086616A1 describes a browser reading assistant using accessibility-tree semantics for extraction, user preferences for modified content, and side-by-side original/modified views with synchronized scrolling. Older patent families describe dynamic personalized reading instruction, tunable summaries, salient-information highlighting, comprehension aids, and performance-based adaptation. A newer patent publication describes personalization using gaze and reading-behavior signals.
+
+Sources:
+- https://patents.google.com/patent/US20240086616A1/en
+- https://patents.google.com/patent/US20030093275A1/en
+- https://patents.google.com/patent/US7386453B2/en
+- https://patents.google.com/patent/US20250362743A1/en
+
+**Reframe implication:** no novelty claim should be based on source-preserving modified views, personalization, highlighting, or behavioral adaptation alone. Prior-art review must continue before any legal or competitive novelty statement.
+
+### 105. Representation selection is not the same as representation effectiveness
+
+The current scan shows substantial overlap at the capability level: extraction, simplification, formatting, TTS, synchronized source/modified views, profiles, highlighting, and behavioral personalization all have existing implementations or disclosures.
+
+The unresolved empirical question remains narrower:
+
+**Under what reader, task, content, and context conditions does switching to a particular source-faithful representation produce measurable benefit, and can a calibration procedure predict that benefit on unseen content?**
+
+This is an effectiveness question, not a claim that the underlying mechanisms are new.
+
+### 106. Privacy feasibility does not remove fidelity requirements
+
+On-device transformation can reduce the need to send sensitive text to a remote service, but local execution does not guarantee semantic accuracy, accessibility, or appropriate transformation behavior.
+
+**Updated rule:** privacy architecture and semantic validation are independent gates. A local model can still fail the research gate if it loses source facts, changes relationships, or does not improve the target task.
