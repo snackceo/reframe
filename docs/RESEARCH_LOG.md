@@ -2159,3 +2159,73 @@ Before production implementation, establish:
 - explicit separation of source evidence, required prior knowledge, and inference;
 - source-derived answerability tests with an UNANSWERABLE outcome;
 - textual similarity/readability treated as secondary diagnostics rather than semantic acceptance criteria.
+
+
+## Research cycle 2026-10-03 — semantic-risk controls and evaluation hierarchy
+
+### 215. Simplification quality is not one coherent construct
+
+The 2026 READIxTSAR literature reports that traditional readability measures correlate poorly with both human judgments and automatic simplification metrics. Meaning preservation showed stronger relationships with human evaluation than simplicity or fluency, and the useful linguistic predictors differed between sentence-level and document-level simplification.
+
+Source: https://aclanthology.org/volumes/2026.readi-1/
+
+**Reframe implication:** Reframe should not optimize a single “readability score.” Evaluation needs separate dimensions for task benefit, meaning preservation, simplicity/processing burden, fluency, and interaction cost.
+
+### 216. Human agreement on semantic preservation is itself imperfect
+
+A 2026 multilingual simplification study found a persistent trade-off between simplification effectiveness and meaning preservation, while also reporting that human annotators can disagree about whether meaning was preserved.
+
+Source: https://aclanthology.org/2026.findings-eacl.279/
+
+**Reframe implication:** fidelity should use multiple complementary checks rather than a single human or model judgment. For high-impact transformations, disagreement should be recorded as uncertainty rather than silently resolved into “faithful.”
+
+### 217. Multilingual proficiency control is not yet reliable enough to assume
+
+A 2026 European Portuguese study found that prompted models often simplified text but had difficulty consistently reaching a precise target proficiency level; exact target-level accuracy remained below 40% in the reported experiments.
+
+Source: https://aclanthology.org/2026.readi-1.12/
+
+**Reframe implication:** a selector should not assume that an instruction such as “make this A2” produces a reliably calibrated accessibility level. Language-specific validation is required before using proficiency targets operationally.
+
+### 218. Evaluator models can help, but evaluation models need validation too
+
+A 2026 study compared small open-weight LLMs with specialized text-simplification metrics for agreement with human judgments. This establishes automatic evaluation as a research target rather than a solved infrastructure problem.
+
+Source: https://aclanthology.org/2026.determit-1.9/
+
+**Reframe implication:** Reframe can eventually use automated evaluators to screen large numbers of transformations, but evaluator agreement must itself be benchmarked against human judgments before it becomes a release gate.
+
+### 219. Emotional meaning is part of source fidelity for real-world communication
+
+A 2026 study of LLM simplification of social-media content for adults with intellectual disabilities found that simplification could improve fluency and structure while changing perceived emotion, especially where emotion was weakly expressed or ambiguous.
+
+Source: https://aclanthology.org/2026.wassa-1.10/
+
+**Reframe implication:** fidelity is broader than factual propositions. Depending on task and content, the ledger may need to preserve tone, emotion, modality, hedging, negation, and social intent. “Factually correct” is not always sufficient.
+
+### 220. Content deletion is a particularly dangerous transformation
+
+The TACL human evaluation framework found that simplified outputs could make original-content questions unanswerable, with over-deletion identified as an important source of failure. The authors recommend human or machine-in-the-loop validation before simplified content is presented to readers.
+
+Source: https://aclanthology.org/2024.tacl-1.24/
+
+**Reframe implication:** omission should be treated as a first-class transformation with explicit risk status. If information is removed, the system needs a recoverable path to the source and should be tested for task-relevant omission.
+
+### Research gate addition: evaluation hierarchy and semantic risk
+
+Before production implementation, establish this evaluation hierarchy:
+
+1. **Task outcome:** did the representation help the reader accomplish the intended task?
+2. **Source fidelity:** can all task-relevant source information still be recovered?
+3. **Accessibility/interaction cost:** did the representation introduce navigation, coordination, visual, or audio burden?
+4. **Reader signal:** did the reader report preference, clarity, or reduced effort?
+5. **Automatic diagnostics:** readability, similarity, model-based fidelity, and other scalable signals.
+
+No lower-level metric should override a failure at a higher level.
+
+Additional gate requirements:
+- semantic uncertainty and evaluator disagreement must be representable;
+- language-specific validation is required for proficiency-controlled transformations;
+- emotional/social meaning may be task-relevant source content;
+- omission must be explicitly logged and recoverable;
+- automated evaluation must be validated against human outcomes before becoming a release criterion.
