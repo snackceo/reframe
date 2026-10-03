@@ -928,3 +928,77 @@ The same representation may help one demand while harming another.
 ### 90. New guardrail
 
 Do not use performance in a representation condition to label a reader as having a particular cognitive deficit. Reframe's research unit remains **reader × task × representation × content × outcome**, not diagnosis.
+
+
+## Research cycle 2026-10-02 — Attention, visual competition, and highlighting
+
+### 91. Digital attentional interference has a measurable comprehension cost
+
+A 2025 meta-analysis synthesized 32 empirical studies and 124 experiments of attentional distraction during digital reading. Across studies, attentional interference was associated with lower reading comprehension (Hedges' g = -0.64), although heterogeneity was high (I² = 88.3%) and moderators included distraction type, study design, educational level, and device/context.
+
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC12684101/
+
+**Reframe implication:** reducing irrelevant visual competition is a legitimate research target, but "focus mode" should not be assumed universally beneficial. Distraction intensity and reading context should be experimental variables.
+
+### 92. Visual simplification can improve comprehension when removed content is genuinely extraneous
+
+An eye-tracking study of 60 first- and second-grade children found higher comprehension in a streamlined condition in which extraneous illustration details were removed. Gaze shifts away from text and fixations on extraneous details were associated with poorer comprehension.
+
+Source: https://doi.org/10.1038/s41539-020-00073-5
+
+A preregistered follow-up found the best comprehension in a condition containing text plus relevant illustrations, rather than either extraneous illustrations or text alone.
+
+Source: https://escholarship.org/uc/item/1131r9kf
+
+**Reframe implication:** the goal is not maximum visual reduction. The goal is minimizing irrelevant competition while retaining useful information.
+
+### 93. Highlighting is not uniformly beneficial
+
+A 2026 eye-tracking study of 42 undergraduate students found that visually distinguishing keywords and providing hyperlinks did not produce statistically significant group differences in reading outcomes; the authors concluded that keyword highlighting alone did not fundamentally change reading literacy or comprehension.
+
+Source: https://doi.org/10.3991/ijep.v16i2.59031
+
+A separate study with 191 seventh graders found limited benefits of highlighting in a broader experiment examining paper/screen reading, cognitive load, and comprehension.
+
+Source: https://doi.org/10.1016/j.lindif.2024.102604
+
+**Reframe implication:** "highlight important words" should remain a testable representation operation rather than a default intervention.
+
+### 94. Active vs passive highlighting matters
+
+A study of 130 college students comparing plain text, highlighted text, filled graphic organizers, active highlighting, and active organizer completion found that graphic-organizer conditions improved both rote-memory and comprehension outcomes, while highlighting primarily improved rote-memory performance. Eye tracking showed highlighting increased attention to marked words.
+
+Source: https://doi.org/10.1016/j.chb.2014.11.038
+
+**Reframe implication:** directing attention to selected words is not equivalent to externalizing information structure. Reframe should keep emphasis and structural representations as separate operations.
+
+### 95. Dynamic highlighting may help some readers while preference points the other way
+
+A 2025 eye-tracking study of 70 Danish second graders found gaze-contingent word highlighting improved reading speed, shortened fixations, reduced regressions and rereading, without reducing pronunciation accuracy or comprehension. Participants nevertheless preferred static text.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/40504601/
+
+**Reframe implication:** this is another direct example of preference diverging from performance. A representation can improve behavior without being preferred, and a preferred representation need not improve performance.
+
+### 96. Mobile reading should be treated as a distinct context
+
+A 2024 systematic review of mobile-assisted reading eye-tracking research covering 2010–2022 concluded that eye tracking provides information about online processing that offline accuracy measures cannot capture, while also identifying methodological and interpretation challenges.
+
+Source: https://doi.org/10.1016/j.edurev.2024.100643
+
+**Reframe implication:** future experiments should record context where relevant: device, screen size, reading posture/activity, distraction, and whether the task is sustained reading or information lookup.
+
+### 97. New representation taxonomy refinement
+
+Attention-related operations should be separated into:
+- **emphasis:** visually mark selected information;
+- **focus:** reduce or mask competing information;
+- **tracking:** dynamically indicate current reading position;
+- **structural externalization:** expose relationships among information;
+- **content removal:** remove information judged extraneous.
+
+These operations have different evidence bases and different failure modes.
+
+### 98. Updated research-gate requirement
+
+A visual representation should not be considered beneficial merely because it reduces gaze dispersion, fixation time, or perceived effort. The experiment must establish whether the attentional change improves the target task without removing information required for comprehension.
