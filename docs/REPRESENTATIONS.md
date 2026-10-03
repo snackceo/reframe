@@ -454,3 +454,27 @@ A future profile should be capable of representing:
 - explicit reader overrides.
 
 Avoid a single global label such as "5W+H reader" or "visual reader" unless repeated held-out evidence demonstrates that level of stability.
+
+## 27. Reader control is established; semantic representation switching remains the hypothesis
+
+Reader-controlled presentation has prior research history, and W3C accessibility guidance establishes separating structure from presentation so alternate presentations can be generated from semantic structure.
+
+Sources:
+- https://doi.org/10.1177/001872088803000408
+- https://www.w3.org/WAI/WCAG21/Techniques/general/G140.html
+
+Reader control is not itself a novelty claim. Semantic representation switching remains a testable Reframe hypothesis.
+
+## 28. Representation switching is a distinct operation
+
+A representation system can support selection, switching, persistence, source recovery, and composition. These should not be collapsed into personalization. Switching introduces measurable interaction costs and may either support self-regulation or create distraction/confusion; it requires direct testing.
+
+## 29. Added representation elements require an interference test
+
+Evidence from symbolated text in IDD shows that added visual symbols can reduce comprehension and increase reading time. Added elements therefore require task-specific benefit testing rather than an assumption that more support is better.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/40168874/
+
+## 30. Adaptive selection should be conditional
+
+Recent adaptive-reading research reports different outcomes across subject domains. Model representation effectiveness as conditional on reader, task, content, representation, and context rather than encoding a universally beneficial representation.
