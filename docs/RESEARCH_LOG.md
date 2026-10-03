@@ -2229,3 +2229,104 @@ Additional gate requirements:
 - emotional/social meaning may be task-relevant source content;
 - omission must be explicitly logged and recoverable;
 - automated evaluation must be validated against human outcomes before becoming a release criterion.
+
+
+## Research cycle 2026-10-03 — measurement validity, functional tasks, and switching cost
+
+### 221. Reading-comprehension measures are not interchangeable
+
+A 2026 meta-analysis comparing standardized and non-standardized reading-comprehension measures found meaningful differences between distal standardized outcomes and proximal instructional measures.
+
+Source: https://link.springer.com/article/10.1007/s44217-026-01140-6
+
+**Reframe implication:** a representation that improves a local task score should not automatically be described as improving general reading comprehension. Reframe experiments need to name the exact construct being measured and distinguish immediate task performance from broader transfer.
+
+### 222. Established reading assessments decompose comprehension into distinct purposes and processes
+
+NAEP's current reading framework separates locating information, inference, and identifying main ideas; PIRLS 2026 similarly defines reading through different purposes and comprehension processes.
+
+Sources:
+- https://nces.ed.gov/nationsreportcard/ltt/what_measure_reading.aspx
+- https://pirls.bc.edu/pirls2026/frameworks/index.html
+
+**Reframe implication:** the experimental task taxonomy should remain explicit rather than collapsing all outcomes into a single comprehension score.
+
+### 223. Parallel forms are important for repeated calibration
+
+Psychometric assessment work describes parallel forms as a way to support repeated measurement while maintaining a common scale.
+
+Source: https://onlinelibrary.wiley.com/doi/10.1002/ets2.12076
+
+**Reframe implication:** repeated calibration should use matched/parallel passages and equivalent task forms rather than repeatedly testing the same passage. Practice effects must be treated as a confound.
+
+### 224. Functional reading tasks provide an important external-validity check
+
+A randomized pilot with 44 young adults with intellectual/developmental disabilities used functional texts such as text messages and emails. The intervention improved use of reading-comprehension strategies and some comprehension outcomes, but not every functional outcome.
+
+Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC12452825/
+
+**Reframe implication:** laboratory passages are insufficient as the only validation domain. Research should eventually include authentic tasks such as following instructions, interpreting messages, finding information in forms, and deciding what action to take.
+
+### 225. Accessibility accommodations can alter construct validity
+
+Research on universally designed accommodations in computer-based reading assessment found that accessibility features can reduce the influence of construct-irrelevant access skills, while accommodation use can vary with readers' access abilities.
+
+Source: https://journals.sagepub.com/doi/10.1177/15345084231170317
+
+**Reframe implication:** Reframe experiments must distinguish an accessibility benefit from accidentally changing the underlying task being measured. The same representation can be appropriate for access support but inappropriate as evidence that the reader's underlying comprehension has changed.
+
+### 226. Retell is useful but cannot stand alone as a comprehension endpoint
+
+A synthesis of 54 studies found retell moderately correlated with standardized comprehension, with literal information recalled more often than inferential information and substantial variation by genre, background knowledge, and student.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/23125521/
+
+**Reframe implication:** if Reframe uses recall/retell, scoring must distinguish literal and inferential content and should be combined with other task measures.
+
+### 227. Switching cost is measurable and can dominate representation benefit
+
+Research on graph-text integration found that switches depended not only on information value but also on perceptual-motor and cognitive costs. Switches were much more frequent during re-inspection than initial reading, and simultaneous availability changed switching frequency.
+
+Source: https://pubmed.ncbi.nlm.nih.gov/30593059/
+
+**Reframe implication:** switching events should be logged with phase/context. A switch during verification may be productive; a switch during initial reading may reflect confusion or navigation burden. Raw switch count is not a success metric.
+
+### 228. Multimodal switching can be productive or confusing depending on the representation relationship
+
+Multi-text/multimodal research found higher-performing readers used some intra-textual switching, while certain inter-text text-to-diagram switches were negatively associated with higher-level strategies and could indicate confusion.
+
+Source: https://www.sciencedirect.com/science/article/pii/S0959475220307088
+
+**Reframe implication:** switching should be modeled as an event with source representation, destination representation, timing, task stage, and subsequent outcome—not as a scalar “engagement” signal.
+
+### 229. Multiple digital sources add measurable comprehension demand
+
+A 2026 analysis using PISA-2018 data from 44 countries and 341,591 students examined single versus multiple digital sources and found multiple-source reading to be more cognitively demanding, with successful performance more dependent on effort/time.
+
+Source: https://link.springer.com/article/10.1007/s11145-026-10854-w
+
+**Reframe implication:** when a representation aggregates information from multiple source spans or documents, the aggregation itself becomes an experimental variable. Provenance and source navigation need to remain visible.
+
+### 230. Visuals can activate or conflict with textual meaning
+
+A 2026 experiment with 285 participants and a follow-up eye-tracking experiment with 143 participants examined consistency versus inconsistency between previously presented pictures and later text. This supports treating cross-modal consistency as part of comprehension rather than assuming an added visual is neutral.
+
+Source: https://onlinelibrary.wiley.com/doi/full/10.1002/acp.70277
+
+**Reframe implication:** generated diagrams, icons, symbols, or illustrations need consistency/error testing. A visual that conflicts with text can introduce semantic error even when the source text itself is unchanged.
+
+### Research gate additions
+
+The evaluation instrument must now explicitly record:
+
+- construct measured: literal retrieval, inference, main idea, structure, summary, action/task completion, or transfer;
+- immediate versus delayed/transfer outcome;
+- original versus parallel-form passage;
+- task-source relationship;
+- accessibility support versus construct-changing transformation;
+- switch event phase and direction;
+- source-span provenance for aggregated representations;
+- cross-modal consistency/conflict;
+- functional-task success where applicable.
+
+A representation cannot be considered validated solely because it increases a generic comprehension score.
