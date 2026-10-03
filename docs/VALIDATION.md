@@ -414,3 +414,19 @@ The representation may help some question types while harming or failing to affe
 ## 29. Reader-controlled switching requires a switching-cost condition
 
 Compare fixed-view conditions with reader-controlled switching. Measure task accuracy, completion time, number/timing of switches, return-to-source events, rereading/navigation, perceived effort, and semantic errors. Switching must be tested as an interaction cost rather than assumed beneficial.
+
+## 30. Held-out evaluation is required for adaptive representation selection
+
+Representation-selection rules must be evaluated on content not used to choose the rule. Compare calibration/training passages with held-out passages and fixed-view baselines. A preference signal is predictive only if it improves the predefined outcome on held-out material.
+
+## 31. Added support must be tested for interference
+
+Every representation that adds labels, icons, marks, or other visual/semantic elements should include checks for comprehension, reading time, omission errors, navigation errors, source recovery, and accessibility-semantic correctness. More cues are not an assumed benefit.
+
+## 32. Structural representation must preserve source semantics
+
+W3C guidance supports separating structural information from presentation. Validation should independently test target-task benefit and traceability to the same source structure.
+
+## 33. Adaptive selection must permit null and negative outcomes
+
+Experiments must permit no benefit, task-specific benefit, content-specific benefit, switching benefit with interaction cost, preference without objective benefit, objective benefit without preference, and negative effects from adaptation.
