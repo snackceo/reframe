@@ -1,9 +1,9 @@
 # Reframe — Architecture Direction
 
-**Status:** Conceptual architecture  
-**Last reviewed:** 2026-10-02
+**Status:** Implementation baseline
+**Last reviewed:** 2026-10-05
 
-This document defines boundaries rather than committing Reframe to a platform, framework, model, or backend.
+This document defines the boundaries of the first implementation. Platform-specific details remain replaceable where the product evidence does not require permanence.
 
 ## 1. System concept
 
@@ -13,13 +13,26 @@ Source → Acquisition → Understanding → Representation → Rendering → Re
 
 The reader can provide feedback or choose another representation at any point.
 
-## 2. Boundary definitions
+## 2. Current implementation boundary
 
-### Source acquisition
+The first implementation establishes the shared semantic core before adding platform UI or privileged acquisition.
+
+Current layers:
+
+1. `SourceDocument` — source identity and original text.
+2. `EvidenceSpan` — source offsets used for provenance.
+3. `SemanticStatus` — STATED, INFERRED, UNKNOWN, CONFLICTING.
+4. `Representation` — structured output with explicit source identity.
+5. Deterministic representations — original, chunking, and outline.
+6. Shared tests — provenance and source-preservation assertions.
+
+The implementation deliberately does **not** yet include system-wide capture, AccessibilityService ingestion, cloud processing, persistent reader profiles, adaptive recommendations, or production model integration.
+
+## 3. Source acquisition
 
 Obtains content from the current reading context.
 
-Possible future sources:
+Candidate sources remain:
 
 - selected text;
 - shared text;
@@ -29,9 +42,9 @@ Possible future sources:
 - documents;
 - screenshots.
 
-No acquisition method is currently mandated.
+The least-privileged mechanism that satisfies the use case must be preferred. AccessibilityService is a privileged fallback, not the universal ingestion architecture.
 
-### Content understanding
+## 4. Content understanding
 
 Converts source content into a structured representation that downstream transformations can reason about.
 
@@ -49,27 +62,33 @@ Potential information:
 - uncertainty;
 - source boundaries.
 
-This layer should not decide how the reader wants the content displayed.
+This layer must not decide how the reader wants content displayed.
 
-### Representation selection
+## 5. Representation selection
 
-Determines which representation the reader requested or which representation the product recommends.
+Determines which representation the reader requested or which representation the calibration system recommends.
 
-Selection should remain separate from generation.
+Selection remains separate from generation.
 
-### Representation generation
+The long-term selection problem is conditional rather than universal:
+
+`P(best representation | reader, task, content, context)`
+
+## 6. Representation generation
 
 Produces a structured transformation with explicit source relationships.
 
-The output should be testable without a UI.
+The output must be testable without a UI.
 
-### Rendering
+Deterministic transformations are preferred where they can reliably perform the operation. Generative transformations require the same provenance/fidelity contract.
+
+## 7. Rendering
 
 Turns the representation into an accessible visual or multimodal interface.
 
-Rendering should not be responsible for deciding semantic meaning.
+Rendering must not decide semantic meaning.
 
-### Reader interaction
+## 8. Reader interaction
 
 Handles:
 
@@ -81,196 +100,143 @@ Handles:
 - feedback;
 - accessibility controls.
 
-## 3. AI boundary
+Automatic recommendations must remain understandable and reversible.
+
+## 9. AI boundary
 
 An AI model is an implementation option inside content understanding or representation generation.
 
 It is not the product boundary.
 
-This allows Reframe to use:
+The model adapter must expose:
 
-- deterministic parsing;
-- traditional NLP;
-- local models;
-- remote models;
-- multiple models;
-- no model for some transformations.
+- provider;
+- model identifier;
+- model version where available;
+- execution location;
+- transformation/protocol version;
+- failure state.
 
-The architecture should make it possible to replace the model without rewriting the reader experience.
+No silent fallback from local processing to external processing is allowed for sensitive content.
 
-## 4. Deterministic before generative
+## 10. Structured intermediate representation
 
-Where a transformation can be performed reliably without generation, prefer deterministic processing.
+The target pipeline is:
 
-Examples:
+`SourceDocument → SemanticDocument → Representation → RenderedView`
 
-- spacing;
-- text sizing;
-- line width;
-- exact source highlighting;
-- sentence segmentation when a reliable parser is sufficient;
-- extracting explicit dates;
-- preserving source text.
+The first implementation currently has the source and representation portions of this contract. `SemanticDocument` is intentionally not invented before its required fields are demonstrated by fidelity tests.
 
-Generative processing may be appropriate for:
-
-- ambiguous structural extraction;
-- complex relationship identification;
-- plain-language rewriting;
-- explanations;
-- adaptive recommendations.
-
-This is a default engineering principle, not a prohibition on AI.
-
-## 5. Structured intermediate representation
-
-The system should eventually use a structured intermediate representation rather than passing raw strings between every component.
-
-Conceptually:
-
-SourceDocument → SemanticDocument → Representation → RenderedView
-
-This creates explicit contracts and makes transformations independently testable.
-
-## 6. No hidden semantic mutation
+## 11. No hidden semantic mutation
 
 Rendering must never silently alter source meaning.
 
 If a component performs a semantic transformation, that transformation must exist as an explicit representation step.
 
-## 7. Privacy boundary
+Every semantic node should eventually be able to answer:
 
-Screen content and extracted text should be treated as sensitive by default.
+> Which source evidence supports this output?
 
-Architectural questions include:
+## 12. Fidelity
 
-- what content leaves the device;
-- whether processing can be local;
-- retention duration;
-- logging;
-- caching;
-- model telemetry;
-- user consent;
-- deletion;
-- third-party provider access.
+Fidelity testing must cover at least:
 
-Privacy decisions should be made before committing to remote processing.
+- actors;
+- actions;
+- objects;
+- quantities;
+- dates;
+- times;
+- locations;
+- negation;
+- uncertainty;
+- attribution;
+- conditions;
+- temporal relationships;
+- causal relationships;
+- exceptions.
 
-## 8. Latency
+The source must remain recoverable when a representation fails.
 
-The eventual system should distinguish:
+## 13. Privacy boundary
 
-- instant visual transformations;
-- fast deterministic parsing;
-- model-dependent transformations;
-- slower multimodal processing.
+Screen content and extracted text are sensitive by default.
 
-The reader should not be blocked unnecessarily by a transformation that can be applied incrementally.
+Architecture must distinguish:
 
-## 9. Offline behavior
+**personalization | research | model training | external processing**
 
-Offline operation is a product question, but the architecture should avoid making it impossible.
+Reader evidence is not training data by default.
 
-A representation that requires a network request should be distinguishable from one that can run locally.
+Do not log raw source content by default.
 
-## 10. State model
+## 14. State model
 
-At minimum, eventual state should distinguish:
+Eventually state must distinguish:
 
 - source state;
 - current representation;
 - reader preference;
 - transformation status;
 - failure state;
-- source/representation relationship.
+- source/representation relationship;
+- calibration evidence;
+- evidence uncertainty.
 
 Do not persist source content merely because the UI makes persistence convenient.
 
-## 11. Observability
+## 15. Latency and offline behavior
+
+The system should distinguish:
+
+- instant visual transformations;
+- fast deterministic parsing;
+- model-dependent transformations;
+- slower multimodal processing.
+
+A network-dependent representation must be distinguishable from a local representation.
+
+The architecture should remain capable of useful offline behavior.
+
+## 16. Observability
 
 Telemetry should measure product behavior without unnecessarily collecting source content.
 
-Prefer events such as:
+Preferred event categories include:
 
 - representation_selected;
 - representation_switched;
 - transformation_failed;
 - source_restored;
 - audio_started;
-- audio_stopped.
+- audio_stopped;
+- calibration_trial_started;
+- calibration_trial_completed.
 
-Avoid raw screen-content logging.
+Raw screen/source content must not enter ordinary analytics logs.
 
-## 12. Security
+## 17. Security
 
-Treat:
-
-- captured content;
-- OCR;
-- model input;
-- model output;
-- cached representations;
-- external content
-
-as untrusted or sensitive data.
+Treat captured content, OCR, model input, model output, cached representations, and external content as untrusted or sensitive data.
 
 Validate model output before rendering it as structured content.
 
-## 13. Architectural decision rule
+## 18. Platform direction
+
+The current implementation uses **Kotlin Multiplatform for the shared semantic core** with native platform layers planned for Android and iOS.
+
+This is an implementation choice, not a product contract. The architecture deliberately avoids tying representation semantics to KMP so that the core can be tested independently of UI and platform acquisition.
+
+Kotlin 2.2.20 remains the pinned Kotlin version. The Android shared library currently uses the Android Gradle Library Plugin compatible with the selected Kotlin/Gradle toolchain.
+
+## 19. Technology-selection rule
 
 Do not choose architecture because it is sophisticated.
 
 Choose the smallest architecture that can answer the current product question.
 
-The first question is not:
-
-How do we build a system-wide AI HUD?
-
 The first question is:
 
-Which representations actually help readers, for which content, and with what tradeoffs?
+> Which representations actually help readers, for which content, and with what tradeoffs?
 
-Architecture should follow that evidence.
-
-
-## 14. Provisional platform and technology direction
-
-**Status:** Research-gated / provisional. This is a direction, not a final implementation decision.
-
-Reframe targets **iOS and Android**. The leading ecosystem under investigation is **Kotlin Multiplatform (KMP)** because it can share core Kotlin logic while retaining native platform integration. This choice is not final until the research gate and platform-feasibility review are complete.
-
-### Candidate direction
-
-- **Shared core:** Kotlin Multiplatform.
-- **iOS application layer:** native Swift/SwiftUI where platform-native behavior or accessibility integration is important.
-- **Android application layer:** Kotlin with Android/Jetpack APIs.
-- **Shared UI:** Compose Multiplatform is an option, not a requirement. Native UI remains available where it provides better platform integration.
-- **Semantic core:** shared, platform-independent Kotlin domain logic for source models, semantic structures, representations, transformation metadata, and fidelity rules.
-- **OCR / text acquisition:** prefer native platform capabilities first; exact APIs and cross-platform abstractions remain research items.
-- **Text-to-speech:** prefer native platform capabilities first; exact abstraction remains a research item.
-- **AI/ML:** provider- and model-agnostic. Local/on-device and remote processing remain separate options subject to privacy, latency, quality, and evidence requirements.
-- **Storage:** local-first bias; exact persistence technology remains undecided.
-- **Backend:** not required by the architecture. Introduce one only if a demonstrated product requirement requires it.
-- **Testing:** shared semantic/fidelity tests plus platform-specific UI, accessibility, integration, and performance tests.
-
-### Why this remains provisional
-
-The technology choice must be evaluated against the actual research findings, especially:
-
-1. access to text from real mobile reading contexts;
-2. native accessibility APIs and system integration;
-3. OCR and document/image handling;
-4. text rendering and interaction;
-5. text-to-speech;
-6. on-device processing;
-7. offline behavior;
-8. semantic transformation testability;
-9. privacy boundaries;
-10. performance and battery cost;
-11. maintainability of shared versus native code.
-
-Flutter and React Native remain viable alternatives until this comparison is completed. They are not rejected; KMP is simply the current leading candidate.
-
-**Moshi is not the Reframe stack.** Moshi is a Kotlin JSON serialization library, whereas the stack decision concerns the application/platform ecosystem, shared core, native integrations, and supporting services.
-
-No implementation should begin solely because this provisional direction is documented.
+Architecture follows that evidence.
