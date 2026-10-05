@@ -1,11 +1,13 @@
 plugins {
     kotlin("multiplatform")
+    id("com.android.library")
 }
 
 kotlin {
-    androidLibrary {
-        namespace = "com.snackceo.reframe.shared"
-        compileSdk = 36
+    androidTarget {
+        compilerOptions {
+            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+        }
     }
 
     iosArm64()
@@ -18,4 +20,9 @@ kotlin {
             implementation(kotlin("test"))
         }
     }
+}
+
+android {
+    namespace = "com.snackceo.reframe.shared"
+    compileSdk = 36
 }
